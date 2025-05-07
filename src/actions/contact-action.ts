@@ -5,7 +5,6 @@ import { revalidatePath } from "next/cache"
 import type { z } from "zod";
 
 export default async function createContact(data:z.infer<typeof contactFormSchema>) {
-   console.log("data is",data);
    await db.contactUs.create({
    data:{
     name:data.name,

@@ -3,6 +3,8 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import { toast } from "sonner";
 import {
   Form,
   FormControl,
@@ -15,6 +17,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import createContact from "@/actions/contact-action";
+import { useState } from "react";
 
 export const contactFormSchema = z.object({
   name: z.string().min(2, "Name should be min of 3 chars."),
@@ -24,6 +27,8 @@ export const contactFormSchema = z.object({
 });
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState<boolean>(false);
+
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -33,19 +38,31 @@ const ContactForm = () => {
       query: "",
     },
   });
-  //form submission 
+
+  //form submission
   async function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    console.log("values are",values);
-    await createContact(values)
-    .then((resp)=>{
-      console.log(resp.message)
-    })
-    .catch((err)=>{
-    console.log("error is",err);
-    })
-    .finally(()=>{
-     form.reset();
-    })
+    setLoading(true);
+    const data = {
+      Name: values.name,
+      Email: values.email,
+      PhoneNumber: values.phone,
+      Query: values.query,
+    };
+
+    //setting the data in the database also and google sheet
+    try {
+      const contactFormResp = await createContact(values);
+      await axios.post(
+        "https://api.sheetbest.com/sheets/049a2e18-8a7f-477a-9d1d-ce5da8e9b6b3",
+        data,
+      );
+      toast.success(contactFormResp.message);
+    } catch (err) {
+      console.log("error is", err);
+    } finally {
+      form.reset();
+      setLoading(false);
+    }
   }
   return (
     <>
@@ -107,7 +124,7 @@ const ContactForm = () => {
                 </FormLabel>
                 <FormControl>
                   <Input
-                  type="number"
+                    type="number"
                     placeholder="+91 9999999999"
                     {...field}
                     className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -141,7 +158,8 @@ const ContactForm = () => {
 
           <Button
             type="submit"
-            className="w-full rounded-md bg-blue-600 py-3 text-white transition-colors hover:bg-blue-700"
+            disabled={loading}
+            className={`w-full rounded-md bg-blue-600 py-3 text-white transition-colors hover:bg-blue-700`}
           >
             Submit
           </Button>
