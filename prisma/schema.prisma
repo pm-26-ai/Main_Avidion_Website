@@ -15,3 +15,31 @@ model ContactUs {
   query       String
   createdAt   DateTime @default(now())
 }
+
+enum Position {
+  WebDeveloper
+  GraphicDesigner
+  DigitalMarketing
+  BusinessDevelopmentExecutive
+}
+
+enum Experience {
+  Fresher
+  YearOfExperience
+}
+
+model Careers {
+  id             Int      @id @default(autoincrement())
+  name           String
+  email          String
+  phoneNumber    String
+  address        String
+  experience     Experience
+  year           String?
+  months         String?
+  position       Position
+  currentSalary  String?
+  expectedSalary String
+  comments       String?
+  resumeLink     String
+}
