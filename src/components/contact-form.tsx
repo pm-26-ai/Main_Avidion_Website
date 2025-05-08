@@ -79,11 +79,11 @@ const ContactForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="mb-1 block text-sm font-medium text-gray-700">
-                  Username
+                  Full Name
                 </FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="john doe"
+                    placeholder="Full Name"
                     {...field}
                     className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   />
@@ -103,7 +103,7 @@ const ContactForm = () => {
                 </FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="john@gmail.com"
+                    placeholder="Email Address"
                     {...field}
                     type="email"
                     className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
@@ -125,7 +125,7 @@ const ContactForm = () => {
                 <FormControl>
                   <Input
                     type="number"
-                    placeholder="+91 9999999999"
+                    placeholder="Phone Number"
                     {...field}
                     className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   />

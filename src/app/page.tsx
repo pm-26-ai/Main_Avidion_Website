@@ -4,7 +4,6 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 export default function HomePage() {
   return (
     <>
-    <div className="text-pri">Heloo</div>
       <ContactForm />
       <FloatingWhatsApp
         notification

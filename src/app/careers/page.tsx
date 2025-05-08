@@ -1,8 +1,9 @@
+import CareerForm from '@/components/career-form'
 import React from 'react'
 
 const Careers = () => {
   return (
-    <div>Pricing</div>
+    <CareerForm/>
   )
 }
 
