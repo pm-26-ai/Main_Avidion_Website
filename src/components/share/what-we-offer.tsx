@@ -1,4 +1,3 @@
-import { Button } from "../ui/button";
 import { HeadingSection } from "./heading-section";
 import Image from "next/image";
 export default function WhatWeOffer() {
@@ -46,14 +45,14 @@ export default function WhatWeOffer() {
   ];
   return (
     <>
-      <div className="bg-linear-[107deg,#190D2E_0.54%,#020103_99.46%] px-[200px] py-[108px] 2xl:px-[400px]">
+      <div className="bg-linear-[107deg,#190D2E_0.54%,#020103_99.46%] px-[118.5px] py-[108px] xl:px-[182.5px] 2xl:px-[422px]">
         <HeadingSection
           mainHeading="What We Offer"
           subContent="Avidion Software is a forward-thinking tech company specializing in custom software development, AI integration, cloud migration, and workflow automation. We deliver scalable digital solutions that drive growth for businesses of all sizes."
           mainClassName="text-center"
           subClassName="text-center"
         />
-        <div className="grid grid-cols-2 gap-10 xl:grid-cols-3">
+        <div className="grid grid-cols-2 gap-5 xl:grid-cols-3 xl:gap-10">
           {offerCards.map((card) => {
             return (
               <>
@@ -76,7 +75,7 @@ export default function WhatWeOffer() {
                       </div>
                     </div>
                     {/* know more button */}
-                    <button className="w-full rounded-[10px] border border-white/15 bg-[rgba(61,61,61,0.40)] px-[15px] py-1.5 text-center text-sm font-normal inset-shadow-[0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
+                    <button className="w-full rounded-[10px] border border-white/15 bg-[rgba(61,61,61,0.40)] px-[15px] py-1.5 text-center text-sm font-normal shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
                       Know More
                     </button>
                   </div>
