@@ -2,7 +2,7 @@
 import {db} from "../server/db"
 import { revalidatePath } from "next/cache"
 import type { z } from "zod";
-import type { careerFormSchema } from "@/components/career-form";
+import type { careerFormSchema } from "@/components/forms/career-form";
 
 export default async function createCareerReq(data:z.infer<typeof careerFormSchema>) {
    try{

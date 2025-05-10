@@ -1,3 +1,4 @@
+import Navbar from "@/components/share/navbar";
 import { Toaster } from "@/components/ui/sonner";
 import "@/styles/globals.css";
 
@@ -26,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body>
-        <main>{children}</main>
+        <main className="bg-[#020103]">
+          <Navbar/>
+          {children}</main>
         <Toaster />
         </body>
     </html>

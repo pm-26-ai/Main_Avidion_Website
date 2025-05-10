@@ -1,5 +1,5 @@
 'use server'
-import type { contactFormSchema } from "@/components/contact-form";
+import type { contactFormSchema } from "@/components/forms/contact-form";
 import {db} from "../server/db"
 import { revalidatePath } from "next/cache"
 import type { z } from "zod";
