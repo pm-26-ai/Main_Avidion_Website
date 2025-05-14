@@ -1,20 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import "tailwindcss";
-@import "tw-animate-css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-1 {
+    animation-delay: 0.2s;
+  }
+  .animation-delay-2 {
+    animation-delay: 0.4s;
+  }
+}
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
 
 :root {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-@theme {
-  /* font styles */
-  --font-inter: "Inter", sans-serif;
-  /* breakpoints */
-  --breakpoint-2xl: 1920px;
-  --breakpoint-xl: 1440px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-md: 768px;
-  --breakpoint-sm: 425px;
-}
-

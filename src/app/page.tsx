@@ -1,25 +1,29 @@
-"use client";
-
+"use server";
 import ContactForm from "@/components/forms/contact-form";
 import HowWeWork from "@/components/share/how-we-work";
 import WhatWeOffer from "@/components/share/what-we-offer";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import Blogs from "./blogs/page";
-export default function HomePage() {
+import HeroSection from "@/components/share/hero-section";
+import OurToolkit from "@/components/share/our-toolkit";
+import WhyChooseUs from "@/components/share/why-choose-us";
+export default async function HomePage() {
   return (
     <>
+      <HeroSection />
       <WhatWeOffer />
-      <HowWeWork/>
+      <WhyChooseUs />
+      <OurToolkit />
+      <HowWeWork />
       {/* <ContactForm /> */}
-      <FloatingWhatsApp
+      {/* <FloatingWhatsApp
         notification
         notificationSound
         phoneNumber="9896584099"
         accountName="Enquiry"
         avatar="./avidion-logo.png"
-      />
-      <Blogs/>
-      
+      /> */}
+      <Blogs />
     </>
   );
 }

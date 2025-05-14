@@ -63,7 +63,7 @@ export default function Blogs() {
     <>
       <div className="relative min-h-screen">
         <video
-          className="absolute inset-0 z-0 h-full w-full object-cover"
+          className="absolute inset-0 top-60 z-0 h-[70%] w-full object-cover"
           autoPlay
           muted
           loop

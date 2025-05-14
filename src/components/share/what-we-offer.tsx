@@ -1,3 +1,5 @@
+"use client";
+import { useRef } from "react";
 import { HeadingSection } from "./heading-section";
 import Image from "next/image";
 export default function WhatWeOffer() {
@@ -43,9 +45,18 @@ export default function WhatWeOffer() {
       icon: "/what-we-offer/icon-6.svg",
     },
   ];
+  const cardRef = useRef<HTMLDivElement>(null);
+  // useEffect(()=>{
+  //  const card=cardRef.current;
+
+  //  card?.addEventListener("mousemove",(e)=>{
+  //    const {clientX,clientY}=e;
+
+  //  })
+  // },[])
   return (
     <>
-      <div className="bg-linear-[107deg,#190D2E_0.54%,#020103_99.46%] px-[118.5px] py-[108px] xl:px-[182.5px] 2xl:px-[422px]">
+      <div className="relative overflow-x-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] px-[118.5px] py-[108px] xl:px-[182.5px] 2xl:px-[422px]">
         <HeadingSection
           mainHeading="What We Offer"
           subContent="Avidion Software is a forward-thinking tech company specializing in custom software development, AI integration, cloud migration, and workflow automation. We deliver scalable digital solutions that drive growth for businesses of all sizes."
@@ -57,8 +68,9 @@ export default function WhatWeOffer() {
             return (
               <>
                 <div
+                  ref={cardRef}
                   key={card.id}
-                  className="font-inter bg-[rgba(0,0,0,0.06 )] flex flex-col gap-2 rounded-[10px] border border-white/15 px-[27px] pt-[30px] pb-5 -tracking-[0.002px] text-white"
+                  className="bg-[rgba(0,0,0,0.06 )] flex flex-col gap-2 rounded-[10px] border border-white/15 px-[27px] pb-5 pt-[30px] font-inter -tracking-[0.002px] text-white"
                 >
                   <div className="px-1 py-0.5">
                     <div className="relative size-[30.8px]">
@@ -67,10 +79,10 @@ export default function WhatWeOffer() {
                   </div>
                   <div className="flex flex-col gap-[33px]">
                     <div className="flex flex-col justify-start gap-1.5">
-                      <div className="text-base leading-[31px] font-medium">
+                      <div className="text-base font-medium leading-[31px]">
                         {card.title}
                       </div>
-                      <div className="h-[104px] text-base leading-[26px] font-normal text-[rgba(255,255,255,0.70)]">
+                      <div className="h-[104px] text-base font-normal leading-[26px] text-[rgba(255,255,255,0.70)]">
                         {card.content}
                       </div>
                     </div>
@@ -84,6 +96,10 @@ export default function WhatWeOffer() {
             );
           })}
         </div>
+        <div className="absolute -left-28 -top-12 h-[250px] w-[250px] animate-blob rounded-full bg-[#971b76] opacity-70 blur-[80px]"></div>
+
+        <div className="animation-delay-1 absolute -right-28 bottom-12 h-[250px] w-[250px] animate-blob rounded-full bg-[#971b76] opacity-70 mix-blend-screen blur-[100px]"></div>
+        <div className="animation-delay-2 absolute -right-28 bottom-52 h-[250px] w-[250px] animate-blob rounded-full bg-[#622A9A] opacity-70 mix-blend-screen blur-[100px]"></div>
       </div>
     </>
   );
