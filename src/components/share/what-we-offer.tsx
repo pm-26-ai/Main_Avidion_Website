@@ -68,8 +68,8 @@ export default function WhatWeOffer() {
             return (
               <>
                 <div
-                  ref={cardRef}
                   key={card.id}
+                  ref={cardRef}
                   className="bg-[rgba(0,0,0,0.06 )] flex flex-col gap-2 rounded-[10px] border border-white/15 px-[27px] pb-5 pt-[30px] font-inter -tracking-[0.002px] text-white"
                 >
                   <div className="px-1 py-0.5">

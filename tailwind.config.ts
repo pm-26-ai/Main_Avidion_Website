@@ -24,6 +24,7 @@ const config: Config = {
         "gradient-wave": "gradientWave 1s linear infinite",
         blob: "blob 0.7s linear infinite",
         bounce: "bounce 3s infinite",
+        "gradient-radial": "gradient-radial 12s linear infinite",
       },
 
       keyframes: {
@@ -62,6 +63,24 @@ const config: Config = {
           "50%": {
             transform: "none",
             "animation-timing-function": "cubic-bezier(0,0,0.2,1)",
+          },
+        },
+        "gradient-radial": {
+          "0%, 100%": {
+            background:
+              "radial-gradient(56.13% 56.07% at 50.86% 3.47%, rgba(0,0,0,0) 0%, #000 100%)",
+          },
+          "25%": {
+            background:
+              "radial-gradient(70.29% 22.24% at 72.24% 59.53%, rgba(0,0,0,0) 0%, #000 100%)",
+          },
+          "50%": {
+            background:
+              "radial-gradient(32.59% 32.59% at 50% 92.13%, rgba(0,0,0,0) 0%, #000 100%)",
+          },
+          "75%": {
+            background:
+              "radial-gradient(68.81% 21.77% at 28.23% 59.53%, rgba(0,0,0,0) 0%, #000 100%)",
           },
         },
 

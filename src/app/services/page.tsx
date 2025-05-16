@@ -1,7 +1,8 @@
+import HeroSection from "./components/hero-section"
 
 const Services = () => {
   return (
-    <div>Hlo , Services</div>
+   <HeroSection/>
   )
 }
 
