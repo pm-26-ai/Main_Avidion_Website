@@ -20,11 +20,11 @@ export default function HeroSection() {
           <div
             style={{
               background:
-                "conic-gradient(from var(--border-angle), #FF57DB, #F0C8E7, #CC86F2, #9D78F2)",
+                "conic-gradient(from var(--border-angle), #FF57DB, #B33691, #6748DB, #9D78F2)",
             }}
             className="animate-rotate-border rounded-[12px] p-[3px] hover:shadow-[0_0_12px_0_rgba(255,255,255,0.60)]"
           >
-            <div className="rounded-[12px] bg-black px-6 py-2.5 text-[15.033px] font-medium leading-[31.067px] text-white transition-all duration-500 ease-in">
+            <div className="rounded-[12px] px-6 py-2.5 bg-black text-[15.033px] font-medium leading-[31.067px] text-white transition-all duration-500 ease-in">
               Book A Free Consultation
             </div>
           </div>

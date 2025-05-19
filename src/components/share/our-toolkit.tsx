@@ -31,10 +31,13 @@ export default function OurToolkit() {
   useEffect(() => {
     const section = sectionRef.current;
     section?.addEventListener("mousemove", (e) => {
-      const { clientX, clientY } = e;
+      const rect = section.getBoundingClientRect();
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
       if (divRef.current) {
-        divRef.current.style.transform = `translate(${clientX - 175}px, ${clientY - 175}px)`;
+        divRef.current.style.transform = `translate(${x - 175}px, ${y - 175}px)`;
       }
     });
   });
@@ -48,7 +51,7 @@ export default function OurToolkit() {
         //   backgroundRepeat: "no-repeat",
         //   backgroundSize: "cover",
         // }}
-        className="relative font-inter"
+        className="relative overflow-hidden font-inter"
       >
         <div className="px-[118.5px] pb-[188px] pt-[123px] xl:px-[182.5px] 2xl:px-[422px]">
           <HeadingSection

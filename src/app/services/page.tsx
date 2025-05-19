@@ -1,9 +1,14 @@
-import HeroSection from "./components/hero-section"
+import AllServices from "./components/all-services";
+import HeroSection from "./components/hero-section";
 
 const Services = () => {
   return (
-   <HeroSection/>
-  )
-}
+    <>
+      <HeroSection />
+      <AllServices />
+     
+    </>
+  );
+};
 
-export default Services
+export default Services;

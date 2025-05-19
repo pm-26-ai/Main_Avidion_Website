@@ -98,8 +98,8 @@ export default function WhatWeOffer() {
         </div>
         <div className="absolute -left-28 -top-12 h-[250px] w-[250px] animate-blob rounded-full bg-[#971b76] opacity-70 blur-[80px]"></div>
 
-        <div className="animation-delay-1 absolute -right-28 bottom-12 h-[250px] w-[250px] animate-blob rounded-full bg-[#971b76] opacity-70 mix-blend-screen blur-[100px]"></div>
-        <div className="animation-delay-2 absolute -right-28 bottom-52 h-[250px] w-[250px] animate-blob rounded-full bg-[#622A9A] opacity-70 mix-blend-screen blur-[100px]"></div>
+        <div className="animation-delay-1 absolute -right-24 bottom-52 size-[309px] animate-blob rounded-full bg-[#971b76] opacity-70 mix-blend-screen blur-[100px]"></div>
+        <div className="animation-delay-2 absolute -right-12 bottom-8 size-[213px] animate-blob rounded-full bg-[#622A9A] opacity-70 mix-blend-screen blur-[100px]"></div>
       </div>
     </>
   );

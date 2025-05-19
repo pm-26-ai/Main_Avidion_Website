@@ -19,12 +19,13 @@ const config: Config = {
         "why-choose-us": "url('/why-choose-bg.png')",
       },
       animation: {
-        "rotate-border": "border-rotate 3s linear infinite",
+        "rotate-border": "border-rotate 4s linear infinite",
         gradient: "gradient 8s linear infinite",
-        "gradient-wave": "gradientWave 1s linear infinite",
-        blob: "blob 0.7s linear infinite",
+        "gradient-wave": "gradientWave 6s linear infinite",
+        blob: "blob 5s linear infinite",
         bounce: "bounce 3s infinite",
         "gradient-radial": "gradient-radial 12s linear infinite",
+        "service-bounce": "service-bounce 3s infinite",
       },
 
       keyframes: {
@@ -46,10 +47,10 @@ const config: Config = {
             transform: "translate(0px, 0px) scale(1)",
           },
           "33%": {
-            transform: "translate(50px, -50px) scale(1.05)",
+            transform: "translate(10px, -130px) scale(1.07)",
           },
           "66%": {
-            transform: "translate(-20px, 20px) scale(0.8)",
+            transform: "translate(-20px, -50px) scale(0.8)",
           },
           "100%": {
             transform: "translate(0px, 0px) scale(1)",
@@ -83,7 +84,16 @@ const config: Config = {
               "radial-gradient(68.81% 21.77% at 28.23% 59.53%, rgba(0,0,0,0) 0%, #000 100%)",
           },
         },
-
+        "service-bounce": {
+          "0%, 100%": {
+            transform: "translateY(-4%)",
+            "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            transform: "none",
+            "animation-timing-function": "cubic-bezier(0,0,0.2,1)",
+          },
+        },
         "border-rotate": {
           to: {
             "--border-angle": "360deg",
