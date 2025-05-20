@@ -17,6 +17,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "why-choose-us": "url('/why-choose-bg.png')",
+        "avidion-benefit": "url('/careers/benefits-bg.png')",
       },
       animation: {
         "rotate-border": "border-rotate 4s linear infinite",

@@ -1,5 +1,7 @@
 import { TbTargetArrow } from "react-icons/tb";
 import Image from "next/image";
+import Main from "./main";
+import { HeadingSection } from "@/components/share/heading-section";
 const facilities = [
   {
     url: "/icons/vision.svg",
@@ -20,61 +22,87 @@ const facilities = [
       "Transparent, collaborative process ensuring tailored, tested, and trusted solutions.",
   },
 ];
+const benefits = [
+  {
+    url: "/careers/benefit-icons/icon-1.svg",
+    title: "Competitive Compensation",
+    content:
+      "Enjoy industry-leading pay packages and performance-based incentives that reward your hard work and dedication.",
+  },
+  {
+    url: "/careers/benefit-icons/icon-2.svg",
+    title: "Comprehensive Benefits",
+    content:
+      "Experience a range of health, dental, and visioninsurance plans, alongside other benefits like flexible work schedules and paid time off.",
+  },
+  {
+    url: "/careers/benefit-icons/icon-3.svg",
+    title: "Learning & Development",
+    content:
+      "Gain access to a wealth of training and development resources, helping you grow professionally and stay ahead of the curve.",
+  },
+  {
+    url: "/careers/benefit-icons/icon-4.svg",
+    title: "Collaborative Culture",
+    content:
+      "Join a truly supportive, inclusive workplace that values open communication, teamwork, and shared success.",
+  },
+  {
+    url: "/careers/benefit-icons/icon-5.svg",
+    title: "Career Growth Opportunities",
+    content:
+      "Benefit from well-defined career paths and growth opportunities, enabling you to advance and make an impact in your chosen field.",
+  },
+  {
+    url: "/careers/benefit-icons/icon-6.svg",
+    title: "Work-Life Balance",
+    content:
+      "Embrace a healthy work-life balance with flexible work arrangements, and initiatives that support your overall well-being.",
+  },
+];
 const AboutUs = () => {
   return (
     <>
+      <Main />
       {/* our vision */}
-      {/* <div className="bg-[#13081C]">
-        <div className="flex flex-row px-[382px] py-[190px]">
-          <div className="">
-            <div className="flex flex-col items-center gap-[25px] border-r p-[27px]">
-              <div className="relative aspect-square w-[72px]">
-                <Image src={"/icons/vision.svg"} alt="vision-image" fill />
-              </div>
-              <div className="flex flex-col items-center gap-1.5">
-                <div className="text-[28px] font-medium leading-[48px] text-[#E0E0E0]">
-                  Our Vision
+      <div className="bg-[#13081C]">
+        <div className="flex flex-row px-[150px] py-[297px] 2xl:px-[340px]">
+          {facilities.map((item, index) => (
+            <>
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center gap-[25px] bg-[#13081C] px-[64px] pb-[50px] pt-[34px]"
+              >
+                <div className="relative aspect-square w-[72px]">
+                  <Image src={item.url} alt="vision-image" fill />
                 </div>
-                <div className="text-base text-[rgba(255,255,255,0.70)]">
-                  Provide highest-quality digital services globally, driving
-                  progress and excellence.
+                <div className="flex flex-col items-center gap-1.5">
+                  <div className="text-[28px] font-medium leading-[48px] text-[#E0E0E0]">
+                    {item.title}
+                  </div>
+                  <div className="text-center text-base text-[rgba(255,255,255,0.70)]">
+                    {item.content}
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center gap-[25px] border-r">
-            <div className="relative aspect-square w-[72px]">
-              <Image src={"/icons/mission.svg"} alt="vision-image" fill />
-            </div>
-            <div className="flex flex-col items-center gap-1.5">
-              <div className="text-[28px] font-medium leading-[48px] text-[#E0E0E0]">
-                Our Mission
-              </div>
-              <div className="text-base text-[rgba(255,255,255,0.70)]">
-                Transparent, collaborative process ensuring tailored, tested,
-                and trusted solutions.
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center gap-[25px]">
-            <div className="relative aspect-square w-[72px]">
-              <Image src={"/icons/approach.svg"} alt="vision-image" fill />
-            </div>
-            <div className="flex flex-col items-center gap-1.5">
-              <div className="text-[28px] font-medium leading-[48px] text-[#E0E0E0]">
-                Our Approach
-              </div>
-              <div className="text-base text-[rgba(255,255,255,0.70)]">
-                Provide highest-quality digital services globally, driving
-                progress and excellence.
-              </div>
-            </div>
-          </div>
+
+              {index != facilities.length - 1 && (
+                <div className="relative h-[425px] w-[1.48px]">
+                  <Image
+                    src={"/icons/line.svg"}
+                    alt="line-image"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+            </>
+          ))}
         </div>
-      </div> */}
+      </div>
 
       {/* vision-led strategy section */}
-      <div className="relative flex flex-col gap-[70px] overflow-hidden px-[387px] py-[103px]">
+      <div className="relative flex flex-col gap-[70px] overflow-hidden px-[150px] py-[103px] 2xl:px-[387px]">
         <div className="text-center text-[56px] font-medium leading-[65px] -tracking-[0.84px] text-white">
           Vision-Led Strategy
         </div>
@@ -134,7 +162,7 @@ const AboutUs = () => {
 
       {/* security-first culture */}
       <div className="bg-[#13081C]">
-        <div className="flex flex-col px-[254px] py-[120px]">
+        <div className="flex flex-col py-[120px] xl:px-[150px] 2xl:px-[254px]">
           <div className="text-center text-[56px] font-medium leading-[65px] -tracking-[0.84px] text-white">
             Security-First Culture{" "}
           </div>
@@ -148,7 +176,7 @@ const AboutUs = () => {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-[radial-gradient(37.42%_37.41%_at_60.23%_87.33%,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.99)_100%)]"></div>
-            <div className="relative flex flex-row items-start gap-6 px-[198px] pb-[200px] pt-[140px] font-inter text-xl font-bold">
+            <div className="relative flex flex-row items-start gap-6 px-[50px] pb-[200px] pt-[140px] font-inter text-xl font-bold xl:px-[100px] 2xl:px-[198px]">
               {/* first card */}
               <div className="flex flex-col items-center gap-4 border border-[#878787] bg-[rgba(23,23,23,0.20)] px-[94px] py-[70px] backdrop-blur-[8px]">
                 <div className="relative aspect-square size-10">
@@ -159,7 +187,7 @@ const AboutUs = () => {
                   />
                 </div>
                 <div className="flex flex-col items-center gap-[7px]">
-                  <div className="text-[#E0E0E0]">
+                  <div className="text-center text-[#E0E0E0]">
                     Enterprise-Level Security
                   </div>
                   <div className="text-center text-xl font-normal text-[#B2B2B2]">
@@ -178,7 +206,7 @@ const AboutUs = () => {
                   />
                 </div>
                 <div className="flex flex-col items-center gap-[7px]">
-                  <div className="text-xl text-[#E0E0E0]">
+                  <div className="text-center text-xl text-[#E0E0E0]">
                     Compliance & Trust
                   </div>
                   <div className="text-center text-xl font-normal text-[#B2B2B2]">
@@ -246,6 +274,36 @@ const AboutUs = () => {
         </div>
       </div>
 
+      {/* avidion benefits */}
+      <div className="bg-[#030105]">
+        <div className="py-[100px] xl:px-[200px] 2xl:px-[416px]">
+          <div className="flex flex-col gap-[57px]">
+            <HeadingSection
+              subContent="At Avidion, we're passionate about shaping the future of IT services together"
+              mainHeading="Avidion Benefits"
+              mainClassName="text-left"
+              subClassName="text-left"
+            />
+            <div className="bg-avidion-benefit relative grid grid-cols-3 gap-[33px] bg-cover bg-center bg-no-repeat">
+              {benefits.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center gap-[14px] px-[36px] pb-[33px] pt-[45px]"
+                >
+                  <div className="relative aspect-square w-[47px]">
+                    <Image src={item.url} alt="benefits-images" fill />
+                  </div>
+                  <div className="flex flex-col gap-[3px] text-center">
+                    <div className="text-white">{item.title}</div>
+                    <div className="text-[#727272]">{item.content}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ai integrated sysytems */}
       <div className="relative">
         <video
@@ -255,7 +313,7 @@ const AboutUs = () => {
           muted
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(50.16%_49.97%_at_50%_93.32%,_rgba(0,0,0,0.00)_0%,_#000_100%)]"></div>
+        <div className="absolute -top-0.5 bottom-0 left-0 right-0 bg-[radial-gradient(50.16%_49.97%_at_50%_93.32%,_rgba(0,0,0,0.00)_0%,_#000_100%)]"></div>
         <div className="relative flex flex-col items-center gap-[87px] py-[168px]">
           <div className="text-center text-[56px] font-medium leading-[65px] -tracking-[0.84px] text-white">
             AI-Integrated Systems{" "}
