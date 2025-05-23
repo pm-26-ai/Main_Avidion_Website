@@ -4,6 +4,7 @@ import { HeadingSection } from "@/components/share/heading-section";
 import CurrentOpenings from "./components/current-openings";
 import Image from "next/image";
 import RecruitmentProcess from "./components/recruitment-process";
+import SemiCircleTimeline from "./components/semi";
 const features = [
   {
     url: "/careers/features-icons/development.svg",
