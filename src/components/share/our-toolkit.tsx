@@ -28,6 +28,7 @@ const aiIcons = [
 export default function OurToolkit() {
   const divRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const section = sectionRef.current;
     section?.addEventListener("mousemove", (e) => {
@@ -40,7 +41,8 @@ export default function OurToolkit() {
         divRef.current.style.transform = `translate(${x - 175}px, ${y - 175}px)`;
       }
     });
-  });
+  },[]);
+
   return (
     <>
       <div

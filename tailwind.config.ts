@@ -21,12 +21,26 @@ const config: Config = {
       },
       animation: {
         "rotate-border": "border-rotate 4s linear infinite",
+        // for animating main logo and hero-heading
         gradient: "gradient 8s linear infinite",
         "gradient-wave": "gradientWave 6s linear infinite",
+
+        //for animating the blurry balls
         blob: "blob 5s linear infinite",
+        "circle-scale": "circle-scale 4s linear infinite",
+
+        //for bouncing the items with normal speed
         bounce: "bounce 3s infinite",
+
+        // for gardient in services page
         "gradient-radial": "gradient-radial 12s linear infinite",
+
+        // for animating all-services icons in services page little slow then bounce
         "service-bounce": "service-bounce 3s infinite",
+
+        //for animating the current-openings in career page
+        slideDown: "slideDown 400ms ease-out",
+        slideUp: "slideUp 400ms ease-out",
       },
 
       keyframes: {
@@ -55,6 +69,20 @@ const config: Config = {
           },
           "100%": {
             transform: "translate(0px, 0px) scale(1)",
+          },
+        },
+        "circle-scale": {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "33%": {
+            transform: "scale(1.07)",
+          },
+          "66%": {
+            transform: "scale(0.8)",
+          },
+          "100%": {
+            transform: "scale(1)",
           },
         },
         bounce: {
@@ -99,6 +127,14 @@ const config: Config = {
           to: {
             "--border-angle": "360deg",
           },
+        },
+        slideDown: {
+          from: { height: "0" },
+          to: { height: "var(--radix-collapsible-content-height)" },
+        },
+        slideUp: {
+          from: { height: "var(--radix-collapsible-content-height)" },
+          to: { height: "0" },
         },
       },
     },

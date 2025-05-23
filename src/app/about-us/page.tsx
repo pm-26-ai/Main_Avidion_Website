@@ -22,44 +22,6 @@ const facilities = [
       "Transparent, collaborative process ensuring tailored, tested, and trusted solutions.",
   },
 ];
-const benefits = [
-  {
-    url: "/careers/benefit-icons/icon-1.svg",
-    title: "Competitive Compensation",
-    content:
-      "Enjoy industry-leading pay packages and performance-based incentives that reward your hard work and dedication.",
-  },
-  {
-    url: "/careers/benefit-icons/icon-2.svg",
-    title: "Comprehensive Benefits",
-    content:
-      "Experience a range of health, dental, and visioninsurance plans, alongside other benefits like flexible work schedules and paid time off.",
-  },
-  {
-    url: "/careers/benefit-icons/icon-3.svg",
-    title: "Learning & Development",
-    content:
-      "Gain access to a wealth of training and development resources, helping you grow professionally and stay ahead of the curve.",
-  },
-  {
-    url: "/careers/benefit-icons/icon-4.svg",
-    title: "Collaborative Culture",
-    content:
-      "Join a truly supportive, inclusive workplace that values open communication, teamwork, and shared success.",
-  },
-  {
-    url: "/careers/benefit-icons/icon-5.svg",
-    title: "Career Growth Opportunities",
-    content:
-      "Benefit from well-defined career paths and growth opportunities, enabling you to advance and make an impact in your chosen field.",
-  },
-  {
-    url: "/careers/benefit-icons/icon-6.svg",
-    title: "Work-Life Balance",
-    content:
-      "Embrace a healthy work-life balance with flexible work arrangements, and initiatives that support your overall well-being.",
-  },
-];
 const AboutUs = () => {
   return (
     <>
@@ -270,36 +232,6 @@ const AboutUs = () => {
             </div>
 
             <div className="relative aspect-square w-[432px]"></div>
-          </div>
-        </div>
-      </div>
-
-      {/* avidion benefits */}
-      <div className="bg-[#030105]">
-        <div className="py-[100px] xl:px-[200px] 2xl:px-[416px]">
-          <div className="flex flex-col gap-[57px]">
-            <HeadingSection
-              subContent="At Avidion, we're passionate about shaping the future of IT services together"
-              mainHeading="Avidion Benefits"
-              mainClassName="text-left"
-              subClassName="text-left"
-            />
-            <div className="bg-avidion-benefit relative grid grid-cols-3 gap-[33px] bg-cover bg-center bg-no-repeat">
-              {benefits.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center gap-[14px] px-[36px] pb-[33px] pt-[45px]"
-                >
-                  <div className="relative aspect-square w-[47px]">
-                    <Image src={item.url} alt="benefits-images" fill />
-                  </div>
-                  <div className="flex flex-col gap-[3px] text-center">
-                    <div className="text-white">{item.title}</div>
-                    <div className="text-[#727272]">{item.content}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

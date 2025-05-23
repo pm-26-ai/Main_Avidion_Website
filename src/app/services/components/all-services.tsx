@@ -4,7 +4,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
-const services = [
+export const services = [
   {
     id: 1,
     url: "/services/service-1.png",

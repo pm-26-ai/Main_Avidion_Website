@@ -11,5 +11,5 @@ export default function CareersLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <><div className="font-inter">{children}</div></>;
 }

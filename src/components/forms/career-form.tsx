@@ -104,7 +104,7 @@ const CareerForm = () => {
     }
   }
 
-  const onerror = (e:unknown) => {
+  const onerror = (e: unknown) => {
     console.log("error in the form data is", e);
   };
   return (
@@ -112,7 +112,7 @@ const CareerForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit, onerror)}
-          className="mx-auto max-w-3xl space-y-6 rounded-xl bg-white p-8 shadow-md"
+          className="w-full space-y-4"
         >
           <h2 className="text-2xl font-semibold text-gray-800">Careers Form</h2>
 
@@ -125,7 +125,7 @@ const CareerForm = () => {
                 <FormLabel>Full Name</FormLabel>
                 <FormControl>
                   <Input
-                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Full Name"
                     {...field}
                   />
@@ -145,7 +145,7 @@ const CareerForm = () => {
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                      className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       type="email"
                       placeholder="Email Address"
                       {...field}
@@ -163,7 +163,7 @@ const CareerForm = () => {
                   <FormLabel>Phone Number</FormLabel>
                   <FormControl>
                     <Input
-                      className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                      className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       type="text"
                       placeholder="+911234567890"
                       {...field}
@@ -184,7 +184,7 @@ const CareerForm = () => {
                 <FormLabel>Address</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Full address"
                     rows={2}
                     {...field}
@@ -205,7 +205,7 @@ const CareerForm = () => {
                 <FormControl>
                   <Input
                     type="text"
-                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="e.g. Frontend Developer"
                     {...field}
                   />
@@ -227,10 +227,10 @@ const CareerForm = () => {
                     value={field.value ?? ""}
                     onValueChange={field.onChange}
                   >
-                    <SelectTrigger className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <SelectTrigger className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                       <SelectValue placeholder="Select Experience Level" />
                     </SelectTrigger>
-                    <SelectContent className="rounded-md border border-gray-300 bg-white px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <SelectContent className="rounded-md border border-gray-300 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                       <SelectGroup>
                         <SelectItem value={Experience.Fresher}>
                           Fresher
@@ -263,7 +263,7 @@ const CareerForm = () => {
                         onChange={(e) =>
                           field.onChange(parseInt(e.target.value))
                         }
-                        className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                        className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="e.g. 2"
                       />
                     </FormControl>
@@ -284,7 +284,7 @@ const CareerForm = () => {
                         onChange={(e) =>
                           field.onChange(parseInt(e.target.value))
                         }
-                        className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                        className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="e.g. 6"
                       />
                     </FormControl>
@@ -305,7 +305,7 @@ const CareerForm = () => {
                   <FormLabel>Current Salary (in lakhs)</FormLabel>
                   <FormControl>
                     <Input
-                      className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                      className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       type="number"
                       placeholder="e.g. 3.5"
                       {...field}
@@ -323,7 +323,7 @@ const CareerForm = () => {
                   <FormLabel>Expected Salary (in lakhs)</FormLabel>
                   <FormControl>
                     <Input
-                      className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                      className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       type="number"
                       placeholder="e.g. 6.5"
                       {...field}
@@ -344,7 +344,7 @@ const CareerForm = () => {
                 <FormLabel>Comments (Optional)</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Any additional information"
                     {...field}
                   />
@@ -363,7 +363,7 @@ const CareerForm = () => {
                 <FormLabel>Resume Link</FormLabel>
                 <FormControl>
                   <Input
-                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                    className="w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="e.g. https://drive.google.com/your-resume"
                     {...field}
                   />

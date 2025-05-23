@@ -1,6 +1,7 @@
 import Footer from "@/components/share/footer";
 import Navbar from "@/components/share/navbar";
 import { Toaster } from "@/components/ui/sonner";
+import WhatsAppIcon from "@/components/whatsapp";
 import "@/styles/globals.css";
 
 import type { Metadata } from "next";
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Footer />
         </main>
         <Toaster />
+        <WhatsAppIcon/>
       </body>
     </html>
   );
