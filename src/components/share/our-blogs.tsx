@@ -1,4 +1,5 @@
-import BlogCard from "./components/blog-card";
+import BlogCard from "@/app/blogs/components/blog-card";
+
 import {
   Carousel,
   CarouselContent,
@@ -6,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-const blogs = [
+export const blogs = [
   {
     id: 1,
     image: "/blogs/blog-1.png",
@@ -53,19 +54,17 @@ const blogs = [
     author: "Shreya Goyal",
   },
 ];
-export default function Blogs() {
+export default function OurBlogs() {
   return (
     <>
       <div className="relative">
         <video
-          className="absolute inset-0 top-60 z-0 h-[70%] w-full object-cover"
+          src="/blogs/blog-bg-video.mp4"
           autoPlay
-          muted
           loop
-          playsInline
-        >
-          <source src="/blog-bg-video.mp4" type="video/mp4" />
-        </video>
+          muted
+          className="absolute inset-0 top-60 h-[70%] w-full object-cover"
+        />
 
         {/* blog content */}
         <div className="relative flex flex-col gap-[98px] px-[118.5px] py-[108px] text-white xl:px-[182.5px] 2xl:px-[422px]">

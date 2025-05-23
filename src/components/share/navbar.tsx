@@ -58,7 +58,7 @@ export default function Navbar() {
                 <>
                   <Link key={item.id} href={item.url} className="relative">
                     <span
-                      className={`font-inter text-[13px] font-normal leading-[26px] -tracking-[0.001px] ${pathname === item.url ? `bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#4D1263_95.25%)] bg-clip-text text-transparent underline underline-offset-8` : `text-white`}`}
+                      className={`font-inter text-[13px] font-normal leading-[26px] -tracking-[0.001px] ${pathname === item.url ? `bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#9E3DC2_95.25%)] bg-clip-text text-transparent underline underline-offset-8` : `text-white`}`}
                     >
                       {item.name}
                     </span>

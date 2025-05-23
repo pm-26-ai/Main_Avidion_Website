@@ -6,6 +6,7 @@ import Blogs from "./blogs/page";
 import HeroSection from "@/components/share/hero-section";
 import OurToolkit from "@/components/share/our-toolkit";
 import WhyChooseUs from "@/components/share/why-choose-us";
+import OurBlogs from "@/components/share/our-blogs";
 export default async function HomePage() {
   return (
     <>
@@ -15,7 +16,7 @@ export default async function HomePage() {
       <OurToolkit />
       <HowWeWork />
       {/* <ContactForm /> */}
-      <Blogs />
+      <OurBlogs/>
     </>
   );
 }
