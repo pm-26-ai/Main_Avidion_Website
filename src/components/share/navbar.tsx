@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="sticky top-6 z-30 mx-auto px-[50px] xl:px-[114px] 2xl:px-[249px]">
+      <div className="fixed w-full top-6 z-30 mx-auto px-[50px] xl:px-[114px] 2xl:px-[249px]">
         <div className="flex items-center justify-between rounded-[60px] border border-white/15 bg-[rgba(45,45,45,0.27)] py-2 backdrop-blur-[22.8px] lg:px-[68.5px] 2xl:px-[173px]">
           {/* avidion logo */}
           <div className="flex items-center gap-[10.87px]">

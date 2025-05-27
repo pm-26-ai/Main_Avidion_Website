@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { IoArrowForward } from "react-icons/io5";
 export type BlogCardProps = {
   id: number;
@@ -8,17 +9,19 @@ export type BlogCardProps = {
   heading: string;
   content: string;
   author: string;
+  url: string;
 };
 export default function BlogCard({ blog }: { blog: BlogCardProps }) {
   return (
     <>
-      <div className="font-inter rounded-[10px] border border-white/15 bg-[rgba(21,21,21,0.29)] backdrop-blur-[23.14px]">
+      <div className="rounded-[10px] border border-white/15 bg-[rgba(21,21,21,0.29)] font-inter backdrop-blur-[23.14px]">
         {/* blog-image */}
         <div className="relative aspect-[1.77]">
           <Image
             src={blog.image}
             alt="blog-image"
             className="rounded-tl-[10px] rounded-tr-[10px] object-cover"
+            quality={100}
             fill
           />
         </div>
@@ -34,20 +37,23 @@ export default function BlogCard({ blog }: { blog: BlogCardProps }) {
           </div>
           <div className="flex flex-col gap-[19px]">
             <div className="flex flex-col gap-[7px]">
-              <div className="text-base font-medium text-white">
+              <div className="h-[48px] text-base font-medium text-white">
                 {blog.heading}
               </div>
               <div className="text-base font-normal text-[#B3B2B3]">
                 {blog.content}
               </div>
             </div>
-            <div className="text-sm font-normal text-[#B9B9B9] italic">
+            <div className="text-sm font-normal italic text-[#B9B9B9]">
               By {blog.author}
             </div>
           </div>
-          <div className="flex items-center gap-1 text-sm font-normal text-white/61">
+          <Link
+            href={blog.url}
+            className="text-white/61 flex items-center gap-1 text-sm font-normal"
+          >
             Read More <IoArrowForward />
-          </div>
+          </Link>
         </div>
       </div>
     </>

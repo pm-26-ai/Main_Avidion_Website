@@ -7,53 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-export const blogs = [
-  {
-    id: 1,
-    image: "/blogs/blog-1.png",
-    mainTech: "NextJS",
-    date: "April 14, 2025",
-    heading: "Dynamic routing in Next.js",
-    content: "Dynamic routing in Next.js allows developers to create pages ...",
-    author: "Shreya Goyal",
-  },
-  {
-    id: 2,
-    image: "/blogs/blog-1.png",
-    mainTech: "NextJS",
-    date: "April 14, 2025",
-    heading: "Dynamic routing in Next.js",
-    content: "Dynamic routing in Next.js allows developers to create pages ...",
-    author: "Shreya Goyal",
-  },
-  {
-    id: 3,
-    image: "/blogs/blog-1.png",
-    mainTech: "NextJS",
-    date: "April 14, 2025",
-    heading: "Dynamic routing in Next.js",
-    content: "Dynamic routing in Next.js allows developers to create pages ...",
-    author: "Shreya Goyal",
-  },
-  {
-    id: 4,
-    image: "/blogs/blog-1.png",
-    mainTech: "NextJS",
-    date: "April 14, 2025",
-    heading: "Dynamic routing in Next.js",
-    content: "Dynamic routing in Next.js allows developers to create pages ...",
-    author: "Shreya Goyal",
-  },
-  {
-    id: 5,
-    image: "/blogs/blog-1.png",
-    mainTech: "NextJS",
-    date: "April 14, 2025",
-    heading: "Dynamic routing in Next.js",
-    content: "Dynamic routing in Next.js allows developers to create pages ...",
-    author: "Shreya Goyal",
-  },
-];
+import { blogs } from "@/data";
 export default function OurBlogs() {
   return (
     <>

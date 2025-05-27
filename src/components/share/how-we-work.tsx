@@ -1,64 +1,16 @@
 "use client";
-import { IoSearch } from "react-icons/io5";
-import { BiPaint } from "react-icons/bi";
-import { LuCodeXml } from "react-icons/lu";
-import { FaChartLine } from "react-icons/fa6";
-import { HiOutlineRocketLaunch } from "react-icons/hi2";
-import { GoFileCode } from "react-icons/go";
-import { MdAppRegistration } from "react-icons/md";
+
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { HeadingSection } from "./heading-section";
-const data = [
-  {
-    title: "Discovery",
-    description:
-      "We begin by understanding your business needs, goals, and the specific challenges you want to address.",
-    icon: IoSearch,
-  },
-  {
-    title: "Planning",
-    description:
-      "Our team creates a detailed roadmap outlining the scope, timeline, resources, and deliverables for your project.",
-    icon: MdAppRegistration,
-  },
-  {
-    title: "Design",
-    description:
-      "We create user-centric designs that align with your brand identity and provide optimal user experience.",
-    icon: BiPaint,
-  },
-  {
-    title: "Development",
-    description:
-      "Our developers build your solution using cutting-edge technologies and best development practices.",
-    icon: LuCodeXml,
-  },
-  {
-    title: "Testing",
-    description:
-      "Rigorous quality assurance ensures your solution works flawlessly across all devices and scenarios.",
-    icon: GoFileCode,
-  },
-  {
-    title: "Deployment",
-    description:
-      "We handle the smooth launch of your solution, ensuring everything runs perfectly in the production environment.",
-    icon: HiOutlineRocketLaunch,
-  },
-  {
-    title: "Support & Growth",
-    description:
-      "Our relationship continues with ongoing maintenance, updates, and strategic growth initiatives.",
-    icon: FaChartLine,
-  },
-];
+import { howWeWork } from "@/data";
+
 export default function HowWeWork() {
   // const isSmallDevice = useMediaQuery("only screen and (max-width : 425px)");
-  const isSmallDevice=false;
+  const isSmallDevice = false;
   return (
     <>
       {/* <div className="relative flex flex-col gap-[98px] px-[118.5px] py-[108px] text-white xl:px-[182.5px] 2xl:px-[422px]"></div> */}
-      <div className="relative min-h-screen">
+      <div className="relative">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
@@ -91,7 +43,7 @@ export default function HowWeWork() {
             ></div>
 
             {/* Timeline items */}
-            {data.map((item, index) => (
+            {howWeWork.map((item, index) => (
               <div key={index} className="relative mb-14 flex w-full">
                 {isSmallDevice ? (
                   <>
