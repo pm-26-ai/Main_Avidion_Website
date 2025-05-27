@@ -11,5 +11,9 @@ export default function PortfolioLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <div className="font-inter">{children}</div>
+    </>
+  );
 }

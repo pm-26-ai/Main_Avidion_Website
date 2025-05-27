@@ -59,7 +59,68 @@ export const blogs = [
     content: "Dynamic routing in Next.js allows developers to create pages ...",
     author: "Shreya Goyal",
     url: "/blogs/ai-chatbot-in-healthcare",
-  }
+  },
+];
+
+export const portfolio = [
+  {
+    id: 1,
+    videoUrl: "/portfolio/portfolio-1.mp4",
+    title: "Avidion Softwares – Futuristic AI & Cloud Transformation Website",
+    description:
+      "Avidion Software's official website is a visually captivating, interactive platform designed to position the company as a leader in AI integration, cloud solutions, and digital transfor",
+    // redirectUrl:"#"
+  },
+  {
+    id: 2,
+    videoUrl: "/portfolio/portfolio-2.mp4",
+    title:
+      "Avidion: Crafting Future-Ready Digital Experiences with AI at the Core",
+    description:
+      "Avidion is a premium software development company dedicated to transforming ideas into reality for startups and enterprises worldwide. With a futur...",
+    // redirectUrl:"#"
+  },
+  {
+    id: 3,
+    videoUrl: "/portfolio/portfolio-3.mp4",
+    title:
+      "ElevateCare – Suggesting an uplift in healthcare standards and patient experience.",
+    description:
+      "This website was developed for HealthCare Center, a forward-thinking medical facility dedicated to providing advanced healthcare for a better...",
+    // redirectUrl:"#"
+  },
+  {
+    id: 4,
+    videoUrl: "/portfolio/portfolio-4.mp4",
+    title: "Logistics sector",
+    description:
+      "A warehouse worker wearing a headset and holding a RFID embedded device, navigating through aisles filled with sports merchandise. The worker... ",
+    // redirectUrl:"#"
+  },
+  {
+    id: 5,
+    videoUrl: "/portfolio/portfolio-5.mp4",
+    title: "Healthcare Sector",
+    description:
+      "A radiologist reviews a CT scan on a computer screen, where AI-generated annotations highlight areas of concern, such as potential intracranial...",
+    // redirectUrl:"#"
+  },
+  {
+    id: 6,
+    videoUrl: "/portfolio/portfolio-6.mp4",
+    title: "Real Estate",
+    description:
+      "A real estate agent uses a computer displaying AI-generated property descriptions alongside high-resolution images of properties. The interface showcas...",
+    // redirectUrl:"#"
+  },
+  {
+    id: 7,
+    videoUrl: "/portfolio/portfolio-7.mp4",
+    title: "E-commerce",
+    description:
+      "A digital interface showcasing AI-generated fashion designs based on textual descriptions. The screen displays multiple apparel images created by the AI, each...",
+    // redirectUrl:"#"
+  },
 ];
 
 export const howWeWork = [

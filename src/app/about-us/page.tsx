@@ -1,7 +1,6 @@
 import { TbTargetArrow } from "react-icons/tb";
 import Image from "next/image";
 import Main from "./main";
-import { HeadingSection } from "@/components/share/heading-section";
 const facilities = [
   {
     url: "/icons/vision.svg",

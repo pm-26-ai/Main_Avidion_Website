@@ -16,7 +16,7 @@ export default function BlogCard({ blog }: { blog: BlogCardProps }) {
     <>
       <div className="rounded-[10px] border border-white/15 bg-[rgba(21,21,21,0.29)] font-inter backdrop-blur-[23.14px]">
         {/* blog-image */}
-        <div className="relative aspect-[1.77]">
+        <div className="relative aspect-[16/9]">
           <Image
             src={blog.image}
             alt="blog-image"
