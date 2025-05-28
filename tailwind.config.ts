@@ -41,6 +41,8 @@ const config: Config = {
         //for animating the current-openings in career page
         slideDown: "slideDown 400ms ease-out",
         slideUp: "slideUp 400ms ease-out",
+
+        "infinite-scroll": "infinite-scroll 20s linear infinite",
       },
 
       keyframes: {
@@ -135,6 +137,10 @@ const config: Config = {
         slideUp: {
           from: { height: "var(--radix-collapsible-content-height)" },
           to: { height: "0" },
+        },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
         },
       },
     },

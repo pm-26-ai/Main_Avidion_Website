@@ -29,7 +29,7 @@ export default function RootLayout({
           <Footer />
         </main>
         <Toaster />
-        <WhatsAppIcon/>
+        <WhatsAppIcon />
       </body>
     </html>
   );

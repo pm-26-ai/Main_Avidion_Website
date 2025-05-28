@@ -40,7 +40,7 @@ export default function BlogCard({ blog }: { blog: BlogCardProps }) {
               <div className="h-[48px] text-base font-medium text-white">
                 {blog.heading}
               </div>
-              <div className="text-base font-normal text-[#B3B2B3]">
+              <div className="h-[72px] text-base font-normal text-[#B3B2B3]">
                 {blog.content}
               </div>
             </div>

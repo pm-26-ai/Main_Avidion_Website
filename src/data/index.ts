@@ -167,3 +167,33 @@ export const howWeWork = [
     icon: FaChartLine,
   },
 ];
+
+export const tapeSection = [
+  {
+    content: "Team Planner",
+  },
+  {
+    content: "Project Management",
+  },
+  {
+    content: "Virtual Office",
+  },
+  {
+    content: "Chat",
+  },
+  {
+    content: "Documents",
+  },
+  {
+    content: "Inbox",
+  },
+  {
+    content: "3D websites",
+  },
+  {
+    content: "AI integration",
+  },
+  {
+    content: "Custom software development",
+  },
+];
