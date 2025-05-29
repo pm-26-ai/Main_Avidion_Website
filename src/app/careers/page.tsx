@@ -70,16 +70,34 @@ const Careers = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const section = sectionRef.current;
-    section?.addEventListener("mousemove", (e) => {
-      const rect = section.getBoundingClientRect();
+    const div = divRef.current;
 
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+    if (!div || !section) return;
 
-      if (divRef.current) {
-        divRef.current.style.transform = `translate(${x - 86}px, ${y - 86}px)`;
-      }
-    });
+    const handleMouseEnter = () => {
+      div.style.opacity = "0.85";
+    };
+
+    const handleMouseLeave = () => {
+      div.style.opacity = "0";
+    };
+
+    const handleMouseMove = () => {
+      section?.addEventListener("mousemove", (e) => {
+        const rect = section.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        if (divRef.current) {
+          divRef.current.style.transform = `translate(${x - 86}px, ${y - 86}px)`;
+        }
+      });
+    };
+
+    section?.addEventListener("mousemove", handleMouseMove);
+    section?.addEventListener("mouseenter", handleMouseEnter);
+    section?.addEventListener("mouseleave", handleMouseLeave);
   }, []);
   return (
     <>
@@ -188,13 +206,13 @@ const Careers = () => {
               </div>
               <div
                 ref={divRef}
-                className="absolute inset-0 z-0 size-[192px] rounded-full bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] blur-[97.25px]"
+                className="absolute inset-0 z-0 size-[192px] rounded-full bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] opacity-0 blur-[97.25px] transition-opacity duration-300"
               ></div>
             </div>
           </div>
 
-          <div className="left-1/5 absolute top-[60%] size-[825px] animate-blob rounded-full bg-[#A5318A] opacity-[0.25] blur-[249px]"></div>
-          <div className="absolute right-[15%] top-[80%] size-[569px] animate-blob rounded-full bg-[#622A9A] opacity-[0.25] blur-[112px]"></div>
+          {/* <div className="left-1/5 absolute top-[60%] size-[825px] animate-blob rounded-full bg-[#A5318A] opacity-[0.25] blur-[249px]"></div>
+          <div className="absolute right-[15%] top-[80%] size-[569px] animate-blob rounded-full bg-[#622A9A] opacity-[0.25] blur-[112px]"></div> */}
         </div>
       </div>
 

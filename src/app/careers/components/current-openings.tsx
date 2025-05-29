@@ -4,7 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Dialog, DialogContent, DialogFooter } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { RxCross2 } from "react-icons/rx";
 import CareerForm from "@/components/forms/career-form";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -183,11 +189,11 @@ export default function CurrentOpenings() {
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-[50%] rounded-xl border border-none bg-[#141315] px-[116px]">
-          <CareerForm />
-          <DialogFooter>
-            <Button type="submit">Save changes</Button>
-          </DialogFooter>
+        <DialogContent className="flex h-full w-full items-center justify-center border border-none bg-black/90 px-[46px]">
+          <div className="max-h-screen w-1/2 overflow-y-auto rounded-md bg-[#141315]">
+            <CareerForm />
+          </div>
+          <DialogClose></DialogClose>
         </DialogContent>
       </Dialog>
     </>
