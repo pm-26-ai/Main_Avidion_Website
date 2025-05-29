@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { HeadingSection } from "./heading-section";
+import { Tabs, TabsList, TabsContent, TabsTrigger } from "../ui/tabs";
 import Image from "next/image";
 const aiIcons = [
   {
@@ -28,10 +28,14 @@ const aiIcons = [
 export default function OurToolkit() {
   const divRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const section = sectionRef.current;
-    section?.addEventListener("mousemove", (e) => {
+    const div = divRef.current;
+
+    if (!div || !section) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
       const rect = section.getBoundingClientRect();
 
       const x = e.clientX - rect.left;
@@ -40,8 +44,19 @@ export default function OurToolkit() {
       if (divRef.current) {
         divRef.current.style.transform = `translate(${x - 175}px, ${y - 175}px)`;
       }
-    });
-  },[]);
+    };
+
+    const handleMouseEnter = () => {
+      div.style.opacity = "0.25";
+    };
+    const handleMouseLeave = () => {
+      div.style.opacity = "0";
+    };
+
+    section?.addEventListener("mouseenter", handleMouseEnter);
+    section?.addEventListener("mousemove", handleMouseMove);
+    section?.addEventListener("mouseleave", handleMouseLeave);
+  }, []);
 
   return (
     <>
@@ -118,7 +133,7 @@ export default function OurToolkit() {
 
         <div
           ref={divRef}
-          className="pointer-events-none absolute inset-0 z-10 h-[350px] w-[350px] rounded-full bg-[#622A9A] opacity-25 blur-[112px] transition-all"
+          className="pointer-events-none absolute inset-0 z-10 h-[350px] w-[350px] rounded-full bg-[#622A9A] opacity-0 blur-[112px] transition-opacity duration-300"
         ></div>
       </div>
     </>

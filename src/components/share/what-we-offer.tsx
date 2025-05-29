@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { HeadingSection } from "./heading-section";
 import Image from "next/image";
 export default function WhatWeOffer() {
@@ -45,15 +45,37 @@ export default function WhatWeOffer() {
       icon: "/what-we-offer/icon-6.svg",
     },
   ];
-  const cardRef = useRef<HTMLDivElement>(null);
-  // useEffect(()=>{
-  //  const card=cardRef.current;
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const glowRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  //  card?.addEventListener("mousemove",(e)=>{
-  //    const {clientX,clientY}=e;
+  useEffect(() => {
+    const cards = cardRefs.current;
+    const glows = glowRefs.current;
 
-  //  })
-  // },[])
+    cards.forEach((card, index) => {
+      if (!card || !glows[index]) return;
+
+      const glow = glows[index];
+      const handleMouseEnter = () => {
+        glow.style.opacity = "0.85";
+      };
+      const handleMouseMove = (e: MouseEvent) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        glow.style.left = `${x - 50}px`;
+        glow.style.top = `${y - 50}px`;
+      };
+      const handleMouseLeave = () => {
+        glow.style.opacity = "0";
+      };
+
+      card.addEventListener("mouseenter", handleMouseEnter);
+      card.addEventListener("mousemove", handleMouseMove);
+      card.addEventListener("mouseleave", handleMouseLeave);
+    });
+  }, []);
   return (
     <>
       <div className="relative overflow-x-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] px-[118.5px] py-[108px] xl:px-[182.5px] 2xl:px-[422px]">
@@ -64,32 +86,42 @@ export default function WhatWeOffer() {
           subClassName="text-center"
         />
         <div className="grid grid-cols-2 gap-5 xl:grid-cols-3 xl:gap-10">
-          {offerCards.map((card) => {
+          {offerCards.map((card, index) => {
             return (
               <>
-                <div
-                  key={card.id}
-                  ref={cardRef}
-                  className="bg-[rgba(0,0,0,0.06 )] flex flex-col gap-2 rounded-[10px] border border-white/15 px-[27px] pb-5 pt-[30px] font-inter -tracking-[0.002px] text-white"
-                >
-                  <div className="px-1 py-0.5">
-                    <div className="relative size-[30.8px]">
-                      <Image src={card.icon} alt="service-icon-image" fill />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-[33px]">
-                    <div className="flex flex-col justify-start gap-1.5">
-                      <div className="text-base font-medium leading-[31px]">
-                        {card.title}
+                <div className="overflow-hidden">
+                  <div
+                    key={card.id}
+                    ref={(el) => {
+                      cardRefs.current[index] = el;
+                    }}
+                    className="bg-[rgba(0,0,0,0.06 )] relative z-10 flex flex-col gap-2 rounded-[10px] border border-white/15 px-[27px] pb-5 pt-[30px] font-inter -tracking-[0.002px] text-white"
+                  >
+                    <div
+                      ref={(el) => {
+                        glowRefs.current[index] = el;
+                      }}
+                      className="pointer-events-none absolute z-0 h-[70px] w-[70px] rounded-full bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] opacity-0 blur-[70px] transition-opacity duration-200"
+                    />
+                    <div className="px-1 py-0.5">
+                      <div className="relative size-[30.8px]">
+                        <Image src={card.icon} alt="service-icon-image" fill />
                       </div>
-                      <div className="h-[104px] text-base font-normal leading-[26px] text-[rgba(255,255,255,0.70)]">
-                        {card.content}
-                      </div>
                     </div>
-                    {/* know more button */}
-                    <button className="w-full rounded-[10px] border border-white/15 bg-[rgba(61,61,61,0.40)] px-[15px] py-1.5 text-center text-sm font-normal shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
-                      Know More
-                    </button>
+                    <div className="flex flex-col gap-[33px]">
+                      <div className="flex flex-col justify-start gap-1.5">
+                        <div className="text-base font-medium leading-[31px]">
+                          {card.title}
+                        </div>
+                        <div className="h-[104px] text-base font-normal leading-[26px] text-[rgba(255,255,255,0.70)]">
+                          {card.content}
+                        </div>
+                      </div>
+                      {/* know more button */}
+                      <button className="w-full rounded-[10px] border border-white/15 bg-[rgba(61,61,61,0.40)] px-[15px] py-1.5 text-center text-sm font-normal shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
+                        Know More
+                      </button>
+                    </div>
                   </div>
                 </div>
               </>

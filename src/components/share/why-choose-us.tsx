@@ -50,8 +50,11 @@ export default function WhyChooseUs() {
 
   useEffect(() => {
     const section = sectionRef.current;
+    const div = divRef.current;
 
-    section?.addEventListener("mousemove", (e) => {
+    if (!div || !section) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
       const rect = section.getBoundingClientRect();
 
       const x = e.clientX - rect.left;
@@ -60,7 +63,17 @@ export default function WhyChooseUs() {
       if (divRef.current) {
         divRef.current.style.transform = `translate(${x - 150}px, ${y - 150}px)`;
       }
-    });
+    };
+    const handleMouseEnter = () => {
+      div.style.opacity = "0.25";
+    };
+    const handleMouseLeave = () => {
+      div.style.opacity = "0";
+    };
+
+    section?.addEventListener("mouseenter", handleMouseEnter);
+    section?.addEventListener("mousemove", handleMouseMove);
+    section?.addEventListener("mouseleave", handleMouseLeave);
   }, []);
   return (
     <>
@@ -97,7 +110,7 @@ export default function WhyChooseUs() {
           </div>
           <div
             ref={divRef}
-            className="pointer-events-none absolute inset-0 z-10 h-[300px] w-[300px] rounded-full bg-[#622A9A] opacity-25 blur-[112px] transition-all"
+            className="pointer-events-none absolute inset-0 z-10 h-[300px] w-[300px] rounded-full bg-[#622A9A] opacity-0 blur-[112px] transition-opacity duration-300"
           ></div>
         </div>
       </div>
