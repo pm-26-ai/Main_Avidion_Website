@@ -70,7 +70,7 @@ export default function OurToolkit() {
         // }}
         className="relative overflow-hidden font-inter"
       >
-        <div className="px-[118.5px] pb-[188px] pt-[123px] xl:px-[182.5px] 2xl:px-[422px]">
+        <div className="container max-w-full pb-[188px] pt-[123px]">
           <HeadingSection
             mainHeading="Our Toolkit"
             subContent="Our development and design teams bring the best blend of industry experience and update knowledge to the table. Focus on finding solutions for your business needs while we handle the technical aspect, end-to-end."

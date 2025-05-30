@@ -11,6 +11,13 @@ const config: Config = {
       xl: "1440px",
       "2xl": "1920px",
     },
+    container: {
+      padding: {
+        md: "57px",
+        xl: "182.5px",
+        "2xl": "416px",
+      },
+    },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
     },

@@ -17,11 +17,11 @@ export default function OurBlogs() {
           autoPlay
           loop
           muted
-          className="absolute inset-0 top-60 h-[70%] w-full object-cover"
+          className="absolute inset-0 top-60 h-[70%] w-full object-cover opacity-60"
         />
 
         {/* blog content */}
-        <div className="relative flex flex-col gap-[98px] px-[118.5px] py-[108px] text-white xl:px-[182.5px] 2xl:px-[422px]">
+        <div className="container relative flex max-w-full flex-col gap-[98px] py-[108px] text-white">
           {/* heading */}
           <div className="text-xl font-medium -tracking-[0.84px] sm:text-2xl md:text-4xl lg:text-[40px] xl:text-5xl 2xl:text-[56px] 2xl:leading-[65px]">
             Our Blogs

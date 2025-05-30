@@ -6,6 +6,39 @@ import { HiOutlineRocketLaunch } from "react-icons/hi2";
 import { GoFileCode } from "react-icons/go";
 import { MdAppRegistration } from "react-icons/md";
 
+export const navItems = [
+  {
+    id: 1,
+    name: "Home",
+    url: "/",
+  },
+  {
+    id: 2,
+    name: "Services",
+    url: "/services",
+  },
+  {
+    id: 3,
+    name: "About Us",
+    url: "/about-us",
+  },
+  {
+    id: 4,
+    name: "Portfolio",
+    url: "/portfolio",
+  },
+  {
+    id: 5,
+    name: "Blogs",
+    url: "/blogs",
+  },
+  {
+    id: 6,
+    name: "Career",
+    url: "/careers",
+  },
+];
+
 export const blogs = [
   {
     id: 1,

@@ -15,7 +15,7 @@ export default async function HomePage() {
       <HowWeWork />
 
       {/* <ContactForm /> */}
-      <OurBlogs />
+      {/* <OurBlogs /> */}
     </>
   );
 }

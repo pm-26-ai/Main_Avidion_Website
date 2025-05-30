@@ -51,7 +51,7 @@ export default function HeroSection() {
           </div>
         )}
 
-        <div className="relative px-[118.5px] py-[162px] xl:px-[114.5px] 2xl:px-[416px]">
+        <div className="container relative max-w-full py-[162px]">
           <div className="flex w-[700px] flex-col items-start justify-center gap-[39px] px-5 font-inter">
             <div className="flex flex-col items-start gap-2">
               <div className="rounded-[50px] border border-white/15 bg-black px-[14px] py-2 text-base font-normal text-[#9855FF]">

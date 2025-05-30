@@ -77,7 +77,7 @@ export default function WhyChooseUs() {
   }, []);
   return (
     <>
-      <div className="z-20 flex flex-col gap-[50px] px-[118.5px] pb-[82px] pt-[123px] xl:px-[182.5px] 2xl:px-[422px]">
+      <div className="container z-20 flex max-w-full flex-col gap-[50px] pb-[82px] pt-[123px]">
         <HeadingSection
           mainHeading="Why Businesses Choose Us"
           subContent="3D Websites: Immersive Experiences for a Modern Web"

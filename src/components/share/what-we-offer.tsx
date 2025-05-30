@@ -57,7 +57,7 @@ export default function WhatWeOffer() {
 
       const glow = glows[index];
       const handleMouseEnter = () => {
-        glow.style.opacity = "0.85";
+        glow.style.opacity = "1";
       };
       const handleMouseMove = (e: MouseEvent) => {
         const rect = card.getBoundingClientRect();
@@ -78,7 +78,7 @@ export default function WhatWeOffer() {
   }, []);
   return (
     <>
-      <div className="relative overflow-x-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] px-[118.5px] py-[108px] xl:px-[182.5px] 2xl:px-[422px]">
+      <div className="container relative max-w-full overflow-x-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] py-[108px]">
         <HeadingSection
           mainHeading="What We Offer"
           subContent="Avidion Software is a forward-thinking tech company specializing in custom software development, AI integration, cloud migration, and workflow automation. We deliver scalable digital solutions that drive growth for businesses of all sizes."
@@ -95,32 +95,38 @@ export default function WhatWeOffer() {
                     ref={(el) => {
                       cardRefs.current[index] = el;
                     }}
-                    className="bg-[rgba(0,0,0,0.06 )] relative z-10 flex flex-col gap-2 rounded-[10px] border border-white/15 px-[27px] pb-5 pt-[30px] font-inter -tracking-[0.002px] text-white"
+                    className="bg-[rgba(0,0,0,0.06 )] relative rounded-[10px] border border-white/15 px-[27px] pb-5 pt-[30px] font-inter -tracking-[0.002px] text-white"
                   >
                     <div
                       ref={(el) => {
                         glowRefs.current[index] = el;
                       }}
-                      className="pointer-events-none absolute z-0 h-[70px] w-[70px] rounded-full bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] opacity-0 blur-[70px] transition-opacity duration-200"
+                      className="pointer-events-none absolute h-[90px] w-[90px] rounded-full bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] opacity-0 blur-2xl transition-opacity duration-200"
                     />
-                    <div className="px-1 py-0.5">
-                      <div className="relative size-[30.8px]">
-                        <Image src={card.icon} alt="service-icon-image" fill />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-[33px]">
-                      <div className="flex flex-col justify-start gap-1.5">
-                        <div className="text-base font-medium leading-[31px]">
-                          {card.title}
-                        </div>
-                        <div className="h-[104px] text-base font-normal leading-[26px] text-[rgba(255,255,255,0.70)]">
-                          {card.content}
+                    <div className="relative z-10 flex flex-col gap-2">
+                      <div className="px-1 py-0.5">
+                        <div className="relative size-[30.8px]">
+                          <Image
+                            src={card.icon}
+                            alt="service-icon-image"
+                            fill
+                          />
                         </div>
                       </div>
-                      {/* know more button */}
-                      <button className="w-full rounded-[10px] border border-white/15 bg-[rgba(61,61,61,0.40)] px-[15px] py-1.5 text-center text-sm font-normal shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
-                        Know More
-                      </button>
+                      <div className="flex flex-col gap-[33px]">
+                        <div className="flex flex-col justify-start gap-1.5">
+                          <div className="text-base font-medium leading-[31px]">
+                            {card.title}
+                          </div>
+                          <div className="h-[104px] text-base font-normal leading-[26px] text-[rgba(255,255,255,0.70)]">
+                            {card.content}
+                          </div>
+                        </div>
+                        {/* know more button */}
+                        <button className="w-full rounded-[10px] border border-white/15 bg-[rgba(61,61,61,0.40)] px-[15px] py-1.5 text-center text-sm font-normal shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
+                          Know More
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
