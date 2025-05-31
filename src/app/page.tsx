@@ -4,7 +4,7 @@ import HeroSection from "@/components/share/hero-section";
 import OurToolkit from "@/components/share/our-toolkit";
 import WhyChooseUs from "@/components/share/why-choose-us";
 import OurBlogs from "@/components/share/our-blogs";
-import HowWeWorkWrapper from "@/components/share/how-we-woer-wrapper";
+import HowWeWork from "@/components/share/how-we-work";
 export default async function HomePage() {
   return (
     <>
@@ -12,7 +12,7 @@ export default async function HomePage() {
       <WhatWeOffer />
       <WhyChooseUs />
       {/* <OurToolkit /> */}
-      <HowWeWorkWrapper />
+      <HowWeWork />
 
       {/* <ContactForm /> */}
       <OurBlogs />
