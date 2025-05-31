@@ -13,7 +13,9 @@ const config: Config = {
     },
     container: {
       padding: {
-        md: "57px",
+        DEFAULT: "23px",
+        sm: "23px",
+        md: "52px",
         xl: "182.5px",
         "2xl": "416px",
       },
@@ -23,7 +25,8 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        "why-choose-us": "url('/why-choose-bg.png')",
+        "why-choose-us-bg-xl": "url('/why-choose-us/why-choose-bg-xl.png')",
+        "why-choose-us-bg-md": "url('/why-choose-us/why-choose-bg-md.png')",
         "avidion-benefit": "url('/careers/benefits-bg.png')",
       },
       animation: {

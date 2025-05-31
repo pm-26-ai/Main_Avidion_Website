@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed top-6 z-30 w-full px-2.5 md:px-[27px] xl:px-[114px] 2xl:px-[249px]">
-        <div className="rounded-[33px] border border-white/15 bg-[rgba(45,45,45,0.27)] backdrop-blur-[22.79px]">
+        <div className="rounded-[30px] border border-white/15 bg-[rgba(45,45,45,0.27)] backdrop-blur-[22.79px]">
           <div className="flex flex-row items-center justify-between rounded-[33px] border border-white/15 px-[19px] py-2 md:px-9 xl:px-[68.5px] 2xl:px-[173px]">
             {/* avidion logo */}
             <div className="flex items-center gap-2 md:gap-[10.87px]">

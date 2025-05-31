@@ -78,14 +78,14 @@ export default function WhatWeOffer() {
   }, []);
   return (
     <>
-      <div className="container relative max-w-full overflow-x-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] py-[108px]">
+      <div className="container relative max-w-full overflow-x-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] py-[63px] md:py-[80px] xl:py-[108px]">
         <HeadingSection
           mainHeading="What We Offer"
           subContent="Avidion Software is a forward-thinking tech company specializing in custom software development, AI integration, cloud migration, and workflow automation. We deliver scalable digital solutions that drive growth for businesses of all sizes."
           mainClassName="text-center"
           subClassName="text-center"
         />
-        <div className="grid grid-cols-2 gap-5 xl:grid-cols-3 xl:gap-10">
+        <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-x-8 md:gap-y-[54px] xl:grid-cols-3 xl:gap-x-10 xl:gap-y-[49px]">
           {offerCards.map((card, index) => {
             return (
               <>
@@ -113,12 +113,12 @@ export default function WhatWeOffer() {
                           />
                         </div>
                       </div>
-                      <div className="flex flex-col gap-[33px]">
+                      <div className="flex flex-col gap-5">
                         <div className="flex flex-col justify-start gap-1.5">
                           <div className="text-base font-medium leading-[31px]">
                             {card.title}
                           </div>
-                          <div className="h-[104px] text-base font-normal leading-[26px] text-[rgba(255,255,255,0.70)]">
+                          <div className="h-[78px] text-sm font-normal leading-[26px] text-[rgba(255,255,255,0.70)] xl:h-[104px] md:text-base">
                             {card.content}
                           </div>
                         </div>

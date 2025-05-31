@@ -1,11 +1,9 @@
 "use client";
 
-import { useMediaQuery } from "@uidotdev/usehooks";
 import { HeadingSection } from "./heading-section";
 import { howWeWork } from "@/data";
 
 export default function HowWeWork() {
-  // const isSmallDevice = useMediaQuery("only screen and (max-width : 425px)");
   const isSmallDevice = false;
   return (
     <>

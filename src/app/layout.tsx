@@ -28,7 +28,7 @@ export default function RootLayout({
           {children}
           {/* <Footer /> */}
         </main>
-        <Toaster />
+        {/* <Toaster /> */}
         <WhatsAppIcon />
       </body>
     </html>

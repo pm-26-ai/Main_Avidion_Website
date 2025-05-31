@@ -17,7 +17,7 @@ export function HeadingSection({
   badgeIcon,
 }: HeadingSectionProps) {
   return (
-    <div className="mb-10 flex flex-col gap-5 font-inter text-white">
+    <div className="mb-10 md:mb-[57px] flex flex-col gap-3 md:gap-5 font-inter text-white">
       {/* mainHeading */}
       <div
         className={`${badgeContent ? `flex w-full flex-row items-center justify-between` : `w-full`}`}

@@ -230,3 +230,45 @@ export const tapeSection = [
     content: "Custom software development",
   },
 ];
+
+export const whyChooseUs = [
+  {
+    id: 1,
+    icon: "/why-choose-us/rocket.png",
+    title: "Innovation-Led Development – ",
+    content: "We blend creativity and code for futuristic solutions.",
+  },
+  {
+    id: 2,
+    icon: "/why-choose-us/lock.png",
+    title: "Security by Design – ",
+    content:
+      "Your data and systems stay protected with enterprise-grade security.",
+  },
+  {
+    id: 3,
+    icon: "/why-choose-us/cross.png",
+    title: "Modular Architecture – ",
+    content: "Scale effortlessly with plug-and-play custom solutions.",
+  },
+  {
+    id: 4,
+    icon: "/why-choose-us/hand.png",
+    title: "Agile & Transparent – ",
+    content:
+      "Stay in the loop with iterative development and real-time collaboration.",
+  },
+  {
+    id: 5,
+    icon: "/why-choose-us/bulb.png",
+    title: "Human + AI Intelligence – ",
+    content: "Combine strategy and automation for smarter decision-making.",
+  },
+  {
+    id: 6,
+    icon: "/why-choose-us/brain.png",
+    title: "Deep Domain Expertise-",
+    content:
+      "Empowering Business Transformation with AI, Cloud, and Enterprise Solutions",
+  },
+];
