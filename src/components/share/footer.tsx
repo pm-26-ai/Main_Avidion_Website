@@ -179,7 +179,7 @@ const Footer = () => {
           backgroundImage: 'url("/footer-bg.png")',
           backgroundPosition: "center",
         }}
-        className="border-t border-t-white/15 bg-gradient-to-r from-[#020103] from-20% via-black via-20% to-[#622A9A] to-90% py-9 text-center text-base font-normal text-[#9CA3AF]"
+        className="border-t border-t-white/15 bg-gradient-to-r from-[#020103] from-20% via-black via-20% to-[#622A9A] to-90% py-9 text-center text-xs md:text-base font-normal text-[#9CA3AF]"
       >
         {" "}
         @2025 Avidion. All rights reserved.
