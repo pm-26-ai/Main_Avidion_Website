@@ -1,6 +1,5 @@
 "use client";
 import { HeadingSection } from "./heading-section";
-import { IoBookOutline } from "react-icons/io5";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { whyChooseUs } from "@/data";
@@ -38,7 +37,10 @@ export default function WhyChooseUs() {
   }, []);
   return (
     <>
-      <div className="container z-20 flex max-w-full flex-col py-[63px] pb-[82px] md:gap-[50px] md:py-[80px] xl:pt-[123px]">
+      <div
+        ref={sectionRef}
+        className="container relative z-20 flex max-w-full flex-col overflow-hidden py-[63px] pb-[82px] md:gap-[50px] md:py-[80px] xl:pt-[123px]"
+      >
         <HeadingSection
           mainHeading="Why Businesses Choose Us"
           subContent="3D Websites: Immersive Experiences for a Modern Web"
@@ -48,44 +50,11 @@ export default function WhyChooseUs() {
           // badgeIcon={<IoBookOutline className="size-4" color="#A3A0AA" />}
         />
 
-        {/* <div className="md:bg-why-choose-us-bg-md xl:bg-why-choose-us-bg-xl relative  md:bg-contain md:bg-center md:bg-no-repeat">
-          <div
-            ref={sectionRef}
-            className="grid grid-cols-1 md:grid-cols-2 md:pt-[40px] xl:grid-cols-3"
-          >
-            {cardData.map((item) => (
-              <div
-                key={item.id}
-                className="pl-[50px] flex flex-col gap-4 py-[35px] xl:px-[43px] xl:py-[50px]"
-              >
-                <div className="relative aspect-square w-[70px] animate-bounce">
-                  <Image src={item.icon} alt="why-choose-us-icon" fill />
-                </div>
-                <div className="flex flex-col items-start gap-[3px] font-inter">
-                  <div className="text-center text-base font-medium leading-[31px] text-white">
-                    {item.title}
-                  </div>
-                  <div className="text-base font-normal text-[rgba(255,255,255,0.70)] w-[291px] pb-[60px]">
-                    {item.content}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div
-            ref={divRef}
-            className="pointer-events-none absolute inset-0 z-10 h-[300px] w-[300px] rounded-full bg-[#622A9A] opacity-0 blur-[112px] transition-opacity duration-300"
-          ></div>
-        </div> */}
-
         <div className="relative xl:mt-10">
           {/* background image layer */}
           <div className="md:bg-why-choose-us-bg-md xl:bg-why-choose-us-bg-xl absolute inset-0 md:bg-contain md:bg-center md:bg-no-repeat xl:scale-[1.4]"></div>
 
-          <div
-            ref={sectionRef}
-            className="grid grid-cols-1 gap-y-[83px] md:grid-cols-2 md:gap-x-[100px] md:gap-y-[92px] lg:ml-[60px] lg:gap-x-[190px] xl:ml-0 xl:grid-cols-3 xl:gap-x-[137px] xl:gap-y-[99px]"
-          >
+          <div className="grid grid-cols-1 gap-y-[83px] md:grid-cols-2 md:gap-x-[100px] md:gap-y-[92px] lg:ml-[60px] lg:gap-x-[190px] xl:ml-0 xl:grid-cols-3 xl:gap-x-[137px] xl:gap-y-[99px]">
             {whyChooseUs.map((item, index) => (
               <>
                 <div key={index} className="flex flex-col gap-4">
@@ -105,11 +74,12 @@ export default function WhyChooseUs() {
               </>
             ))}
           </div>
-          {/* <div
-            ref={divRef}
-            className="pointer-events-none absolute inset-0 z-10 h-[300px] w-[300px] rounded-full bg-[#622A9A] opacity-0 blur-[112px] transition-opacity duration-300"
-          ></div> */}
         </div>
+
+        <div
+          ref={divRef}
+          className="absolute inset-0 h-[300px] w-[300px] rounded-full bg-[#622A9A] opacity-0 blur-[112px] transition-opacity duration-300"
+        ></div>
       </div>
     </>
   );

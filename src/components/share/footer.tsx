@@ -96,29 +96,41 @@ const generalInfo = [
 const Footer = () => {
   return (
     <>
-      <div className="font-inter flex flex-row flex-wrap items-start justify-between px-[118.5px] py-[89px] xl:px-[182.5px] 2xl:px-[422px]">
-        <div className="flex basis-[30%] flex-col gap-10 lg:basis-1/3">
-          <div className="flex items-center gap-[15px]">
-            <div className="relative size-[40px]">
-              <Image src={"/avidion-logo.png"} alt="avidion-logo" fill />
+      <div className="container flex flex-col gap-[48px] max-w-full md:flex-row items-start justify-between py-[89px] font-inter">
+        <div className="flex basis-full md:basis-[40%] flex-col gap-8 xl:basis-[30%]">
+          <div className="flex flex-col gap-10">
+            <div className="flex items-center gap-2 md:gap-2.5 xl:gap-[15px]">
+              <div className="relative size-[30px] md:size-[40px]">
+                <Image src={"/avidion-logo.png"} alt="avidion-logo" fill />
+              </div>
+              <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-inter text-lg font-bold leading-[24px] -tracking-[0.6px] text-transparent xl:text-2xl">
+                Avidion
+              </div>
             </div>
-            <div className="font-inter bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text text-2xl font-bold -tracking-[0.6px] text-transparent">
-              Avidion
+            <div className="flex flex-col gap-4">
+              {generalInfo.map((info) => (
+                <div key={info.id} className="flex flex-row gap-2.5">
+                  <div className="size-[16.7px] text-white">{info.icon}</div>
+                  <div className="text-xs font-normal text-[rgba(255,255,255,0.70)]">
+                    {info.value}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            {generalInfo.map((info) => (
-              <div key={info.id} className="flex flex-row gap-2.5">
-                <div className="size-[16.7px] text-white">{info.icon}</div>
-                <div className="text-xs font-normal text-[rgba(255,255,255,0.70)]">
-                  {info.value}
+
+          <div className="flex-row items-start gap-4 flex xl:hidden">
+            {socialIcons.map((icon) => (
+              <div key={icon.id} className="rounded-md bg-[#676768] p-[6px]">
+                <div className="flex size-[19.5px] items-center justify-center text-black">
+                  {icon.icon}
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="flex basis-[63%] flex-row justify-between">
+        <div className="flex basis-full md:basis-[50%] flex-row gap-20 md:justify-between lg:basis-[40%] xl:basis-[63%]">
           {/* navigation links */}
           <div className="flex flex-col justify-start gap-[18px] text-[13px] leading-[26px]">
             <div className="font-medium text-white">Navigation</div>
@@ -150,7 +162,7 @@ const Footer = () => {
           </div>
 
           {/* social icons */}
-          <div className="flex flex-row items-start gap-4">
+          <div className="hidden flex-row items-start gap-4 xl:flex">
             {socialIcons.map((icon) => (
               <div key={icon.id} className="rounded-md bg-[#676768] p-[6px]">
                 <div className="flex size-[19.5px] items-center justify-center text-black">

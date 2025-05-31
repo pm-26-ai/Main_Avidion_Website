@@ -6,7 +6,6 @@ export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
   const [isHovering, setIsHovering] = useState<boolean>(false);
 
-
   useEffect(() => {
     const section = containerRef.current;
     section?.addEventListener("mousemove", (e) => {
@@ -28,7 +27,7 @@ export default function HeroSection() {
       >
         <video
           src="/hero-section/bg-hero-video.mp4"
-          className="absolute left-[40px] top-[28px] sm:top-[45px] h-full w-full scale-[1.8] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1.15]"
+          className="absolute left-[40px] top-[28px] h-full w-full scale-[1.8] sm:top-[45px] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1.15]"
           autoPlay
           muted
           loop
@@ -36,7 +35,7 @@ export default function HeroSection() {
         {/* Hidden background image - only visible on the hover */}
         {isHovering && (
           <div
-            className="absolute inset-0 transition-all duration-200 ease-out"
+            className="inset-0 transition-all duration-200 ease-out xl:absolute"
             style={{
               maskImage: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 0.4) 12%, transparent 18%)`,
               // WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 0.4) 12%, transparent 18%)`,

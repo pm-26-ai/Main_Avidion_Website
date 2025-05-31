@@ -26,7 +26,7 @@ export default function RootLayout({
         <main className="bg-[#020103]">
           <Navbar />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </main>
         {/* <Toaster /> */}
         <WhatsAppIcon />
