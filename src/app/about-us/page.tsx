@@ -134,6 +134,8 @@ const AboutUs = () => {
               muted
               loop
               autoPlay
+              playsInline
+              preload=""
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-[radial-gradient(37.42%_37.41%_at_60.23%_87.33%,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.99)_100%)]"></div>

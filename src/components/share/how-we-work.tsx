@@ -1,3 +1,4 @@
+"use client";
 import { HeadingSection } from "./heading-section";
 
 export default function HowWeWork() {
@@ -40,6 +41,7 @@ export default function HowWeWork() {
               ></div>
 
               {/* Timeline items */}
+              {/* <Timeline /> */}
             </div>
           </div>
         </div>

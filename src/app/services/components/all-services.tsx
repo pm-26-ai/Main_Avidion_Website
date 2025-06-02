@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
 
 export const services = [
   {
@@ -51,27 +49,29 @@ export const services = [
 export default function AllServices() {
   return (
     <>
-      <div className="relative h-[330vh]">
+      <div className="relative">
         {/* Sticky Video */}
         <video
           src="/how-we-work-bg-video.mp4"
           muted
           autoPlay
           loop
-          className="sticky top-0 w-full object-cover opacity-25"
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
 
         {/* Cards scrolling over the video */}
-        <div className="absolute inset-0 flex flex-col justify-center gap-10 px-[50px] font-inter xl:px-[114px] 2xl:px-[249px]">
+        <div className="relative flex flex-col justify-center gap-10 py-[67px] font-inter md:px-[29px] xl:px-[114px] 2xl:px-[249px]">
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`${index % 2 == 0 ? `bg-[#17061B]` : `bg-[#000000]`} relative flex flex-row items-center justify-between overflow-hidden rounded-[24px] px-[140px] py-[50px]`}
+              className={`${index % 2 == 0 ? `bg-[#17061B]` : `bg-[#000000]`} relative flex flex-col items-center gap-9 overflow-hidden rounded-[24px] px-6 py-[50px] md:px-[85px] xl:flex-row xl:justify-between xl:px-[140px]`}
             >
               <div
                 className={`${
-                  index % 2 === 0 ? "order-1" : "order-2"
-                } relative h-[356px] w-[400px]`}
+                  index % 2 === 0 ? "order-1" : "xl:order-2"
+                } relative h-[250px] w-[248px] xl:h-[356px] xl:w-[400px]`}
               >
                 <Image
                   src={service.url}
@@ -84,12 +84,12 @@ export default function AllServices() {
               <div
                 className={`${
                   index % 2 === 0 ? "order-2" : "order-1"
-                } flex basis-[50%] flex-col items-start gap-[13px]`}
+                } flex flex-col items-center justify-center gap-[13px] md:items-start xl:basis-[50%]`}
               >
-                <div className="text-[40px] font-medium leading-[48px] text-[#E0E0E0]">
+                <div className="text-xl font-medium text-[#E0E0E0] md:text-2xl xl:text-[40px] xl:leading-[48px]">
                   {service.title}
                 </div>
-                <div className="text-base font-normal text-[rgba(255,255,255,0.70)]">
+                <div className="text-sm font-normal text-[rgba(255,255,255,0.70)] md:text-base">
                   {service.content}
                 </div>
                 <Link

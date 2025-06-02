@@ -43,7 +43,7 @@ export default function OurBlogs() {
               {blogs.map((blog) => (
                 <CarouselItem
                   key={blog.id}
-                  className="basis-[300px] sm:basis-[320px] md:basis-[338px]"
+                  className="basis-[270px] sm:basis-[320px] md:basis-[338px]"
                 >
                   <BlogCard blog={blog} />
                 </CarouselItem>

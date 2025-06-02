@@ -26,7 +26,7 @@ export default function BlogCard({ blog }: { blog: BlogCardProps }) {
           />
         </div>
         {/* blog-content */}
-        <div className="flex flex-col gap-2.5 p-5">
+        <div className="flex flex-col gap-2.5 p-2 sm:p-2.5 md:p-5">
           <div className="flex flex-row gap-3">
             <div className="rounded-2xl bg-[#F1F5F9] px-2 py-[2px] text-sm font-semibold text-[#0F1729]">
               {blog.mainTech}
@@ -35,7 +35,7 @@ export default function BlogCard({ blog }: { blog: BlogCardProps }) {
               {blog.date}
             </div>
           </div>
-          <div className="flex flex-col gap-[19px]">
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-[19px]">
             <div className="flex flex-col gap-[7px]">
               <div className="h-[48px] text-base font-medium text-white">
                 {blog.heading}

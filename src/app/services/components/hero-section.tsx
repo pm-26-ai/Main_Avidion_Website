@@ -10,26 +10,26 @@ export default function HeroSection() {
           muted
           loop
           autoPlay
+          playsInline
+          preload="auto"
           className="absolute inset-0 h-full w-full object-cover"
         />
         {/* radial gradient overlay over the video */}
         <div className="absolute inset-0 animate-gradient-radial"></div>
         {/* content */}
-        <div className="relative px-[520px] pt-[100px]">
+        <div className="relative px-6 pt-[150px] md:px-[57px] lg:px-[168px] xl:px-[268px] 2xl:px-[488px]">
           <div className="flex flex-col items-center gap-[20px] font-inter">
-            <div className="flex flex-col gap-[30px] text-white">
-              <div className="px-[154px] text-center text-[56px] font-medium leading-[65px] -tracking-[0.84px]">
+            <div className="flex flex-col gap-0.5 text-white md:gap-[10px] xl:gap-[30px]">
+              <div className="text-center text-[26px] font-medium leading-[65px] -tracking-[0.54px] md:text-[40px] md:-tracking-[0.84px] xl:text-[56px]">
                 Our Services
               </div>
-              <div className="text-center text-xl font-normal">
-                At Avidion Softwares, we empower businesses with cutting-edge
-                digital solutions that blend AI, human insight, and scalable
-                engineering. Our mission is to set benchmarks in next-gen
-                technology by delivering flexible, high-impact software tailored
-                to your goals.
+              <div className="text-center text-sm font-normal md:text-base xl:text-xl">
+                We offer a comprehensive range of digital solutions including
+                Website Development, 3D Websites, AI Integration, AI Chatbot,
+                Mobile App Development, ERP Development, CRM, and WMS.
               </div>
             </div>
-            <div className="relative h-[690px] w-[702px]">
+            <div className="relative h-[350px] w-[306px] sm:h-[465px] sm:w-[421px] md:h-[621px] md:w-[612px] xl:h-[690px] xl:w-[702px]">
               <Image
                 className="object-cover"
                 src={"/inner-hero-section-bg.png"}

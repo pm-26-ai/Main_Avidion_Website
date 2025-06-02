@@ -52,13 +52,13 @@ export default function WhyChooseUs() {
 
         <div className="relative xl:mt-10">
           {/* background image layer */}
-          <div className="md:bg-why-choose-us-bg-md xl:bg-why-choose-us-bg-xl absolute inset-0 md:bg-contain md:bg-center md:bg-no-repeat xl:scale-[1.4]"></div>
+          <div className="absolute inset-0 md:bg-why-choose-us-bg-md md:bg-contain md:bg-center md:bg-no-repeat xl:scale-[1.4] xl:bg-why-choose-us-bg-xl"></div>
 
           <div className="grid grid-cols-1 gap-y-[83px] md:grid-cols-2 md:gap-x-[100px] md:gap-y-[92px] lg:ml-[60px] lg:gap-x-[190px] xl:ml-0 xl:grid-cols-3 xl:gap-x-[137px] xl:gap-y-[99px]">
             {whyChooseUs.map((item, index) => (
               <>
                 <div key={index} className="flex flex-col gap-4">
-                  <div className="relative aspect-square w-[70px] animate-bounce">
+                  <div className="relative aspect-square w-[50px] animate-bounce md:w-[60px] xl:w-[70px]">
                     <Image src={item.icon} alt="why-choose-us-icon" fill />
                   </div>
 
