@@ -31,6 +31,8 @@ export default function HeroSection() {
           autoPlay
           muted
           loop
+          preload="auto"
+          playsInline
         ></video>
         {/* Hidden background image - only visible on the hover */}
         {isHovering && (

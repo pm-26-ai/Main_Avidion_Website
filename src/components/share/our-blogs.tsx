@@ -18,6 +18,8 @@ export default function OurBlogs() {
           loop
           muted
           className="absolute inset-0 top-60 h-[70%] w-full object-cover opacity-60"
+          preload="auto"
+          playsInline
         />
 
         {/* blog content */}

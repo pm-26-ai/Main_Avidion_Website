@@ -10,6 +10,8 @@ export default function HowWeWork() {
           autoPlay
           muted
           loop
+          preload="auto"
+          playsInline
         >
           <source src="/how-we-work-bg-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
