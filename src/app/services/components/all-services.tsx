@@ -89,7 +89,7 @@ export default function AllServices() {
                 <div className="text-xl font-medium text-[#E0E0E0] md:text-2xl xl:text-[40px] xl:leading-[48px]">
                   {service.title}
                 </div>
-                <div className="text-sm font-normal text-[rgba(255,255,255,0.70)] md:text-base">
+                <div className="text-center text-sm font-normal text-[rgba(255,255,255,0.70)] md:text-left md:text-base">
                   {service.content}
                 </div>
                 <Link
