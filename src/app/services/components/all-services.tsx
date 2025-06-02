@@ -12,7 +12,7 @@ export const services = [
   },
   {
     id: 2,
-    url: "/services/service-2.svg",
+    url: "/services/service-2.png",
     title: "3D & Animated Websites",
     content:
       "Step into the future of digital experiences with cutting-edge 3D and animated website development by Avidion Softwares. We go beyond static designs to create immersive, visually stunning, and interactive websites that capture attention and elevate your brand presence.",
