@@ -74,7 +74,7 @@ export default function Navbar() {
           </div>
           {/* mobile menu */}
           {isMobileMenuOpen && (
-            <div onClick={()=>setIsMobileMenuOpen(false)} className=" flex flex-col items-center gap-9 px-[27px] pb-[30px] pt-[50px] transition-all duration-300 ease-in-out">
+            <div className=" flex flex-col items-center gap-9 px-[27px] pb-[30px] pt-[50px] transition-all duration-300 ease-in-out">
               {navItems.map((item) => (
                 <Link key={item.id} href={item.url} className="relative">
                   <span
