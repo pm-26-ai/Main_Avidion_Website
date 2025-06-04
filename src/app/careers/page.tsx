@@ -136,6 +136,7 @@ const Careers = () => {
                 alt="join avidion image"
                 className="object-contain"
                 fill
+                priority
               />
             </div>
           </div>
@@ -149,7 +150,7 @@ const Careers = () => {
                     className="flex flex-col items-center justify-center gap-[9.5px] py-[30px] xl:py-[50px]"
                   >
                     <div className="relative aspect-square w-[43px]">
-                      <Image src={item.url} alt="vision-image" fill />
+                      <Image src={item.url} alt="vision-image" fill priority/>
                     </div>
                     <div className="flex flex-col items-center gap-1.5">
                       <div className="text-base font-bold text-[#E0E0E0] md:text-xl">
@@ -168,6 +169,7 @@ const Careers = () => {
                         alt="line-image"
                         fill
                         className="object-cover"
+                        priority
                       />
                     </div>
                   )} */}
@@ -200,7 +202,7 @@ const Careers = () => {
                     className="flex flex-col items-start gap-[14px] md:pb-[26px] md:pr-[25px] md:pt-[45px] xl:items-center xl:px-[21px] xl:pb-[33px] xl:pt-[43px]"
                   >
                     <div className="relative aspect-square w-[47px]">
-                      <Image src={item.url} alt="benefits-images" fill />
+                      <Image src={item.url} alt="benefits-images" fill priority/>
                     </div>
                     <div className="flex flex-col items-start gap-[3px] xl:items-center">
                       <div className="text-white">{item.title}</div>

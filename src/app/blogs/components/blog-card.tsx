@@ -23,6 +23,7 @@ export default function BlogCard({ blog }: { blog: BlogCardProps }) {
             className="rounded-tl-[10px] rounded-tr-[10px] object-cover"
             quality={100}
             fill
+            priority
           />
         </div>
         {/* blog-content */}

@@ -18,6 +18,8 @@ export default function BlogLayout({
           autoPlay
           muted
           loop
+          preload="true"
+          playsInline
           src="/blogs/blog-shimmer-bg.mp4"
           className="absolute left-0 top-0 h-full w-full object-cover"
         />

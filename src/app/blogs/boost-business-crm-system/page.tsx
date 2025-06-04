@@ -25,7 +25,7 @@ export default function BoostBusinessCrmSystem() {
           </div>
         </div>
 
-        <div className="relative h-[597px] w-[1061px]">
+        {/* <div className="relative h-[597px] w-[1061px]">
           <Image
             src={"/blogs/blog-2.png"}
             className="rounded-[4px] object-cover"
@@ -33,7 +33,7 @@ export default function BoostBusinessCrmSystem() {
             fill
             quality={100}
           />
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-[27px]">
           <div className="text-xl font-bold">

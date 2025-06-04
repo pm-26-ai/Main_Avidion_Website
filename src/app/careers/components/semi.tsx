@@ -81,7 +81,7 @@ const SemiCircleTimeline = () => {
           <div className="flex h-[64px] w-[64px] items-center justify-center rounded-full border-[1.53px] border-[#656565] bg-[linear-gradient(90deg,_rgba(64,15,54,0.40)_0%,_rgba(37,15,71,0.90)_100%)] shadow-[inset_0_0_9.08px_4.54px_rgba(255,255,255,0.25)] backdrop-blur-[10.5px]">
             <span className="rounded-full border border-[rgba(255,255,255,0.15)] bg-[linear-gradient(90deg,_#501444_0%,_#391671_100%)] p-2 shadow-[inset_0_0_5.482px_2.741px_rgba(255,255,255,0.25)] backdrop-blur-[6.3px]">
               <div className="relative aspect-square size-6">
-                <Image src={item.icon} fill alt="recruitment-icon" />
+                <Image src={item.icon} fill alt="recruitment-icon" priority />
               </div>
             </span>
           </div>

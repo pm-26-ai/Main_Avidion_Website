@@ -110,6 +110,7 @@ export default function WhatWeOffer() {
                             src={card.icon}
                             alt="service-icon-image"
                             fill
+                            priority
                           />
                         </div>
                       </div>

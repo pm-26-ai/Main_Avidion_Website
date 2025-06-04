@@ -112,6 +112,7 @@ export default function OurToolkit() {
                             alt="ai-icons"
                             fill
                             className="rounded-[6px] object-cover"
+                            priority
                           />
                         </div>
                       </div>

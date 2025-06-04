@@ -79,6 +79,7 @@ export default function AllServices() {
                   fill
                   className="animate-service-bounce object-contain"
                   quality={100}
+                  priority
                 />
               </div>
               <div

@@ -16,7 +16,12 @@ export default function Navbar() {
             {/* avidion logo */}
             <div className="flex items-center gap-2 md:gap-[10.87px]">
               <div className="relative size-[30px] md:size-9 xl:size-[40px]">
-                <Image src={"/avidion-logo.png"} alt="avidion-logo" fill />
+                <Image
+                  src={"/avidion-logo.png"}
+                  alt="avidion-logo"
+                  fill
+                  priority
+                />
               </div>
               <div className="animate-gradient-wave bg-[radial-gradient(78.86%_61.3%_at_59.94%_54.33%,_#6748CD_0%,_#972BC7_27.47%,_#B33691_64.66%,_#8A30AC_97.65%)] bg-[length:400%_auto] bg-clip-text font-inter text-lg font-bold -tracking-[0.6px] text-transparent md:text-xl xl:text-2xl">
                 Avidion
@@ -44,11 +49,14 @@ export default function Navbar() {
 
               <div className="flex flex-row items-center gap-4 md:gap-8">
                 {/* Contact Button */}
-                <div className="rounded-[8px] border border-[#EB88D6] bg-[rgba(0,0,0,0.16)] p-1 backdrop-blur-[94.64px] md:rounded-[12px] md:p-1.5">
+                <Link
+                  href="/contact-us"
+                  className="rounded-[8px] border border-[#EB88D6] bg-[rgba(0,0,0,0.16)] p-1 backdrop-blur-[94.64px] md:rounded-[12px] md:p-1.5"
+                >
                   <div className="rounded-[5.51px] border-white/15 bg-[linear-gradient(90deg,_rgba(157,46,135,0.4)_0%,_rgba(84,41,153,0.4)_100%)] px-[15px] py-0.5 font-inter text-[10px] text-white shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px] transition-all duration-700 ease-in-out hover:bg-[linear-gradient(90deg_,rgba(201,104,182,0.40)_0%,_rgba(121,81,186,0.40)_100%)] md:rounded-[8px] md:py-1 md:text-sm">
                     Contact Us
                   </div>
-                </div>
+                </Link>
 
                 <div className="relative size-7 md:size-9 lg:hidden">
                   <div
@@ -59,6 +67,7 @@ export default function Navbar() {
                       src={"/icons/hamburger.svg"}
                       alt="hamburger-icon"
                       fill
+                      priority
                     />
                   </div>
 
@@ -66,7 +75,12 @@ export default function Navbar() {
                     className={`${isMobileMenuOpen ? `pointer-events-auto opacity-100` : `pointer-events-none opacity-0`} absolute inset-0 transition-opacity duration-300 ease-in-out`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Image src={"/icons/cross.svg"} alt="hamburger-icon" fill />
+                    <Image
+                      src={"/icons/cross.svg"}
+                      alt="hamburger-icon"
+                      fill
+                      priority
+                    />
                   </div>
                 </div>
               </div>
@@ -74,7 +88,7 @@ export default function Navbar() {
           </div>
           {/* mobile menu */}
           {isMobileMenuOpen && (
-            <div className=" flex flex-col items-center gap-9 px-[27px] pb-[30px] pt-[50px] transition-all duration-300 ease-in-out">
+            <div className="flex flex-col items-center gap-9 px-[27px] pb-[30px] pt-[50px] transition-all duration-300 ease-in-out">
               {navItems.map((item) => (
                 <Link key={item.id} href={item.url} className="relative">
                   <span

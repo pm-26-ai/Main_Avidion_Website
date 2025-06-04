@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 export default function AiChatBotsInHealthCare() {
   return (
     <>
-      <div className="flex flex-col items-start gap-[66px] py-[174px] text-white 2xl:px-[415px]">
+      <div className="flex flex-col items-start gap-[66px] py-[174px] text-white container max-w-full">
         <Link
           href="/blogs"
           className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[25px] py-[9px] text-sm text-[#EDEDED]"
@@ -28,14 +28,15 @@ export default function AiChatBotsInHealthCare() {
           </div>
         </div>
 
-        <div className="relative h-[597px] w-[1061px]">
+        {/* <div className="relative h-[597px] w-[1061px]">
           <Image
             src={"/blogs/blog-1.png"}
             className="rounded-[4px] object-cover"
             alt="ai-chatbots healthcare image"
             fill
+            priority
           />
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-[27px]">
           <div className="text-xl font-bold">What Is a Healthcare Chatbot?</div>

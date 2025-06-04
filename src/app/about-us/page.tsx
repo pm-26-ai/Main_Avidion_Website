@@ -35,7 +35,7 @@ const AboutUs = () => {
                 className="flex flex-col items-center justify-center gap-[25px] bg-[#13081C] px-[64px] pb-[50px] pt-[34px]"
               >
                 <div className="relative aspect-square w-[72px]">
-                  <Image src={item.url} alt="vision-image" fill />
+                  <Image src={item.url} alt="vision-image" fill priority />
                 </div>
                 <div className="flex flex-col items-center gap-1.5">
                   <div className="text-[28px] font-medium leading-[48px] text-[#E0E0E0]">
@@ -54,6 +54,7 @@ const AboutUs = () => {
                     alt="line-image"
                     fill
                     className="object-cover"
+                    priority
                   />
                 </div>
               )}
@@ -90,6 +91,7 @@ const AboutUs = () => {
                   alt="collaborate-image"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
               <div className="flex flex-col gap-[3px]">
@@ -110,6 +112,7 @@ const AboutUs = () => {
               alt="strategy image"
               fill
               className="object-contain"
+              priority
             />
           </div>
         </div>
@@ -135,7 +138,7 @@ const AboutUs = () => {
               loop
               autoPlay
               playsInline
-              preload=""
+              preload="auto"
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-[radial-gradient(37.42%_37.41%_at_60.23%_87.33%,_rgba(0,0,0,0)_0%,_rgba(0,0,0,0.99)_100%)]"></div>
@@ -146,7 +149,7 @@ const AboutUs = () => {
                   <Image
                     src={"/icons/enterprise-security.svg"}
                     alt="enterprise-security-icon"
-                    fill
+                    fill priority
                   />
                 </div>
                 <div className="flex flex-col items-center gap-[7px]">
@@ -166,6 +169,7 @@ const AboutUs = () => {
                     src={"/icons/compliance-and-trust.svg"}
                     alt="enterprise-security-icon"
                     fill
+                    priority
                   />
                 </div>
                 <div className="flex flex-col items-center gap-[7px]">
@@ -198,6 +202,7 @@ const AboutUs = () => {
                     alt="custom software and ai chatbots"
                     fill
                     className="object-cover"
+                    priority
                   />
                 </div>
                 <div className="flex flex-col gap-[14px]">
@@ -218,6 +223,7 @@ const AboutUs = () => {
                     alt="enterprise-crm-erp"
                     fill
                     className="object-cover"
+                    priority
                   />
                 </div>
                 <div className="flex flex-col gap-[14px]">
@@ -244,6 +250,8 @@ const AboutUs = () => {
           autoPlay
           loop
           muted
+          playsInline
+          preload="auto"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute -top-0.5 bottom-0 left-0 right-0 bg-[radial-gradient(50.16%_49.97%_at_50%_93.32%,_rgba(0,0,0,0.00)_0%,_#000_100%)]"></div>
@@ -256,6 +264,7 @@ const AboutUs = () => {
               src={"/about-us/ai-integrated-system.svg"}
               alt="ai-integrated-system"
               fill
+              priority
             />
             <div className="absolute -right-[80%] top-[20%] flex w-[321px] flex-col items-start gap-1 text-[#D4DEF9]">
               <div className="text-xl font-bold">Predictive Analytics</div>

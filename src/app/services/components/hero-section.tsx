@@ -35,6 +35,7 @@ export default function HeroSection() {
                 src={"/inner-hero-section-bg.png"}
                 alt="hero-section-background-image"
                 fill
+                priority
               />
             </div>
           </div>

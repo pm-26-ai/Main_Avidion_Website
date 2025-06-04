@@ -18,6 +18,8 @@ export default function PortfolioCard({
           autoPlay
           loop
           muted
+          playsInline
+          preload="auto"
         />
         <div className="flex flex-col gap-1.5 px-[17px] py-[17px] md:py-[19px] xl:gap-4 xl:px-[25px] xl:py-8">
           <div className="=text-base font-bold text-[#E0E0E0] h-[72px] xl:text-xl">

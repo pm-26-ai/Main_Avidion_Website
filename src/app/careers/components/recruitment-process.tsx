@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
 const data = [
@@ -59,7 +58,7 @@ export default function RecruitmentProcess() {
                       <div className="flex h-[64px] w-[64px] items-center justify-center rounded-full border border-[#656565] bg-transparent bg-[linear-gradient(90deg,_rgba(64,15,54,0.40)_0%,_rgba(37,25,71,0.40)_100%)] shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.40)] backdrop-blur-[7px]">
                         <div className="rounded-full border border-[rgba(255,255,255,0.15)] bg-[linear-gradient(90deg,_rgba(157,46,135,0.40)_0%,_rgba(84,41,153,0.41)_100%)] p-2 shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
                           <div className="relative aspect-square size-6">
-                            <Image alt="icons" src={item.icon} fill />
+                            <Image alt="icons" src={item.icon} fill priority/>
                           </div>
                         </div>
                       </div>
@@ -84,6 +83,7 @@ export default function RecruitmentProcess() {
                         fill
                         className="object-cover"
                         quality={100}
+                        priority
                       />
                     </div>
                     <div className="left-[22.8%] top-[23%] rounded-full border-[5.867px] border-[#AFAFAF] p-6 md:absolute xl:left-[27%] xl:top-[23%] xl:p-12">
@@ -93,6 +93,7 @@ export default function RecruitmentProcess() {
                           alt="rounded-circle"
                           className="z-10 rotate-[45deg]"
                           fill
+                          priority
                         />
                         <div className="absolute -bottom-[34%] left-[32%] aspect-square w-[58.79px] xl:w-[99.7px]">
                           <Image
@@ -100,6 +101,7 @@ export default function RecruitmentProcess() {
                             alt="user-image"
                             className="z-0"
                             fill
+                            priority
                           />
                         </div>
                         <div className="relative aspect-square w-[103px] xl:w-[175px]">
@@ -107,6 +109,7 @@ export default function RecruitmentProcess() {
                             src={"/careers/user.svg"}
                             alt="user-image"
                             fill
+                            priority
                           />
                         </div>
                       </div>

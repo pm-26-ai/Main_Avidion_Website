@@ -9,6 +9,8 @@ export default function MainSection() {
           autoPlay
           loop
           muted
+          playsInline
+          preload="auto"
         />
         <div className="absolute inset-0 bg-[radial-gradient(53.48%_53.48%_at_50%_96.75%,_rgba(0,0,0,0.00)_0%,_#000_100%)]"></div>
         <div className="relative flex flex-col items-center gap-[76px] px-[418px] py-[150px] text-xl text-white">
@@ -33,6 +35,7 @@ export default function MainSection() {
               alt="team-chart"
               className="object-cover"
               fill
+              priority
             />
           </div>
         </div>

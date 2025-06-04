@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
               <>
                 <div key={index} className="flex flex-col gap-4">
                   <div className="relative aspect-square w-[50px] animate-bounce md:w-[60px] xl:w-[70px]">
-                    <Image src={item.icon} alt="why-choose-us-icon" fill />
+                    <Image src={item.icon} alt="why-choose-us-icon" fill priority/>
                   </div>
 
                   <div className="flex flex-col items-start gap-[3px] font-inter">

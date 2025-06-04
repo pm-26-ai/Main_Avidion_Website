@@ -4,41 +4,44 @@ import { FaArrowLeft } from "react-icons/fa6";
 export default function ErpHelpsInBusiness() {
   return (
     <>
-      <div className="flex flex-col items-start gap-[66px] py-[174px] text-white 2xl:px-[415px]">
-        <Link
-          href="/blogs"
-          className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[25px] py-[9px] text-sm text-[#EDEDED]"
-        >
-          <FaArrowLeft size={18} color="#C0C0C0" strokeWidth={0.1} />
-          Back To Blogs
-        </Link>
-        <div className="flex flex-col gap-[34px]">
-          <div className="text-4xl font-medium">
-            How Does ERP Help to Manage Business Processes?
-          </div>
+      <div className="container flex max-w-full flex-col items-start gap-[33px] py-[142px] text-white md:gap-[50px] xl:gap-[66px]">
+        <div className="flex flex-col items-start gap-6 md:gap-[50px]">
+          <Link
+            href="/blogs"
+            className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[11px] py-2 text-xs text-[#EDEDED] md:px-[25px] md:py-[9px] md:text-sm"
+          >
+            <FaArrowLeft size={18} color="#C0C0C0" strokeWidth={0.1} />
+            Back To Blogs
+          </Link>
+          <div className="flex flex-col gap-[21px] md:gap-[34px]">
+            <div className="text-[22px] font-medium leading-[32px] md:text-[28px] md:leading-[46px] xl:text-4xl">
+              How Does ERP Help to Manage Business Processes?
+            </div>
 
-          <div className="text-base font-normal">
-            Running a business means handling many moving parts—sales, finance,
-            inventory, HR, and more. If these parts don’t work together
-            smoothly, it can slow down your growth. That’s where ERP (Enterprise
-            Resource Planning) software comes in. ERP helps you manage your
-            business processes in one place, making your work faster, easier,
-            and more organized. Let’s see how ERP makes a difference.
+            <div className="text-sm font-normal md:text-base">
+              Running a business means handling many moving parts—sales,
+              finance, inventory, HR, and more. If these parts don’t work
+              together smoothly, it can slow down your growth. That’s where ERP
+              (Enterprise Resource Planning) software comes in. ERP helps you
+              manage your business processes in one place, making your work
+              faster, easier, and more organized. Let’s see how ERP makes a
+              difference.
+            </div>
           </div>
         </div>
-
-        <div className="relative h-[597px] w-[1061px]">
+        {/* <div className="relative h-[216px] w-[400px] md:h-[370px] md:w-[650px] xl:h-[597px] xl:w-[1061px]">
           <Image
             src={"/blogs/blog-3.png"}
             className="rounded-[4px] object-cover"
             alt="ai-chatbots healthcare image"
             fill
+            priority
           />
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-[27px]">
-          <div className="text-xl font-bold">What is ERP?</div>
-          <div>
+          <div className="text-lg font-bold md:text-xl">What is ERP?</div>
+          <div className="text-sm font-normal md:text-base">
             ERP is software that helps businesses run better by connecting
             different departments in one system. Instead of using separate tools
             for accounting, inventory, sales, and HR, ERP brings everything
@@ -51,12 +54,12 @@ export default function ErpHelpsInBusiness() {
         </div>
 
         <div className="flex flex-col gap-[61px]">
-          <div className="text-xl font-bold">
+          <div className="text-sm font-bold md:text-xl">
             How ERP Helps Manage Business Processes?
           </div>
 
-          <ul className="flex list-decimal flex-col gap-[61px] pl-[15px]">
-            <li className="text-base font-bold">
+          <ul className="flex list-decimal flex-col gap-[30px] md:gap-[45px] xl:gap-[61px] pl-[15px] text-sm md:text-base">
+            <li className="font-bold">
               All Your Data in One Place
               <p className="font-normal">
                 With ERP, your sales, accounts, and inventory data are stored in
@@ -64,7 +67,7 @@ export default function ErpHelpsInBusiness() {
                 faster decisions.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Saves Time with Automation
               <p className="font-normal">
                 ERP automates everyday tasks like billing, stock updates,
@@ -72,7 +75,7 @@ export default function ErpHelpsInBusiness() {
                 errors.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Better Reports and Insights
               <p className="font-normal">
                 ERP gives you clear and real-time reports on sales, expenses,
@@ -80,14 +83,14 @@ export default function ErpHelpsInBusiness() {
                 decisions.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Smarter Inventory Management
               <p className="font-normal">
                 No more overstocking or running out of products. ERP tracks your
                 inventory levels and helps you reorder on time.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Improves Customer Service
               <p className="font-normal">
                 With customer data in the system, your team can respond quickly
@@ -95,7 +98,7 @@ export default function ErpHelpsInBusiness() {
                 support.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Helps You Stay Compliant
               <p className="font-normal">
                 ERP systems help you follow tax laws and business regulations
@@ -103,7 +106,7 @@ export default function ErpHelpsInBusiness() {
                 reports.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Grows With Your Business
               <p className="font-normal">
                 Whether you’re a small business or growing fast, ERP can scale
@@ -112,7 +115,7 @@ export default function ErpHelpsInBusiness() {
             </li>
           </ul>
 
-          <div className="text-base font-normal">
+          <div className="text-sm font-normal md:text-base">
             <div className="font-bold">Example: ERP in Action</div>
             <br />
             <br />
@@ -125,7 +128,7 @@ export default function ErpHelpsInBusiness() {
             auto-generates an invoice, and alerts the warehouse—all in minutes.
           </div>
 
-          <div className="text-base font-normal">
+          <div className="text-sm font-normal md:text-base">
             <div className="font-bold">Final Thoughts</div>
             <br />
             <br />

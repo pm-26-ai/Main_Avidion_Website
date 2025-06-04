@@ -94,7 +94,7 @@ const Footer = () => {
           <div className="flex flex-col gap-10">
             <div className="flex items-center gap-2 md:gap-2.5 xl:gap-[15px]">
               <div className="relative size-[30px] md:size-[40px]">
-                <Image src={"/avidion-logo.png"} alt="avidion-logo" fill />
+                <Image src={"/avidion-logo.png"} alt="avidion-logo" fill priority/>
               </div>
               <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-inter text-lg font-bold leading-[24px] -tracking-[0.6px] text-transparent xl:text-2xl">
                 Avidion
