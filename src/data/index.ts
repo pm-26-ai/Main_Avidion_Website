@@ -83,16 +83,6 @@ export const blogs = [
     author: "Shreya Goyal",
     url: "/blogs/ai-chatbot-in-healthcare",
   },
-  {
-    id: 5,
-    image: "/blogs/blog-1.png",
-    mainTech: "NextJS",
-    date: "April 14, 2025",
-    heading: "Dynamic routing in Next.js",
-    content: "Dynamic routing in Next.js allows developers to create pages ...",
-    author: "Shreya Goyal",
-    url: "/blogs/ai-chatbot-in-healthcare",
-  },
 ];
 
 export const portfolio = [

@@ -81,7 +81,7 @@ export default function WhatWeOffer() {
       <div className="container relative max-w-full overflow-x-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] py-[63px] md:py-[80px] xl:py-[108px]">
         <HeadingSection
           mainHeading="What We Offer"
-          subContent="Avidion Software is a forward-thinking tech company specializing in custom software development, AI integration, cloud migration, and workflow automation. We deliver scalable digital solutions that drive growth for businesses of all sizes."
+          subContent="Avidion Softwares is a forward-thinking tech company specializing in custom software development, AI integration, cloud migration, and workflow automation. We deliver scalable digital solutions that drive growth for businesses of all sizes."
           mainClassName="text-center"
           subClassName="text-center"
         />

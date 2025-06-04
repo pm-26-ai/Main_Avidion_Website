@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 export default function BoostBusinessCrmSystem() {
   return (
     <>
-      <div className="flex flex-col items-start gap-[66px] py-[174px] text-white 2xl:px-[415px]">
+      <div className="container flex max-w-full flex-col items-start gap-[66px] py-[174px] text-white">
         <Link
           href="/blogs"
           className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[25px] py-[9px] text-sm text-[#EDEDED]"

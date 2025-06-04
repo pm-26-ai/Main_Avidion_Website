@@ -4,9 +4,9 @@ import { blogs } from "@/data";
 export default function Blogs() {
   return (
     <>
-      <div className="flex flex-col gap-[98px] px-[118.5px] py-[155px] text-white xl:px-[182.5px] 2xl:px-[415px]">
+      <div className="container flex max-w-full flex-col gap-[44px] py-[155px] text-white md:gap-[79px] xl:gap-[98px]">
         <div className="flex flex-col items-center gap-[10px]">
-          <div className="rounded-[50px] border border-white/15 px-[14px] py-2 text-base font-normal text-[#9855FF]">
+          <div className="rounded-[50px] border border-white/15 px-3 py-1.5 text-xs font-normal text-[#9855FF] md:text-sm xl:px-[14px] xl:py-2 xl:text-base">
             Latest Insights
           </div>
           <HeadingSection
@@ -17,7 +17,7 @@ export default function Blogs() {
           />
         </div>
 
-        <div className="grid grid-cols-3 gap-[25px]">
+        <div className="grid grid-cols-1 gap-9 md:grid-cols-2 md:gap-x-[25px] md:gap-y-[41px] xl:grid-cols-3">
           {blogs.map((blog, index) => (
             <BlogCard key={index} blog={blog} />
           ))}
