@@ -112,7 +112,7 @@ const CareerForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit, onerror)}
-          className="space-y-[30px] px-[50px] py-9 font-inter"
+          className="max-w-full space-y-[30px] px-6 xl:px-[50px] py-9 font-inter"
         >
           <div className="flex items-center justify-center">
             <div className="relative mx-auto inline-block">

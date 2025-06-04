@@ -272,3 +272,82 @@ export const whyChooseUs = [
       "Empowering Business Transformation with AI, Cloud, and Enterprise Solutions",
   },
 ];
+
+export const currentOpenings = [
+  {
+    title: "Senior React Developer",
+    content:
+      "We're looking for an experienced React developer to join our frontend team and help build innovative web applications.",
+    department: "Engineering",
+    workType: ["Hybrid", "Full-time"],
+    requirements: [
+      "5+ years of experience with React",
+      "Strong TypeScript skills",
+      "Experience with state management libraries",
+      "Knowledge of responsive design principles",
+    ],
+    benefits: [
+      "Competitive salary",
+      "Remote work flexibility",
+      "Health insurance",
+      "Professional development budge",
+    ],
+  },
+  {
+    title: "UX/UI Designer",
+    content:
+      "Join our design team to create intuitive, accessible, and visually appealing user interfaces for our clients' products.",
+    department: "Engineering",
+    workType: ["Hybrid", "Full-time"],
+    requirements: [
+      "5+ years of experience with React",
+      "Strong TypeScript skills",
+      "Experience with state management libraries",
+      "Knowledge of responsive design principles",
+    ],
+    benefits: [
+      "Competitive salary",
+      "Remote work flexibility",
+      "Health insurance",
+      "Professional development budge",
+    ],
+  },
+  {
+    title: "DevOps Engineer",
+    content:
+      "Help us build and maintain our cloud infrastructure, CI/CD pipelines, and ensure reliability of our systems.",
+    department: "Engineering",
+    workType: ["Hybrid", "Full-time"],
+    requirements: [
+      "5+ years of experience with React",
+      "Strong TypeScript skills",
+      "Experience with state management libraries",
+      "Knowledge of responsive design principles",
+    ],
+    benefits: [
+      "Competitive salary",
+      "Remote work flexibility",
+      "Health insurance",
+      "Professional development budge",
+    ],
+  },
+  {
+    title: "Project Manager",
+    content:
+      "Oversee project lifecycles, coordinate with clients, and ensure timely delivery of high-quality solutions.",
+    department: "Engineering",
+    workType: ["Hybrid", "Full-time"],
+    requirements: [
+      "5+ years of experience with React",
+      "Strong TypeScript skills",
+      "Experience with state management libraries",
+      "Knowledge of responsive design principles",
+    ],
+    benefits: [
+      "Competitive salary",
+      "Remote work flexibility",
+      "Health insurance",
+      "Professional development budge",
+    ],
+  },
+];

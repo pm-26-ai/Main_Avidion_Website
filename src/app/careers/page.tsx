@@ -1,10 +1,15 @@
 "use client";
 import { useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
 import { HeadingSection } from "@/components/share/heading-section";
 import CurrentOpenings from "./components/current-openings";
 import Image from "next/image";
-import RecruitmentProcess from "./components/recruitment-process";
-import SemiCircleTimeline from "./components/semi";
+const RecruitmentSteps = dynamic(
+  () => import("../careers/components/recruitment-process"),
+  {
+    ssr: false,
+  },
+);
 const features = [
   {
     url: "/careers/features-icons/development.svg",
@@ -101,8 +106,6 @@ const Careers = () => {
   }, []);
   return (
     <>
-      {/* <div className="text-white font-inter text-[56px] leading-[65px] font-medium -tracking-[0.84px]">Current Openings</div>
-      <CareerForm />; */}
       {/* join team avidion */}
       <div className="relative">
         <video
@@ -110,22 +113,24 @@ const Careers = () => {
           autoPlay
           loop
           muted
+          preload="auto"
+          playsInline
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-opacity-50 bg-[radial-gradient(27.26%_97.44%_at_50.03%_100%,_rgba(42,4,48,0.00)_0%,_#000_100%)]"></div>
-        {/* <div className="relative"> */}
+
+        <div className="absolute inset-0 bg-opacity-50 bg-[radial-gradient(50.58%_26.36%_at_57.81%_48.24%,_rgba(42,4,48,0.00)_0%,_#000_100%)] md:bg-[radial-gradient(81.55%_42.77%_at_57.5%_59.34%,_rgba(42,4,48,0.00)_0%,_#000_100%)] xl:bg-[radial-gradient(27.26%_97.44%_at_50.03%_100%,_rgba(42,4,48,0.00)_0%,_#000_100%)]"></div>
         <div className="relative">
-          <div className="flex items-center justify-between py-[52px] pl-[416px] pr-[444px]">
-            <div className="flex flex-col gap-5 text-white">
-              <div className="text-[56px] font-medium leading-[65px] -tracking-[0.84px]">
+          <div className="container flex max-w-full flex-col items-center gap-[60px] sm:gap-[75px] pt-[134px] md:gap-[86px] xl:flex-row xl:justify-between">
+            <div className="flex flex-col items-center gap-2 text-white xl:items-start xl:gap-5">
+              <div className="text-2xl font-medium leading-[40px] -tracking-[0.84px] lg:text-[40px] xl:text-[56px] xl:leading-[65px]">
                 Join Team Avidion!
               </div>
-              <div className="text-[20px] font-normal leading-[30px] -tracking-[0.002px]">
+              <div className="text-center text-sm font-normal leading-[30px] -tracking-[0.002px] md:text-[20px] xl:text-left">
                 Innovate. Code. Grow – Your Journey Starts Here
               </div>
             </div>
 
-            <div className="relative aspect-square w-[402px]">
+            <div className="relative aspect-square h-[258px] w-[310px] sm:h-[323px] sm:w-[375px] md:h-[430px] md:w-[461px] xl:w-[402px]">
               <Image
                 src={"/careers/main-image.png"}
                 alt="join avidion image"
@@ -134,29 +139,29 @@ const Careers = () => {
               />
             </div>
           </div>
-          {/* careers features */}
-          <div className="bg-[linear-gradient(19deg,_rgba(0,0,0,0.70)_13.98%,_rgba(0,0,0,0.00)_88.58%)]">
-            <div className="flex flex-row gap-[32px] px-[150px] pb-[80px] pt-[57px] 2xl:px-[340px]">
+
+          <div className="bg-[linear-gradient(2deg,_rgba(0,0,0,0.70)_57%,_rgba(0,0,0,0.36)_98.29%)] backdrop-blur-[2px]">
+            <div className="container flex flex-col gap-[18px] md:px-[200px] 2xl:px-[340px] xl:flex-row xl:gap-[64px]">
               {features.map((item, index) => (
                 <>
                   <div
                     key={index}
-                    className="flex flex-col items-center justify-center gap-[9.5px] py-[50px]"
+                    className="flex flex-col items-center justify-center gap-[9.5px] py-[30px] xl:py-[50px]"
                   >
                     <div className="relative aspect-square w-[43px]">
                       <Image src={item.url} alt="vision-image" fill />
                     </div>
                     <div className="flex flex-col items-center gap-1.5">
-                      <div className="text-xl font-bold text-[#E0E0E0]">
+                      <div className="text-base font-bold text-[#E0E0E0] md:text-xl">
                         {item.title}
                       </div>
-                      <div className="text-center text-base font-normal text-[rgba(255,255,255,0.70)]">
+                      <div className="text-center text-sm font-normal text-[rgba(255,255,255,0.70)] md:text-base">
                         {item.content}
                       </div>
                     </div>
                   </div>
 
-                  {index != features.length - 1 && (
+                  {/* {index != features.length - 1 && (
                     <div className="relative h-[241px] w-[1.48px]">
                       <Image
                         src={"/icons/line.svg"}
@@ -165,19 +170,18 @@ const Careers = () => {
                         className="object-cover"
                       />
                     </div>
-                  )}
+                  )} */}
                 </>
               ))}
             </div>
           </div>
         </div>
-        {/* </div> */}
       </div>
 
       {/* avidion benefits */}
       <div className="bg-[#030105]">
-        <div className="relative overflow-hidden pb-[100px] pt-[126px] xl:px-[200px] 2xl:px-[416px]">
-          <div className="flex flex-col gap-[57px]">
+        <div className="container relative max-w-full overflow-hidden pb-[100px] pt-[63px] md:pt-[80px] xl:pt-[126px]">
+          <div className="flex flex-col gap-[50px]">
             <HeadingSection
               subContent="At Avidion, we're passionate about shaping the future of IT services together"
               mainHeading="Avidion Benefits"
@@ -185,21 +189,24 @@ const Careers = () => {
               subClassName="text-left"
             />
             <div className="relative">
+              <div className="absolute -top-12 bottom-0 left-0 right-0 scale-[0.85] bg-contain bg-center bg-no-repeat md:bg-why-choose-us-bg-md xl:left-2 xl:scale-[1] xl:bg-why-choose-us-bg-xl"></div>
               <div
                 ref={sectionRef}
-                className="relative z-10 grid grid-cols-3 gap-[33px] bg-avidion-benefit bg-cover bg-center bg-no-repeat pb-[100px]"
+                className="relative z-10 grid grid-cols-1 gap-14 pb-[50px] md:grid-cols-2 md:gap-x-[40px] md:pb-[80px] xl:grid-cols-3 xl:gap-[40px] xl:pb-[100px]"
               >
                 {benefits.map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center gap-[14px] px-[36px] pb-[33px] pt-[45px]"
+                    className="flex flex-col items-start gap-[14px] md:pb-[26px] md:pr-[25px] md:pt-[45px] xl:items-center xl:px-[21px] xl:pb-[33px] xl:pt-[43px]"
                   >
                     <div className="relative aspect-square w-[47px]">
                       <Image src={item.url} alt="benefits-images" fill />
                     </div>
-                    <div className="flex flex-col gap-[3px] text-center">
+                    <div className="flex flex-col items-start gap-[3px] xl:items-center">
                       <div className="text-white">{item.title}</div>
-                      <div className="text-[#727272]">{item.content}</div>
+                      <div className="text-[#727272] xl:text-center">
+                        {item.content}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -211,13 +218,13 @@ const Careers = () => {
             </div>
           </div>
 
-          {/* <div className="left-1/5 absolute top-[60%] size-[825px] animate-blob rounded-full bg-[#A5318A] opacity-[0.25] blur-[249px]"></div>
-          <div className="absolute right-[15%] top-[80%] size-[569px] animate-blob rounded-full bg-[#622A9A] opacity-[0.25] blur-[112px]"></div> */}
+          <div className="left-1/5 absolute top-[60%] size-[825px] animate-blob rounded-full bg-[#A5318A] opacity-[0.25] blur-[249px]"></div>
+          <div className="absolute right-[15%] top-[80%] size-[569px] animate-blob rounded-full bg-[#622A9A] opacity-[0.25] blur-[112px]"></div>
         </div>
       </div>
 
       <CurrentOpenings />
-      <RecruitmentProcess />
+      <RecruitmentSteps />
     </>
   );
 };

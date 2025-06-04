@@ -37,7 +37,7 @@ const config: Config = {
 
         //for animating the blurry balls
         blob: "blob 5s linear infinite",
-        "circle-scale": "circle-scale 4s linear infinite",
+        "circle-scale": "circle-scale 2s linear infinite",
 
         //for bouncing the items with normal speed
         bounce: "bounce 3s infinite",
