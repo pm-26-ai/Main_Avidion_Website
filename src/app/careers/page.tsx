@@ -120,7 +120,7 @@ const Careers = () => {
 
         <div className="absolute inset-0 bg-opacity-50 bg-[radial-gradient(50.58%_26.36%_at_57.81%_48.24%,_rgba(42,4,48,0.00)_0%,_#000_100%)] md:bg-[radial-gradient(81.55%_42.77%_at_57.5%_59.34%,_rgba(42,4,48,0.00)_0%,_#000_100%)] xl:bg-[radial-gradient(27.26%_97.44%_at_50.03%_100%,_rgba(42,4,48,0.00)_0%,_#000_100%)]"></div>
         <div className="relative">
-          <div className="container flex max-w-full flex-col items-center gap-[60px] sm:gap-[75px] pt-[134px] md:gap-[86px] xl:flex-row xl:justify-between">
+          <div className="container flex max-w-full flex-col items-center gap-[60px] sm:gap-[75px] pt-[134px] md:pt-[160px] xl:pt-[196px] md:gap-[86px] xl:flex-row xl:justify-between">
             <div className="flex flex-col items-center gap-2 text-white xl:items-start xl:gap-5">
               <div className="text-2xl font-medium leading-[40px] -tracking-[0.84px] lg:text-[40px] xl:text-[56px] xl:leading-[65px]">
                 Join Team Avidion!

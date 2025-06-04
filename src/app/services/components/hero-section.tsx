@@ -17,7 +17,7 @@ export default function HeroSection() {
         {/* radial gradient overlay over the video */}
         <div className="absolute inset-0 animate-gradient-radial"></div>
         {/* content */}
-        <div className="relative px-6 pt-[150px] md:px-[57px] lg:px-[168px] xl:px-[268px] 2xl:px-[488px]">
+        <div className="relative px-6 pt-[134px] md:pt-[160px] xl:pt-[196px] md:px-[57px] lg:px-[168px] xl:px-[268px] 2xl:px-[488px]">
           <div className="flex flex-col items-center gap-[20px] font-inter">
             <div className="flex flex-col gap-0.5 text-white md:gap-[10px] xl:gap-[30px]">
               <div className="text-center text-[26px] font-medium leading-[65px] -tracking-[0.54px] md:text-[40px] md:-tracking-[0.84px] xl:text-[56px]">

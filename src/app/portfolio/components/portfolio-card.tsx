@@ -19,11 +19,11 @@ export default function PortfolioCard({
           loop
           muted
         />
-        <div className="flex flex-col gap-4 px-[25px] py-8">
-          <div className="h-[62px] text-xl font-bold text-[#E0E0E0]">
+        <div className="flex flex-col gap-1.5 px-[17px] py-[17px] md:py-[19px] xl:gap-4 xl:px-[25px] xl:py-8">
+          <div className="=text-base font-bold text-[#E0E0E0] h-[72px] xl:text-xl">
             {details.title}
           </div>
-          <div className="text-base font-normal text-[#B3B3B3]">
+          <div className="text-sm font-normal text-[#B3B3B3] xl:text-base">
             {details.description}
           </div>
         </div>

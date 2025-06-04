@@ -101,7 +101,7 @@ export const portfolio = [
     videoUrl: "/portfolio/portfolio-1.mp4",
     title: "Avidion Softwares – Futuristic AI & Cloud Transformation Website",
     description:
-      "Avidion Software's official website is a visually captivating, interactive platform designed to position the company as a leader in AI integration, cloud solutions, and digital transfor",
+      "Avidion Software's official website is a visually captivating, interactive platform designed to position the company as a leader in AI integration, cloud solutions...",
     // redirectUrl:"#"
   },
   {
@@ -143,7 +143,7 @@ export const portfolio = [
     videoUrl: "/portfolio/portfolio-6.mp4",
     title: "Real Estate",
     description:
-      "A real estate agent uses a computer displaying AI-generated property descriptions alongside high-resolution images of properties. The interface showcas...",
+      "A real estate agent uses a computer displaying AI-generated property descriptions alongside high-resolution images of properties...",
     // redirectUrl:"#"
   },
   {
@@ -151,7 +151,7 @@ export const portfolio = [
     videoUrl: "/portfolio/portfolio-7.mp4",
     title: "E-commerce",
     description:
-      "A digital interface showcasing AI-generated fashion designs based on textual descriptions. The screen displays multiple apparel images created by the AI, each...",
+      "A digital interface showcasing AI-generated fashion designs based on textual descriptions. The screen displays multiple apparel images created...",
     // redirectUrl:"#"
   },
 ];
