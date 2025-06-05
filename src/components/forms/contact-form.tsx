@@ -69,7 +69,7 @@ const ContactForm = () => {
   }
   return (
     <>
-      <div className="relative flex w-full flex-col items-center justify-between gap-[46px] overflow-hidden px-[23px] py-[27px] md:flex-row md:px-[40px] md:py-[47px] xl:py-[77px] xl:pl-[157px] xl:pr-[104px]">
+      <div className="relative flex w-full flex-col items-center justify-between gap-[46px] overflow-hidden px-[23px] py-[47px] md:flex-row md:px-[40px] xl:py-[77px] xl:pl-[157px] xl:pr-[104px]">
         <div className="z-10 flex w-full flex-col items-start gap-[46px] md:w-[200px] xl:w-[246px]">
           <div className="relative inline-block">
             <h2 className="text-xl font-bold text-[#FEFEFE]">Contact Us</h2>

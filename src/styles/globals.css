@@ -23,3 +23,17 @@
   padding: 0px;
   /* box-sizing: border-box; */
 }
+
+.card-glow-border {
+  border: 1px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image:
+    linear-gradient(#0a0a0a, #0a0a0a),
+      radial-gradient(
+        180px circle at var(--mouse-x) var(--mouse-y),
+        #ffffffaa,
+        #7722dd44,
+        transparent 80%
+      ); 
+}

@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { HeadingSection } from "./heading-section";
 import Image from "next/image";
+import "@/styles/globals.css";
 export default function WhatWeOffer() {
   const offerCards = [
     {
@@ -66,6 +67,9 @@ export default function WhatWeOffer() {
 
         glow.style.left = `${x - 50}px`;
         glow.style.top = `${y - 50}px`;
+
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
       };
       const handleMouseLeave = () => {
         glow.style.opacity = "0";
@@ -95,7 +99,8 @@ export default function WhatWeOffer() {
                     ref={(el) => {
                       cardRefs.current[index] = el;
                     }}
-                    className="bg-[rgba(0,0,0,0.06 )] relative rounded-[10px] border border-white/15 px-[27px] pb-5 pt-[30px] font-inter -tracking-[0.002px] text-white"
+                    style={{ borderImage: "none" }}
+                    className="card-border-glow bg-[rgba(0,0,0,0.06 )] group relative rounded-[10px] border border-white/15 px-[27px] pb-5 pt-[30px] font-inter -tracking-[0.002px] text-white"
                   >
                     <div
                       ref={(el) => {
@@ -119,7 +124,7 @@ export default function WhatWeOffer() {
                           <div className="text-base font-medium leading-[31px]">
                             {card.title}
                           </div>
-                          <div className="h-[78px] text-sm font-normal leading-[26px] text-[rgba(255,255,255,0.70)] xl:h-[104px] md:text-base">
+                          <div className="h-[78px] text-sm font-normal leading-[26px] text-[rgba(255,255,255,0.70)] md:text-base xl:h-[104px]">
                             {card.content}
                           </div>
                         </div>
@@ -135,10 +140,10 @@ export default function WhatWeOffer() {
             );
           })}
         </div>
-        <div className="absolute -left-28 -top-12 h-[250px] w-[250px] animate-blob rounded-full bg-[#971b76] opacity-70 blur-[80px]"></div>
+        <div className="animate-circle-move absolute -left-28 -top-12 h-[250px] w-[250px] rounded-full bg-[#971b76] opacity-70 blur-[80px]"></div>
 
-        <div className="animation-delay-1 absolute -right-24 bottom-52 size-[309px] animate-blob rounded-full bg-[#971b76] opacity-70 mix-blend-screen blur-[100px]"></div>
-        <div className="animation-delay-2 absolute -right-12 bottom-8 size-[213px] animate-blob rounded-full bg-[#622A9A] opacity-70 mix-blend-screen blur-[100px]"></div>
+        <div className="animation-delay-1 animate-circle-move absolute -right-24 bottom-52 size-[309px] rounded-full bg-[#971b76] opacity-70 mix-blend-screen blur-[100px]"></div>
+        <div className="animation-delay-2 animate-circle-move absolute -right-12 bottom-8 size-[213px] rounded-full bg-[#622A9A] opacity-70 mix-blend-screen blur-[100px]"></div>
       </div>
     </>
   );

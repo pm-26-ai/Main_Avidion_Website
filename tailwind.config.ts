@@ -38,7 +38,7 @@ const config: Config = {
         //for animating the blurry balls
         blob: "blob 5s ease-in-out infinite",
         "blob-2": "blob-2 5s ease-in-out infinite",
-        "circle-scale": "circle-scale 2s linear infinite",
+        "circle-move": "circle-move 2s linear infinite",
 
         //for bouncing the items with normal speed
         bounce: "bounce 3s infinite",
@@ -98,18 +98,18 @@ const config: Config = {
             transform: "translate(0px, 0px) ",
           },
         },
-        "circle-scale": {
+        "circle-move": {
           "0%": {
-            transform: "scale(1)",
+            transform: "translate(0px, 0px)",
           },
           "33%": {
-            transform: "scale(1.07)",
+            transform: "translate(10px, -50px)",
           },
           "66%": {
-            transform: "scale(0.8)",
+            transform: "translate(-30px, -50px)",
           },
           "100%": {
-            transform: "scale(1)",
+            transform: "translate(0px, 0px)",
           },
         },
         bounce: {
