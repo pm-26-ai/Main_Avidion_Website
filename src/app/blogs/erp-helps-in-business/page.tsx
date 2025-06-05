@@ -53,12 +53,12 @@ export default function ErpHelpsInBusiness() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-[61px]">
-          <div className="text-sm font-bold md:text-xl">
+        <div className="flex flex-col gap-[21px] md:gap-[41px] xl:gap-[61px]">
+          <div className="text-base font-bold md:text-xl">
             How ERP Helps Manage Business Processes?
           </div>
 
-          <ul className="flex list-decimal flex-col gap-[30px] md:gap-[45px] xl:gap-[61px] pl-[15px] text-sm md:text-base">
+          <ul className="flex list-decimal flex-col gap-[30px] pl-[15px] text-sm md:gap-[45px] md:text-base xl:gap-[61px]">
             <li className="font-bold">
               All Your Data in One Place
               <p className="font-normal">

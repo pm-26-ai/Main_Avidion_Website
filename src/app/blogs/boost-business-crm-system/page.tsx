@@ -4,20 +4,20 @@ import { FaArrowLeft } from "react-icons/fa6";
 export default function BoostBusinessCrmSystem() {
   return (
     <>
-      <div className="container flex max-w-full flex-col items-start gap-[66px] py-[174px] text-white">
+      <div className="container flex max-w-full flex-col items-start gap-[33px] py-[142px] text-white md:gap-[50px] xl:gap-[66px]">
         <Link
           href="/blogs"
-          className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[25px] py-[9px] text-sm text-[#EDEDED]"
+          className="px-[11px] py-2 flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] md:px-[25px] md:py-[9px] text-xs md:text-sm text-[#EDEDED]"
         >
           <FaArrowLeft size={18} color="#C0C0C0" strokeWidth={0.1} />
           Back To Blogs
         </Link>
-        <div className="flex flex-col gap-[34px]">
-          <div className="text-4xl font-medium">
+        <div className="flex flex-col gap-[21px] md:gap-[34px]">
+          <div className="text-[22px] leading-[32px] md:text-[28px] md:leading-[46px] xl:text-4xl font-medium">
             What Changes Does CRM Bring to a Business?{" "}
           </div>
 
-          <div className="text-base font-normal">
+          <div className="text-sm md:text-base font-normal">
             In today’s competitive world, building strong customer relationships
             is key to growing any business. That’s where CRM (Customer
             Relationship Management) software comes in. It helps you manage and
@@ -36,11 +36,11 @@ export default function BoostBusinessCrmSystem() {
         </div> */}
 
         <div className="flex flex-col gap-[27px]">
-          <div className="text-xl font-bold">
+          <div className="text-base md:text-xl font-bold">
             Let’s explore the important changes a CRM can bring to your
             business.
           </div>
-          <div>
+          <div className="text-sm font-normal md:text-base">
             A healthcare chatbot is an AI-powered conversational tool designed
             to simulate human-like interactions with patients. These bots can be
             integrated into websites, mobile apps, or messaging platforms like
@@ -57,14 +57,13 @@ export default function BoostBusinessCrmSystem() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-[61px]">
-          <div className="text-xl font-bold">
+        <div className="flex flex-col gap-[21px] md:gap-[41px] xl:gap-[61px]">
+          <div className="text-base md:text-xl font-bold">
             Let’s explore how chatbots are playing a key role in achieving this
             :
           </div>
-
-          <ul className="flex list-decimal flex-col gap-[61px] pl-[15px]">
-            <li className="text-base font-bold">
+          <ul className="flex list-decimal flex-col gap-[30px] pl-[15px] text-sm md:gap-[45px] md:text-base xl:gap-[61px]">
+            <li className="font-bold">
               All Customer Info in One Place
               <p className="font-normal">
                 With CRM, you no longer need to search through emails,
@@ -77,7 +76,7 @@ export default function BoostBusinessCrmSystem() {
                 <br />✅ Avoid mistakes or missed messages
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Better Customer Service
               <p className="font-normal">
                 A CRM system helps you stay in touch with customers at the right
@@ -89,7 +88,7 @@ export default function BoostBusinessCrmSystem() {
                 your business to others.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Stronger Teamwork
               <p className="font-normal">
                 CRM helps your sales, marketing, and support teams work
@@ -98,7 +97,7 @@ export default function BoostBusinessCrmSystem() {
                 page.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Higher Sales and More Leads
               <p className="font-normal">
                 CRM tools make it easier to track leads, follow up, and close
@@ -108,7 +107,7 @@ export default function BoostBusinessCrmSystem() {
                 faster.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Smarter Business Decisions
               <p className="font-normal">
                 CCRM gives you reports and insights that show how your business
@@ -119,7 +118,7 @@ export default function BoostBusinessCrmSystem() {
                 This helps you make better choices and plan for growth.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Saves Time with Automation
               <p className="font-normal">
                 CRM can automate everyday tasks like sending welcome emails,
@@ -127,7 +126,7 @@ export default function BoostBusinessCrmSystem() {
                 lets your team focus on more important work.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Ready to Grow with You
               <p className="font-normal">
                 As your business grows, managing customers becomes harder. A CRM
@@ -137,7 +136,7 @@ export default function BoostBusinessCrmSystem() {
             </li>
           </ul>
 
-          <div className="text-base font-normal">
+          <div className="text-sm md:text-base font-normal">
             <div className="font-bold">Final Thoughts</div>
             <br />
             <br />

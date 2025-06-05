@@ -4,20 +4,20 @@ import { FaArrowLeft } from "react-icons/fa6";
 export default function AiChatBotsInHealthCare() {
   return (
     <>
-      <div className="flex flex-col items-start gap-[66px] py-[174px] text-white container max-w-full">
+      <div className="container flex max-w-full flex-col items-start gap-[33px] pb-[60px] xl:pb-[100px] pt-[142px] text-white md:gap-[50px] xl:gap-[66px]">
         <Link
           href="/blogs"
-          className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[25px] py-[9px] text-sm text-[#EDEDED]"
+          className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[11px] py-2 text-xs text-[#EDEDED] md:px-[25px] md:py-[9px] md:text-sm"
         >
           <FaArrowLeft size={18} color="#C0C0C0" strokeWidth={0.1} />
           Back To Blogs
         </Link>
-        <div className="flex flex-col gap-[34px]">
-          <div className="text-4xl font-medium">
+        <div className="flex flex-col gap-[21px] md:gap-[34px]">
+          <div className="text-4xl text-[22px] font-medium leading-[32px] md:text-[28px] md:leading-[46px]">
             How Chatbots Are Improving Patient Engagement in Clinics
           </div>
 
-          <div className="text-base font-normal">
+          <div className="text-sm font-normal md:text-base">
             In today’s fast-paced, tech-driven world, healthcare providers are
             under increasing pressure to deliver more personalized, efficient,
             and accessible care. One of the most promising tools helping clinics
@@ -39,8 +39,10 @@ export default function AiChatBotsInHealthCare() {
         </div> */}
 
         <div className="flex flex-col gap-[27px]">
-          <div className="text-xl font-bold">What Is a Healthcare Chatbot?</div>
-          <div>
+          <div className="text-lg font-bold md:text-xl">
+            What Is a Healthcare Chatbot?
+          </div>
+          <div className="text-sm font-normal md:text-base">
             A healthcare chatbot is an AI-powered conversational tool designed
             to simulate human-like interactions with patients. These bots can be
             integrated into websites, mobile apps, or messaging platforms like
@@ -57,14 +59,14 @@ export default function AiChatBotsInHealthCare() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-[61px]">
-          <div className="text-xl font-bold">
+        <div className="flex flex-col gap-[41px] xl:gap-[61px]">
+          <div className="text-base font-bold md:text-xl">
             Let’s explore how chatbots are playing a key role in achieving this
             :
           </div>
 
-          <ul className="flex list-decimal flex-col gap-[61px] pl-[15px]">
-            <li className="text-base font-bold">
+          <ul className="flex list-decimal flex-col gap-[30px] pl-[15px] text-sm md:gap-[45px] md:text-base xl:gap-[61px]">
+            <li className="font-bold">
               24/7 Availability for Immediate Assistance
               <p className="font-normal">
                 One of the biggest pain points for patients is the lack of
@@ -79,7 +81,7 @@ export default function AiChatBotsInHealthCare() {
                 frustration and increasing trust in the clinic.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Simplified Appointment Scheduling
               <p className="font-normal">
                 Forget long hold times or missed callbacks. Chatbots streamline
@@ -93,7 +95,7 @@ export default function AiChatBotsInHealthCare() {
                 improved patient convenience.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Personalized Patient Interaction
               <p className="font-normal">
                 With access to patient history and preferences, advanced
@@ -107,7 +109,7 @@ export default function AiChatBotsInHealthCare() {
                 experience.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Efficient Triage and Symptom Checking
               <p className="font-normal">
                 Chatbots equipped with symptom-checking algorithms can guide
@@ -121,7 +123,7 @@ export default function AiChatBotsInHealthCare() {
                 management.
               </p>
             </li>
-            <li className="text-base font-bold">
+            <li className="font-bold">
               Feedback Collection and Patient Insights
               <p className="font-normal">
                 Want to know how patients feel about your services? Chatbots can
@@ -135,7 +137,7 @@ export default function AiChatBotsInHealthCare() {
             </li>
           </ul>
 
-          <div className="text-base font-normal">
+          <div className="text-sm font-normal md:text-base">
             Chatbots are no longer just a trend - they are a strategic asset for
             modern clinics aiming to elevate patient engagement. By automating
             routine tasks, personalizing care, and providing 24/7 support,
