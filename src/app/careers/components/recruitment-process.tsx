@@ -42,8 +42,8 @@ export default function RecruitmentProcess() {
       <div className="overflow-hidden bg-[#030104]">
         <div className="px-9 py-[46px] md:px-[50px] md:py-[80px] xl:px-[206px]">
           <div className="relative">
-            <div className="absolute left-0 top-0 size-[930px] animate-circle-scale rounded-full bg-[linear-gradient(90deg,_#3D065F_0%,_#5F27BD_100%)] opacity-[0.28] blur-[344px]"></div>
-            <div className="absolute right-0 top-0 size-[930px] animate-circle-scale rounded-full bg-[linear-gradient(120deg,_rgba(255,115,217,0.80)_0%,_rgba(234,62,187,0.80)_86.07%)] opacity-[0.28] blur-[344px]"></div>
+            <div className="absolute left-0 top-[30%] size-[430px] animate-blob rounded-full bg-[linear-gradient(90deg,_#3D065F_0%,_#5F27BD_100%)] opacity-[0.35] blur-[112px] will-change-transform md:top-0 md:size-[730px]"></div>
+            <div className="animate-blob-2 absolute -right-1/4 top-0 size-[430px] rounded-full bg-[linear-gradient(120deg,_rgba(255,115,217,0.80)_0%,_rgba(234,62,187,0.80)_86.07%)] opacity-[0.28] blur-[112px] will-change-transform md:right-0 md:size-[730px]"></div>
             <div className="relative flex flex-col gap-[50px] xl:gap-[80px]">
               <div className="pt-[17px] text-center text-2xl font-medium leading-[65px] text-white md:pt-[38px] md:text-[42px] xl:text-[56px]">
                 Recruitment Process
@@ -58,7 +58,7 @@ export default function RecruitmentProcess() {
                       <div className="flex h-[64px] w-[64px] items-center justify-center rounded-full border border-[#656565] bg-transparent bg-[linear-gradient(90deg,_rgba(64,15,54,0.40)_0%,_rgba(37,25,71,0.40)_100%)] shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.40)] backdrop-blur-[7px]">
                         <div className="rounded-full border border-[rgba(255,255,255,0.15)] bg-[linear-gradient(90deg,_rgba(157,46,135,0.40)_0%,_rgba(84,41,153,0.41)_100%)] p-2 shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
                           <div className="relative aspect-square size-6">
-                            <Image alt="icons" src={item.icon} fill priority/>
+                            <Image alt="icons" src={item.icon} fill priority />
                           </div>
                         </div>
                       </div>

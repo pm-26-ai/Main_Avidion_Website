@@ -4,13 +4,26 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { RxCross2 } from "react-icons/rx";
 import { Dialog, DialogClose, DialogContent } from "@/components/ui/dialog";
 import CareerForm from "@/components/forms/career-form";
 import { useState } from "react";
 import { currentOpenings } from "@/data";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 export default function CurrentOpenings() {
   const [open, setOpen] = useState<boolean>(false);
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 767px)");
 
   return (
     <>
@@ -92,7 +105,7 @@ export default function CurrentOpenings() {
                     <div className="rounded-[12px] border border-[#EB88D6] bg-[rgba(0,0,0,0.16)] p-1.5 backdrop-blur-[94.65px]">
                       <button
                         onClick={() => setOpen(true)}
-                        className="rounded-[8px] border border-[rgba(255,255,255,0.15)] bg-[linear-gradient(90deg,_rgba(157,46,135,0.40)_0%,_rgba(84,41,153,0.40)_100%)] px-[15px] py-[6px] text-xs md:text-sm font-medium text-[#F8F8FC] shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)]"
+                        className="rounded-[8px] border border-[rgba(255,255,255,0.15)] bg-[linear-gradient(90deg,_rgba(157,46,135,0.40)_0%,_rgba(84,41,153,0.40)_100%)] px-[15px] py-[6px] text-xs font-medium text-[#F8F8FC] shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] md:text-sm"
                       >
                         Apply Now
                       </button>
@@ -105,14 +118,34 @@ export default function CurrentOpenings() {
         </div>
       </div>
 
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="flex w-screen items-center justify-center border border-none bg-black/80 md:px-[46px]">
-          <div className="max-h-screen w-screen md:w-[90%] lg:w-[85%] xl:w-[70%] 2xl:w-1/2 overflow-y-auto rounded-md bg-[#141315]">
-            <CareerForm />
-          </div>
-          <DialogClose></DialogClose>
-        </DialogContent>
-      </Dialog>
+      {isSmallDevice ? (
+        <>
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetContent
+              side="bottom"
+              className="h-[80vh] overflow-y-scroll border border-none bg-[#141315] pb-[80px] transition-transform duration-500"
+            >
+              <CareerForm />
+
+              <SheetClose asChild onClick={() => setOpen(false)}>
+                <RxCross2
+              
+                  className="absolute right-4 top-4 size-4 text-white"
+                />
+              </SheetClose>
+            </SheetContent>
+          </Sheet>
+        </>
+      ) : (
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogContent className="flex w-screen items-center justify-center border border-none bg-black/80 md:px-[46px]">
+            <div className="max-h-screen w-screen overflow-y-auto rounded-md bg-[#141315] md:w-[90%] lg:w-[85%] xl:w-[60%] 2xl:w-[47%]">
+              <CareerForm />
+            </div>
+            <DialogClose></DialogClose>
+          </DialogContent>
+        </Dialog>
+      )}
     </>
   );
 }

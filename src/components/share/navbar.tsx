@@ -34,9 +34,9 @@ export default function Navbar() {
             <div className="flex flex-row items-center gap-5 xl:gap-[30px]">
               {/* desktop menu */}
               <div className="hidden gap-5 lg:flex xl:gap-[30px]">
-                {navItems.map((item) => (
+                {navItems.map((item,index) => (
                   <>
-                    <Link key={item.id} href={item.url} className="relative">
+                    <Link key={index} href={item.url} className="relative">
                       <span
                         className={`font-inter text-[13px] font-normal leading-[26px] -tracking-[0.001px] transition-all duration-300 ease-in hover:font-medium hover:text-white ${pathname === item.url ? `bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#9E3DC2_95.25%)] bg-clip-text text-transparent underline underline-offset-8` : `text-white/80`}`}
                       >
@@ -92,8 +92,8 @@ export default function Navbar() {
           {/* mobile menu */}
           {isMobileMenuOpen && (
             <div className="flex flex-col items-center gap-9 px-[27px] pb-[30px] pt-[50px] transition-all duration-300 ease-in-out">
-              {navItems.map((item) => (
-                <Link key={item.id} href={item.url} className="relative">
+              {navItems.map((item,index) => (
+                <Link key={index} href={item.url} className="relative">
                   <span
                     className={`font-inter text-[13px] font-normal leading-[26px] -tracking-[0.001px] ${
                       pathname === item.url

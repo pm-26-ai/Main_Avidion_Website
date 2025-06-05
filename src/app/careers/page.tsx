@@ -120,7 +120,7 @@ const Careers = () => {
 
         <div className="absolute inset-0 bg-opacity-50 bg-[radial-gradient(50.58%_26.36%_at_57.81%_48.24%,_rgba(42,4,48,0.00)_0%,_#000_100%)] md:bg-[radial-gradient(81.55%_42.77%_at_57.5%_59.34%,_rgba(42,4,48,0.00)_0%,_#000_100%)] xl:bg-[radial-gradient(27.26%_97.44%_at_50.03%_100%,_rgba(42,4,48,0.00)_0%,_#000_100%)]"></div>
         <div className="relative">
-          <div className="container flex max-w-full flex-col items-center gap-[60px] sm:gap-[75px] pt-[134px] md:pt-[160px] xl:pt-[196px] md:gap-[86px] xl:flex-row xl:justify-between">
+          <div className="container flex max-w-full flex-col items-center gap-[60px] pt-[134px] sm:gap-[75px] md:gap-[86px] md:pt-[160px] xl:flex-row xl:justify-between xl:pt-[196px]">
             <div className="flex flex-col items-center gap-2 text-white xl:items-start xl:gap-5">
               <div className="text-2xl font-medium leading-[40px] -tracking-[0.84px] lg:text-[40px] xl:text-[56px] xl:leading-[65px]">
                 Join Team Avidion!
@@ -141,8 +141,8 @@ const Careers = () => {
             </div>
           </div>
 
-          <div className="bg-[linear-gradient(2deg,_rgba(0,0,0,0.70)_57%,_rgba(0,0,0,0.36)_98.29%)] backdrop-blur-[2px]">
-            <div className="container flex flex-col gap-[18px] md:px-[200px] 2xl:px-[340px] xl:flex-row xl:gap-[64px]">
+          <div className="flex justify-center bg-[linear-gradient(2deg,_rgba(0,0,0,0.70)_57%,_rgba(0,0,0,0.36)_98.29%)] backdrop-blur-[2px]">
+            <div className="container flex flex-col gap-[18px] md:px-[200px] xl:flex-row xl:gap-[64px] 2xl:px-[340px]">
               {features.map((item, index) => (
                 <>
                   <div
@@ -150,7 +150,7 @@ const Careers = () => {
                     className="flex flex-col items-center justify-center gap-[9.5px] py-[30px] xl:py-[50px]"
                   >
                     <div className="relative aspect-square w-[43px]">
-                      <Image src={item.url} alt="vision-image" fill priority/>
+                      <Image src={item.url} alt="vision-image" fill priority />
                     </div>
                     <div className="flex flex-col items-center gap-1.5">
                       <div className="text-base font-bold text-[#E0E0E0] md:text-xl">
@@ -202,7 +202,12 @@ const Careers = () => {
                     className="flex flex-col items-start gap-[14px] md:pb-[26px] md:pr-[25px] md:pt-[45px] xl:items-center xl:px-[21px] xl:pb-[33px] xl:pt-[43px]"
                   >
                     <div className="relative aspect-square w-[47px]">
-                      <Image src={item.url} alt="benefits-images" fill priority/>
+                      <Image
+                        src={item.url}
+                        alt="benefits-images"
+                        fill
+                        priority
+                      />
                     </div>
                     <div className="flex flex-col items-start gap-[3px] xl:items-center">
                       <div className="text-white">{item.title}</div>
@@ -220,8 +225,8 @@ const Careers = () => {
             </div>
           </div>
 
-          <div className="left-1/5 absolute top-[60%] size-[825px] animate-blob rounded-full bg-[#A5318A] opacity-[0.25] blur-[249px]"></div>
-          <div className="absolute right-[15%] top-[80%] size-[569px] animate-blob rounded-full bg-[#622A9A] opacity-[0.25] blur-[112px]"></div>
+          <div className="absolute left-0 top-[80%] size-[525px] animate-blob rounded-full bg-[#A5318A] opacity-[0.3] blur-[112px] lg:size-[625px] xl:left-[20%] xl:top-[60%] xl:size-[825px] xl:blur-[200px]"></div>
+          <div className="animate-blob-2 absolute right-0 top-[70%] size-[350px] rounded-full bg-[#622A9A] opacity-[0.3] blur-[112px] lg:size-[569px] xl:right-[15%]"></div>
         </div>
       </div>
 

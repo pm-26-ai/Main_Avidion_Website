@@ -36,7 +36,8 @@ const config: Config = {
         "gradient-wave": "gradientWave 6s linear infinite",
 
         //for animating the blurry balls
-        blob: "blob 5s linear infinite",
+        blob: "blob 5s ease-in-out infinite",
+        "blob-2": "blob-2 5s ease-in-out infinite",
         "circle-scale": "circle-scale 2s linear infinite",
 
         //for bouncing the items with normal speed
@@ -77,10 +78,24 @@ const config: Config = {
             transform: "translate(10px, -130px) scale(1.07)",
           },
           "66%": {
-            transform: "translate(-20px, -50px) scale(0.8)",
+            transform: "translate(300px, -50px) scale(0.8)",
           },
           "100%": {
             transform: "translate(0px, 0px) scale(1)",
+          },
+        },
+        "blob-2": {
+          "0%": {
+            transform: "translate(0px, 0px) ",
+          },
+          "33%": {
+            transform: "translate(10px, -180px) ",
+          },
+          "66%": {
+            transform: "translate(-200px, -20px) ",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) ",
           },
         },
         "circle-scale": {
