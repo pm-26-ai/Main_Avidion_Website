@@ -4,8 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { useState } from "react";
+import { Dialog, DialogClose, DialogContent } from "../ui/dialog";
+import ContactForm from "../forms/contact-form";
 
 export default function Navbar() {
+  const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const pathname = usePathname();
   return (
@@ -49,14 +52,14 @@ export default function Navbar() {
 
               <div className="flex flex-row items-center gap-4 md:gap-8">
                 {/* Contact Button */}
-                <Link
-                  href="/contact-us"
-                  className="rounded-[8px] border border-[#EB88D6] bg-[rgba(0,0,0,0.16)] p-1 backdrop-blur-[94.64px] md:rounded-[12px] md:p-1.5"
+                <div
+                  onClick={() => setIsDialogOpen(true)}
+                  className="cursor-pointer rounded-[8px] border border-[#EB88D6] bg-[rgba(0,0,0,0.16)] p-1 backdrop-blur-[94.64px] md:rounded-[12px] md:p-1.5"
                 >
-                  <div className="rounded-[5.51px] border-white/15 bg-[linear-gradient(90deg,_rgba(157,46,135,0.4)_0%,_rgba(84,41,153,0.4)_100%)] px-[15px] py-0.5 font-inter text-[10px] text-white shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px] transition-all duration-700 ease-in-out hover:bg-[linear-gradient(90deg_,rgba(201,104,182,0.40)_0%,_rgba(121,81,186,0.40)_100%)] md:rounded-[8px] md:py-1 md:text-sm">
+                  <div className="rounded-[5.51px] border-white/15 bg-[linear-gradient(90deg,_rgba(157,46,135,0.4)_0%,_rgba(84,41,153,0.4)_100%)] px-[15px] py-0.5 font-inter text-[10px] text-white shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px] transition-all duration-700 ease-in hover:bg-[linear-gradient(90deg_,rgba(201,104,182,0.40)_0%,_rgba(121,81,186,0.40)_100%)] md:rounded-[8px] md:py-1 md:text-sm">
                     Contact Us
                   </div>
-                </Link>
+                </div>
 
                 <div className="relative size-7 md:size-9 lg:hidden">
                   <div
@@ -109,6 +112,14 @@ export default function Navbar() {
           )}
         </div>
       </div>
+
+      {/* contact us form dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-h-screen w-screen overflow-y-auto rounded-[4px] border border-none bg-[#141315] md:w-[95%] xl:w-[80%] 2xl:w-[60%]">
+          <ContactForm />
+          <DialogClose></DialogClose>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

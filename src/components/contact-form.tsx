@@ -141,11 +141,11 @@ const ContactForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="mb-1 block text-sm font-medium text-gray-700">
-                  Your Message
+                  Message
                 </FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Write your query here..."
+                    placeholder="Tell us about your idea, or feedback"
                     {...field}
                     rows={4}
                     className="w-full resize-none rounded-md border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
