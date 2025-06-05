@@ -7,17 +7,17 @@ export default function BoostBusinessCrmSystem() {
       <div className="container flex max-w-full flex-col items-start gap-[33px] py-[142px] text-white md:gap-[50px] xl:gap-[66px]">
         <Link
           href="/blogs"
-          className="px-[11px] py-2 flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] md:px-[25px] md:py-[9px] text-xs md:text-sm text-[#EDEDED]"
+          className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[11px] py-2 text-xs text-[#EDEDED] md:px-[25px] md:py-[9px] md:text-sm"
         >
           <FaArrowLeft size={18} color="#C0C0C0" strokeWidth={0.1} />
           Back To Blogs
         </Link>
         <div className="flex flex-col gap-[21px] md:gap-[34px]">
-          <div className="text-[22px] leading-[32px] md:text-[28px] md:leading-[46px] xl:text-4xl font-medium">
+          <div className="text-xl font-medium md:text-[28px] md:leading-[46px] xl:text-4xl">
             What Changes Does CRM Bring to a Business?{" "}
           </div>
 
-          <div className="text-sm md:text-base font-normal">
+          <div className="text-sm font-normal md:text-base">
             In today’s competitive world, building strong customer relationships
             is key to growing any business. That’s where CRM (Customer
             Relationship Management) software comes in. It helps you manage and
@@ -36,7 +36,7 @@ export default function BoostBusinessCrmSystem() {
         </div> */}
 
         <div className="flex flex-col gap-[27px]">
-          <div className="text-base md:text-xl font-bold">
+          <div className="text-base font-bold md:text-xl">
             Let’s explore the important changes a CRM can bring to your
             business.
           </div>
@@ -58,7 +58,7 @@ export default function BoostBusinessCrmSystem() {
         </div>
 
         <div className="flex flex-col gap-[21px] md:gap-[41px] xl:gap-[61px]">
-          <div className="text-base md:text-xl font-bold">
+          <div className="text-base font-bold md:text-xl">
             Let’s explore how chatbots are playing a key role in achieving this
             :
           </div>
@@ -136,7 +136,7 @@ export default function BoostBusinessCrmSystem() {
             </li>
           </ul>
 
-          <div className="text-sm md:text-base font-normal">
+          <div className="text-sm font-normal md:text-base">
             <div className="font-bold">Final Thoughts</div>
             <br />
             <br />

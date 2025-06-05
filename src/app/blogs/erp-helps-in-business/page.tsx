@@ -14,7 +14,7 @@ export default function ErpHelpsInBusiness() {
             Back To Blogs
           </Link>
           <div className="flex flex-col gap-[21px] md:gap-[34px]">
-            <div className="text-[22px] font-medium leading-[32px] md:text-[28px] md:leading-[46px] xl:text-4xl">
+            <div className="text-xl font-medium md:text-[28px] md:leading-[46px] xl:text-4xl">
               How Does ERP Help to Manage Business Processes?
             </div>
 

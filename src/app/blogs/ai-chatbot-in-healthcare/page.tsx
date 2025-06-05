@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 export default function AiChatBotsInHealthCare() {
   return (
     <>
-      <div className="container flex max-w-full flex-col items-start gap-[33px] pb-[60px] xl:pb-[100px] pt-[142px] text-white md:gap-[50px] xl:gap-[66px]">
+      <div className="container flex max-w-full flex-col items-start gap-[33px] pb-[60px] pt-[142px] text-white md:gap-[50px] xl:gap-[66px] xl:pb-[100px]">
         <Link
           href="/blogs"
           className="flex flex-row items-center gap-2 rounded-[4px] border border-[#535353] px-[11px] py-2 text-xs text-[#EDEDED] md:px-[25px] md:py-[9px] md:text-sm"
@@ -13,7 +13,7 @@ export default function AiChatBotsInHealthCare() {
           Back To Blogs
         </Link>
         <div className="flex flex-col gap-[21px] md:gap-[34px]">
-          <div className="text-4xl text-[22px] font-medium leading-[32px] md:text-[28px] md:leading-[46px]">
+          <div className="text-xl font-medium leading-[32px] md:text-[28px] md:leading-[46px]">
             How Chatbots Are Improving Patient Engagement in Clinics
           </div>
 
