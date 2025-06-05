@@ -2,8 +2,13 @@
 import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import { HeadingSection } from "@/components/share/heading-section";
-import CurrentOpenings from "./components/current-openings";
 import Image from "next/image";
+const Openings = dynamic(
+  () => import("../careers/components/current-openings"),
+  {
+    ssr: false,
+  },
+);
 const RecruitmentSteps = dynamic(
   () => import("../careers/components/recruitment-process"),
   {
@@ -230,7 +235,7 @@ const Careers = () => {
         </div>
       </div>
 
-      <CurrentOpenings />
+      <Openings />
       <RecruitmentSteps />
     </>
   );
