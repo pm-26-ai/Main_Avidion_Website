@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="rounded-[30px] border border-white/15 bg-[rgba(45,45,45,0.27)] backdrop-blur-[22.79px]">
           <div className="flex flex-row items-center justify-between rounded-[33px] border border-white/15 px-[19px] py-2 md:px-9 xl:px-[68.5px] 2xl:px-[173px]">
             {/* avidion logo */}
-            <div className="flex items-center gap-2 md:gap-[10.87px]">
+            <Link href="/" className="flex items-center gap-2 md:gap-[10.87px]">
               <div className="relative size-[30px] md:size-9 xl:size-[40px]">
                 <Image
                   src={"/avidion-logo.png"}
@@ -29,7 +29,7 @@ export default function Navbar() {
               <div className="animate-gradient-wave bg-[radial-gradient(78.86%_61.3%_at_59.94%_54.33%,_#6748CD_0%,_#972BC7_27.47%,_#B33691_64.66%,_#8A30AC_97.65%)] bg-[length:400%_auto] bg-clip-text font-inter text-lg font-bold -tracking-[0.6px] text-transparent md:text-xl xl:text-2xl">
                 Avidion
               </div>
-            </div>
+            </Link>
 
             <div className="flex flex-row items-center gap-5 xl:gap-[30px]">
               {/* desktop menu */}

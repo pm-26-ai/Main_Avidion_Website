@@ -73,15 +73,59 @@ export const blogs = [
     author: "Shreya Goyal",
     url: "/blogs/erp-helps-in-business",
   },
-  {
+   {
     id: 4,
     image: "/blogs/blog-1.png",
-    mainTech: "NextJS",
-    date: "April 14, 2025",
-    heading: "Dynamic routing in Next.js",
-    content: "Dynamic routing in Next.js allows developers to create pages ...",
+    mainTech: "Chatbots",
+    date: "May 24, 2025",
+    heading: "How Chatbots Are Improving Patient Engagement in Clinics",
+    content:
+      "In today’s fast-paced, tech-driven world, healthcare providers are under...",
     author: "Shreya Goyal",
     url: "/blogs/ai-chatbot-in-healthcare",
+  },
+];
+
+export const whatWeOfferCards = [
+  {
+    id: 1,
+    title: "Custom Website Development",
+    content:
+      "Tailor-made, responsive, and lightning-fast websites built with the latest tech stack.",
+    icon: "/what-we-offer/icon-1.svg",
+  },
+  {
+    id: 2,
+    title: "AI Integration & Chatbots",
+    content: "Visual insights into your site’s performance.",
+    icon: "/what-we-offer/icon-2.svg",
+  },
+  {
+    id: 3,
+    title: "Mobile App Development",
+    content: "Automatic suggestions and the best keywords to target.",
+    icon: "/what-we-offer/icon-3.svg",
+  },
+  {
+    id: 4,
+    title: "CRM",
+    content:
+      "Salesforce, HubSpot, Zoho CRM tailored to enhance customer satisfaction, raising scores by 25%.",
+    icon: "/what-we-offer/icon-4.svg",
+  },
+  {
+    id: 5,
+    title: "3D Websites",
+    content:
+      "3D websites capture attention and create memorable brand stories through immersive visuals and interaction.",
+    icon: "/what-we-offer/icon-5.svg",
+  },
+  {
+    id: 6,
+    title: "WMS & ERP Systems",
+    content:
+      "Seamless warehouse management system integration reduces inventory costs by 15%.",
+    icon: "/what-we-offer/icon-6.svg",
   },
 ];
 
@@ -193,32 +237,26 @@ export const howWeWork = [
 
 export const tapeSection = [
   {
-    content: "Team Planner",
+    url: "./infinite-scroll/gemini.svg",
   },
-  {
-    content: "Project Management",
+   {
+    url: "./infinite-scroll/instamojo.svg",
   },
-  {
-    content: "Virtual Office",
+   {
+    url: "./infinite-scroll/openai.svg",
   },
-  {
-    content: "Chat",
+   {
+    url: "./infinite-scroll/paypal.svg",
   },
-  {
-    content: "Documents",
+   {
+    url: "./infinite-scroll/payu.svg",
   },
-  {
-    content: "Inbox",
+   {
+    url: "./infinite-scroll/razorpay.svg",
   },
-  {
-    content: "3D websites",
-  },
-  {
-    content: "AI integration",
-  },
-  {
-    content: "Custom software development",
-  },
+   {
+    url: "./infinite-scroll/stripe.svg",
+  }
 ];
 
 export const whyChooseUs = [

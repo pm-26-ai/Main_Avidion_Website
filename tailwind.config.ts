@@ -22,12 +22,14 @@ const config: Config = {
     },
     fontFamily: {
       inter: ["Inter", "sans-serif"],
+      jersey: ["Jersey 25", "sans-serif"],
     },
     extend: {
       backgroundImage: {
         "why-choose-us-bg-xl": "url('/why-choose-us/why-choose-bg-xl.png')",
         "why-choose-us-bg-md": "url('/why-choose-us/why-choose-bg-md.png')",
-        "avidion-benefit": "url('/careers/benefits-bg.png')",
+        // "ai-integration-chatbot": "url('/hero-section/bg-image.png')",
+        "mobile-app-dev":"url('/hero-section/mobile-app-dev-bg.svg')"
       },
       animation: {
         "rotate-border": "border-rotate 4s linear infinite",
@@ -165,7 +167,7 @@ const config: Config = {
         },
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
+          to: { transform: "translateX(-100%)" },
         },
       },
     },

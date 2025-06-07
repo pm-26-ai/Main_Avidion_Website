@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+25&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -24,16 +24,59 @@
   /* box-sizing: border-box; */
 }
 
-.card-glow-border {
-  border: 1px solid transparent;
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  background-image:
-    linear-gradient(#0a0a0a, #0a0a0a),
-      radial-gradient(
-        180px circle at var(--mouse-x) var(--mouse-y),
-        #ffffffaa,
-        #7722dd44,
-        transparent 80%
-      ); 
+/* .glow-effect {
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    rgb(251, 55, 60),
+    rgba(252, 114, 28, 1),
+    rgba(255, 220, 0, 1),
+    rgba(27, 206, 255, 1),
+    rgba(42, 107, 255, 1),
+    rgba(217, 41, 255, 1),
+    rgba(255, 10, 92, 1)
+  );
+  mask-image:
+    linear-gradient(#0000, #0000),
+    conic-gradient(
+      from calc((var(--start, 0) - (20 * 1.1)) * 1deg),
+      #ffffff1f 0deg,
+      white,
+      #ffffff00 100deg
+    );
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+  mask-clip: padding-box, border-box;
+} */
+
+.glow-effect {
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #ff69f8,
+    #a355f9,
+    #622a9a,
+    #c793ff,
+    #ff69f8
+  );
+
+  mask-image:
+    linear-gradient(#0000, #0000),
+    conic-gradient(
+      from calc((var(--start, 0) - 20) * 0.5deg),
+      #ffffff30 0deg,
+      white,
+      #ffffff00 100deg
+    );
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+  mask-clip: padding-box, border-box;
+}
+
+.bg-ai-integration-chatbot {
+  background:
+    linear-gradient(288deg, rgba(0, 0, 0, 0) 12.65%, #000000 91.05%),
+    url("/hero-section/bg-image.png") lightgray -53px -36px / 139.405% 140.449%
+      no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

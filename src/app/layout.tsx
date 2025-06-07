@@ -2,7 +2,6 @@ import Footer from "@/components/share/footer";
 import Navbar from "@/components/share/navbar";
 import WhatsAppIcon from "@/components/whatsapp";
 import "@/styles/globals.css";
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

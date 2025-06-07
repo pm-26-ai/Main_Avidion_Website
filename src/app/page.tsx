@@ -10,10 +10,10 @@ export default function HomePage() {
     <>
       <HeroSection />
       <WhatWeOffer />
+      {/* <WhatWeOfferNew/> */}
       <WhyChooseUs />
       {/* <OurToolkit /> */}
       <HowWeWork />
-
       {/* <ContactForm /> */}
       <OurBlogs />
     </>
