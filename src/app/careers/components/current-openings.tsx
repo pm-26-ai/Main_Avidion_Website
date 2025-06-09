@@ -119,7 +119,7 @@ export default function CurrentOpenings() {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetContent
               side="bottom"
-              className="h-[80vh] overflow-y-scroll border border-none bg-[#141315] pb-[80px] transition-transform duration-500"
+              className="h-[80vh] overflow-y-auto border border-none bg-[#141315] pb-[80px] transition-transform duration-500"
             >
               <CareerForm />
 

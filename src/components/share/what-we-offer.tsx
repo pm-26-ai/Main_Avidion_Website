@@ -2,51 +2,14 @@
 import { useEffect, useRef } from "react";
 import { HeadingSection } from "./heading-section";
 import Image from "next/image";
+import { whatWeOfferCards } from "@/data";
+import { useRouter, useSearchParams } from "next/navigation";
 export default function WhatWeOffer() {
-  const offerCards = [
-    {
-      id: 1,
-      title: "Custom Website Development",
-      content:
-        "Tailor-made, responsive, and lightning-fast websites built with the latest tech stack.",
-      icon: "/what-we-offer/icon-1.svg",
-    },
-    {
-      id: 2,
-      title: "AI Integration & Chatbots",
-      content: "Visual insights into your site’s performance.",
-      icon: "/what-we-offer/icon-2.svg",
-    },
-    {
-      id: 3,
-      title: "Mobile App Development",
-      content: "Automatic suggestions and the best keywords to target.",
-      icon: "/what-we-offer/icon-3.svg",
-    },
-    {
-      id: 4,
-      title: "CRM",
-      content:
-        "Salesforce, HubSpot, Zoho CRM tailored to enhance customer satisfaction, raising scores by 25%.",
-      icon: "/what-we-offer/icon-4.svg",
-    },
-    {
-      id: 5,
-      title: "3D Websites",
-      content:
-        "3D websites capture attention and create memorable brand stories through immersive visuals and interaction.",
-      icon: "/what-we-offer/icon-5.svg",
-    },
-    {
-      id: 6,
-      title: "WMS & ERP Systems",
-      content:
-        "Seamless warehouse management system integration reduces inventory costs by 15%.",
-      icon: "/what-we-offer/icon-6.svg",
-    },
-  ];
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const glowRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(searchParams.toString());
+  const router = useRouter();
 
   useEffect(() => {
     const cards = cardRefs.current;
@@ -89,7 +52,7 @@ export default function WhatWeOffer() {
           subClassName="text-center"
         />
         <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-x-8 md:gap-y-[54px] xl:grid-cols-3 xl:gap-x-10 xl:gap-y-[49px]">
-          {offerCards.map((card, index) => {
+          {whatWeOfferCards.map((card, index) => {
             return (
               <>
                 <div className="overflow-hidden">
@@ -128,7 +91,15 @@ export default function WhatWeOffer() {
                           </div>
                         </div>
                         {/* know more button */}
-                        <button className="w-full rounded-[10px] border border-white/15 bg-[rgba(61,61,61,0.40)] px-[15px] py-1.5 text-center text-sm font-normal shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]">
+                        <button
+                          onClick={() => {
+                            params.set("open", "true");
+                            router.push(`/?${params.toString()}`, {
+                              scroll: false,
+                            });
+                          }}
+                          className="w-full rounded-[10px] border border-white/15 bg-[rgba(61,61,61,0.40)] px-[15px] py-1.5 text-center text-sm font-normal shadow-[inset_0_0_6px_3px_rgba(255,255,255,0.25)] backdrop-blur-[7px]"
+                        >
                           Know More
                         </button>
                       </div>

@@ -29,8 +29,8 @@ const navigationLinks = [
   },
   {
     id: 1,
-    name: "Contact Us",
-    redirectUrl: "/contact-us",
+    name: "Careers",
+    redirectUrl: "/careers",
   },
 ];
 
@@ -94,7 +94,12 @@ const Footer = () => {
           <div className="flex flex-col gap-10">
             <div className="flex items-center gap-2 md:gap-2.5 xl:gap-[15px]">
               <div className="relative size-[30px] md:size-[40px]">
-                <Image src={"/avidion-logo.png"} alt="avidion-logo" fill priority/>
+                <Image
+                  src={"/avidion-logo.png"}
+                  alt="avidion-logo"
+                  fill
+                  priority
+                />
               </div>
               <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-inter text-lg font-bold leading-[24px] -tracking-[0.6px] text-transparent xl:text-2xl">
                 Avidion
@@ -162,7 +167,7 @@ const Footer = () => {
               <>
                 <Link
                   href={link.redirectUrl}
-                  className="flex flex-col gap-4 font-normal text-[rgba(255,255,255,0.50)]"
+                  className="flex flex-col gap-4 font-normal text-[rgba(255,255,255,0.50)] transition-all duration-300 ease-in-out hover:font-medium hover:text-white"
                   key={link.id}
                 >
                   {link.name}
@@ -177,7 +182,7 @@ const Footer = () => {
             {servicesLinks.map((link) => (
               <>
                 <div
-                  className="flex flex-col gap-4 font-normal text-[rgba(255,255,255,0.50)]"
+                  className="flex flex-col gap-4 font-normal text-[rgba(255,255,255,0.50)] transition-all duration-300 ease-in-out hover:font-medium hover:text-white"
                   key={link.id}
                 >
                   {link.name}
@@ -189,7 +194,11 @@ const Footer = () => {
           {/* social icons */}
           <div className="hidden flex-row items-start gap-4 xl:flex">
             {socialIcons.map((icon) => (
-              <Link href={icon.redirectUrl} key={icon.id} className="rounded-md bg-[#676768] p-[6px]">
+              <Link
+                href={icon.redirectUrl}
+                key={icon.id}
+                className="rounded-md bg-[#676768] p-[6px] transition-all duration-300 ease-in-out hover:bg-white/65"
+              >
                 <div className="flex size-[19.5px] items-center justify-center text-black">
                   {icon.icon}
                 </div>

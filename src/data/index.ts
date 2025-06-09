@@ -73,7 +73,7 @@ export const blogs = [
     author: "Shreya Goyal",
     url: "/blogs/erp-helps-in-business",
   },
-   {
+  {
     id: 4,
     image: "/blogs/blog-1.png",
     mainTech: "Chatbots",
@@ -239,24 +239,24 @@ export const tapeSection = [
   {
     url: "./infinite-scroll/gemini.svg",
   },
-   {
+  {
     url: "./infinite-scroll/instamojo.svg",
   },
-   {
+  {
     url: "./infinite-scroll/openai.svg",
   },
-   {
+  {
     url: "./infinite-scroll/paypal.svg",
   },
-   {
+  {
     url: "./infinite-scroll/payu.svg",
   },
-   {
+  {
     url: "./infinite-scroll/razorpay.svg",
   },
-   {
+  {
     url: "./infinite-scroll/stripe.svg",
-  }
+  },
 ];
 
 export const whyChooseUs = [
@@ -303,79 +303,48 @@ export const whyChooseUs = [
 
 export const currentOpenings = [
   {
-    title: "Senior React Developer",
+    title: "3D Designer",
     content:
-      "We're looking for an experienced React developer to join our frontend team and help build innovative web applications.",
-    department: "Engineering",
-    workType: ["Hybrid", "Full-time"],
+      "We're seeking a talented UI/UX designer with strong 3D design expertise to craft immersive and visually compelling user experiences for next-gen web and mobile applications.",
+    department: "Design",
+    workType: ["On-site", "Full-time"],
     requirements: [
-      "5+ years of experience with React",
-      "Strong TypeScript skills",
-      "Experience with state management libraries",
-      "Knowledge of responsive design principles",
+      "2+ years of professional experience in UI/UX design",
+      "Proficiency in 3D design tools like Blender, Figma, or Adobe XD",
+      "Strong understanding of user-centered design principles",
+      "Ability to create wireframes, mockups, and interactive prototypes",
+      "Experience designing for both web and mobile platforms",
+      "Understanding of animation, transitions, and micro-interactions in 3D environments",
     ],
     benefits: [
-      "Competitive salary",
-      "Remote work flexibility",
+      "Creative freedom on cutting-edge projects",
+      "Opportunity to work with AI-driven & 3D experiences",
+      "Collaborative and innovation-driven environment",
       "Health insurance",
-      "Professional development budge",
+       "Competitive salary",
     ],
   },
+
   {
-    title: "UX/UI Designer",
+    title: "Mobile & Custom Software Developer",
     content:
-      "Join our design team to create intuitive, accessible, and visually appealing user interfaces for our clients' products.",
-    department: "Engineering",
-    workType: ["Hybrid", "Full-time"],
+      "We're looking for a passionate developer experienced in building high-performance mobile apps and custom software solutions using modern frameworks like React Native and Flutter.",
+    department: "Technology",
+    workType: ["On-site", "Full-time"],
     requirements: [
-      "5+ years of experience with React",
-      "Strong TypeScript skills",
-      "Experience with state management libraries",
-      "Knowledge of responsive design principles",
+      "2+ years of hands-on experience in mobile app development",
+      "Proficiency in React Native and/or Flutter",
+      "Experience in building and deploying apps for both Android and iOS",
+      "Familiarity with RESTful APIs, Firebase, or GraphQL",
+      "Knowledge of app performance optimization and debugging",
+      "Experience developing custom software solutions for clients",
     ],
     benefits: [
-      "Competitive salary",
-      "Remote work flexibility",
+      "Opportunity to work on AI-driven and innovative products",
+      "Exposure to diverse client projects and domains",
       "Health insurance",
-      "Professional development budge",
-    ],
-  },
-  {
-    title: "DevOps Engineer",
-    content:
-      "Help us build and maintain our cloud infrastructure, CI/CD pipelines, and ensure reliability of our systems.",
-    department: "Engineering",
-    workType: ["Hybrid", "Full-time"],
-    requirements: [
-      "5+ years of experience with React",
-      "Strong TypeScript skills",
-      "Experience with state management libraries",
-      "Knowledge of responsive design principles",
-    ],
-    benefits: [
       "Competitive salary",
-      "Remote work flexibility",
-      "Health insurance",
-      "Professional development budge",
-    ],
-  },
-  {
-    title: "Project Manager",
-    content:
-      "Oversee project lifecycles, coordinate with clients, and ensure timely delivery of high-quality solutions.",
-    department: "Engineering",
-    workType: ["Hybrid", "Full-time"],
-    requirements: [
-      "5+ years of experience with React",
-      "Strong TypeScript skills",
-      "Experience with state management libraries",
-      "Knowledge of responsive design principles",
-    ],
-    benefits: [
-      "Competitive salary",
-      "Remote work flexibility",
-      "Health insurance",
-      "Professional development budge",
+      "Skill development and certification support",
     ],
   },
 ];

@@ -1,8 +1,10 @@
 import Footer from "@/components/share/footer";
 import Navbar from "@/components/share/navbar";
+import NavbarWrapper from "@/components/share/navbar-wrapper";
 import WhatsAppIcon from "@/components/whatsapp";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -22,8 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className="bg-[#020103]">
-          <Navbar />
-          {children}
+          {/* useSearchParams needs to be wrapped in suspense boundary */}
+          <Suspense>
+            <NavbarWrapper />
+            {children}
+          </Suspense>
           <Footer />
         </main>
         {/* <Toaster /> */}

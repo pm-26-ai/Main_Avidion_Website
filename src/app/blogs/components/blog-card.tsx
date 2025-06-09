@@ -1,5 +1,7 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { IoArrowForward } from "react-icons/io5";
 export type BlogCardProps = {
   id: number;
@@ -12,9 +14,13 @@ export type BlogCardProps = {
   url: string;
 };
 export default function BlogCard({ blog }: { blog: BlogCardProps }) {
+  const router = useRouter();
   return (
     <>
-      <div className="rounded-[10px] border border-white/15 bg-[rgba(21,21,21,0.29)] font-inter backdrop-blur-[23.14px]">
+      <div
+        onClick={() => router.push(blog.url)}
+        className="cursor-pointer rounded-[10px] border border-white/15 bg-[rgba(21,21,21,0.29)] font-inter backdrop-blur-[23.14px]"
+      >
         {/* blog-image */}
         <div className="relative aspect-[16/9]">
           <Image

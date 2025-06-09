@@ -25,7 +25,7 @@ export default function WhyChooseUs() {
       }
     };
     const handleMouseEnter = () => {
-      div.style.opacity = "0.25";
+      div.style.opacity = "0.35";
     };
     const handleMouseLeave = () => {
       div.style.opacity = "0";

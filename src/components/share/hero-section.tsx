@@ -24,11 +24,11 @@ export default function HeroSection() {
         ref={containerRef}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        className="relative h-[630px] overflow-hidden bg-[#090B0D] bg-[linear-gradient(2deg,_rgba(0,0,0,0.00)_81.43%,#000_90.93%)] font-inter md:h-[980px] xl:h-[1280px]"
+        className="relative h-[630px] overflow-hidden bg-[#090B0D] bg-[linear-gradient(2deg,_rgba(0,0,0,0.00)_81.43%,#000_90.93%)] font-inter md:h-[980px] xl:h-[1234px]"
       >
         <video
           src="/hero-section/bg-hero-video.mp4"
-          className="absolute left-[40px] top-[28px] h-full w-full scale-[1.8] sm:top-[45px] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1.15]"
+          className="absolute left-[40px] top-[28px] h-full w-full scale-[1.8] sm:top-[45px] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1]"
           autoPlay
           muted
           loop
@@ -100,11 +100,15 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="left-[25%] top-[68%] 2xl:flex hidden scale-[0.9] flex-row gap-[18px] font-inter 2xl:absolute">
+      {/* <div className="absolute top-[43%] left-[24.5%] w-[953px] h-[627px] scale-[0.9]">
+      <Image src={"/hero-section/Frame-257.png"} alt="cbhdscbdc" fill className="object-cover"/>
+     </div> */}
+
+      <div className="left-[24.5%] top-[43%] hidden flex-row gap-[18px] font-inter 2xl:absolute 2xl:top-[64%] 2xl:flex">
         {/* left-divs */}
-        <div className="flex flex-col gap-[11px]">
+        <div className="flex flex-col gap-[18px]">
           {/* future ready digital solutions card*/}
-          <div className="flex flex-col gap-[17px] rounded-[8px] bg-[linear-gradient(144deg,_#1B1521_3.52%,_rgba(28,22,34,0.00)_55.43%,_#756184_96.85%)] px-[21px] py-9">
+          <div className="flex flex-col gap-[17px] rounded-[8px] bg-[linear-gradient(144deg,_#1B1521_3.52%,_rgba(28,22,34,0.00)_55.43%,_#756184_96.85%)] px-[21px] pb-[21px] pt-9">
             <div className="relative aspect-square size-[55px]">
               <Image
                 src={"/hero-section/logo.svg"}
@@ -119,7 +123,7 @@ export default function HeroSection() {
                 Future-Ready Digital Solutions
               </div>
 
-              <div className="flex flex-col gap-2.5 text-xs font-normal leading-[25.83px] -tracking-[0.001px] text-[rgba(255,255,255,0.70)]">
+              <div className="flex flex-col gap-2 text-xs font-normal leading-[25.83px] -tracking-[0.001px] text-[rgba(255,255,255,0.70)]">
                 <div>Highly Skilled Professionals</div>
                 <div>100% In-House Talent</div>
                 <div>Global-Ready Delivery Model</div>
@@ -127,7 +131,7 @@ export default function HeroSection() {
             </div>
           </div>
           {/* ai integration and chatbot card */}
-          <div className="bg-ai-integration-chatbot bg-fill flex flex-col items-start gap-[15px] rounded-[8px] bg-[#161616] bg-center bg-no-repeat px-[24px] py-[35px]">
+          <div className="bg-ai-integration-chatbot bg-fill flex flex-col items-start gap-[15px] rounded-[8px] bg-[#161616] bg-center bg-no-repeat px-[24px] pb-[23px] pt-[35px]">
             <div className="rounded-full bg-[linear-gradient(14deg,_#593C6A_10.29%,_#AF76D0_88%)] p-2">
               <div className="relative size-[17.8px]">
                 <Image
@@ -160,14 +164,11 @@ export default function HeroSection() {
           </div>
         </div>
         {/* center divs */}
-        <div className="flex flex-col items-center justify-between">
-          <div className="flex flex-col items-center justify-center gap-[60px]">
+        <div className="relative flex flex-col items-center justify-between">
+          <div className="flex flex-col items-center justify-center">
             <div className="w-[400px] px-[26px] pt-[28px] text-center text-2xl font-medium text-white">
               Your Creative & Tech Partner for Future-Ready Experiences
             </div>
-            {/* <div className="relative aspect-square size-[272px]">
-            <Image src={"/hero-section/main-circle.svg"} fill alt="main-circle"/>
-          </div> */}
           </div>
           <div className="flex flex-row gap-[18px]">
             <div className="flex flex-col items-start gap-[21px] bg-[url('/hero-section/mobile-app-dev-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
@@ -186,6 +187,10 @@ export default function HeroSection() {
               </div>
             </div>
 
+            {/* <div className="absolute inset-0 w-[187px] h-[291px]">
+              <Image src={"/hero-section/mobile-app-dev-bg.svg"} alt="cbhdsbc" fill className="object-cover"/>
+            </div> */}
+
             <div className="flex flex-col items-end gap-[21px] bg-[url('/hero-section/staff-augmentation-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
               <div className="rounded-full bg-[linear-gradient(14deg,_#502135_10.29%,_#A13A94_88%)] p-2">
                 <div className="relative size-[17.8px]">
@@ -202,6 +207,15 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
+          <div className="absolute -left-[8%] bottom-0 right-0 top-[9%] aspect-square size-[470px]">
+            <Image
+              src={"/hero-section/main-circle.svg"}
+              fill
+              alt="main-circle"
+              className="object-cover"
+            />
+          </div>
+          {/* <div className="absolute inset-0 text-white">heyyyy</div> */}
         </div>
         {/* right-divs */}
         <div className="flex flex-col gap-[18px]">

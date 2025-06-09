@@ -93,12 +93,12 @@ export default function AllServices() {
                 <div className="text-center text-sm font-normal text-[rgba(255,255,255,0.70)] md:text-left md:text-base">
                   {service.content}
                 </div>
-                <Link
+                {/* <Link
                   href="#"
                   className="py-2 text-sm font-normal text-white underline underline-offset-1"
                 >
                   Know More
-                </Link>
+                </Link> */}
               </div>
               {index % 2 == 0 ? (
                 <>
