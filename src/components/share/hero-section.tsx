@@ -20,91 +20,95 @@ export default function HeroSection() {
 
   return (
     <>
-      <div
-        ref={containerRef}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-        className="relative h-[630px] overflow-hidden bg-[#090B0D] bg-[linear-gradient(2deg,_rgba(0,0,0,0.00)_81.43%,#000_90.93%)] font-inter md:h-[980px] xl:h-[1234px]"
-      >
-        <video
-          src="/hero-section/bg-hero-video.mp4"
-          className="absolute left-[40px] top-[28px] h-full w-full scale-[1.8] sm:top-[45px] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1]"
-          autoPlay
-          muted
-          loop
-          preload="auto"
-          playsInline
-        ></video>
-        {/* Hidden background image - only visible on the hover */}
-        {isHovering && (
-          <div
-            className="transition-all duration-200 ease-out xl:absolute xl:bottom-0 xl:left-[250px] xl:right-0 xl:top-0 2xl:bottom-0 2xl:left-20 2xl:right-0 2xl:top-0"
-            style={{
-              maskImage: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 0.4) 12%, transparent 18%)`,
-              // WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 0.4) 12%, transparent 18%)`,
-            }}
-          >
-            <Image
-              src={"/hero-section/hero-svg.svg"}
-              alt="hero-svg"
-              className="absolute inset-0 hidden h-full w-full object-fill opacity-40 2xl:block"
-              fill
-            />
+      <div className="bg-[#090B0D]">
+        <div
+          ref={containerRef}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          className="relative h-[630px] overflow-hidden bg-[#090B0D] font-inter md:h-[980px] xl:h-[1234px]"
+        >
+          <video
+            src="/hero-section/bg-hero-video.mp4"
+            className="absolute left-[40px] top-[28px] h-full w-full scale-[1.8] sm:top-[45px] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1]"
+            autoPlay
+            muted
+            loop
+            preload="auto"
+            playsInline
+          ></video>
+          {/* overlay over the video */}
+          <div className="absolute inset-0 bg-[linear-gradient(2deg,_rgba(0,0,0,0.00)_81.43%,#000_90.93%)]"></div>
 
-            <Image
-              src={"/hero-section/hero-svgg-small.svg"}
-              alt="hero-svg"
-              className="absolute inset-0 h-full w-full object-fill opacity-40 xl:block 2xl:hidden"
-              fill
-            />
-          </div>
-        )}
-
-        <div className="container relative py-[100px] sm:py-[112px] md:py-[162px]">
-          <div className="flex flex-col items-start justify-center gap-[22px] font-inter md:gap-[34px] xl:gap-[39px]">
-            <div className="flex flex-col items-start gap-2">
-              <div className="rounded-[50px] border border-white/15 bg-black px-[7.78px] py-1 text-[10px] font-normal leading-[14.45px] -tracking-[0.001px] text-[#9855FF] md:px-2.5 md:py-1.5 md:text-[11px] md:leading-[18px] xl:px-[14px] xl:py-2">
-                We are here to redefine the digital future
-              </div>
-              <div className="flex flex-col gap-2.5 xl:gap-3">
-                <div className="w-[255px] text-[28px] font-medium leading-[38px] -tracking-[1.417px] text-transparent text-white md:w-[500px] md:text-[59px] md:leading-[60px] md:-tracking-[4.158px] xl:w-[700px] xl:text-[82.178px] xl:leading-[90.182px]">
-                  Transforming Ideas into Reality
-                </div>
-                <div className="w-[250px] text-sm font-normal text-white md:w-[392px] xl:w-[550px] xl:text-xl">
-                  We create smart, AI-driven products that help businesses
-                  innovate, grow, and lead in a digital-first world.
-                </div>
-              </div>
-            </div>
+          {/* Hidden background image - only visible on the hover */}
+          {isHovering && (
             <div
+              className="transition-all duration-200 ease-out xl:absolute xl:bottom-0 xl:left-[250px] xl:right-0 xl:top-0 2xl:bottom-0 2xl:left-20 2xl:right-0 2xl:top-0"
               style={{
-                background:
-                  "conic-gradient(from var(--border-angle), #FF57DB, #B33691, #6748DB, #9D78F2)",
+                maskImage: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 0.4) 12%, transparent 18%)`,
+                // WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0, 0, 0, 1) 8%, rgba(0, 0, 0, 0.4) 12%, transparent 18%)`,
               }}
-              className="animate-rotate-border rounded-[12px] p-[3px] hover:shadow-[0_0_12px_0_rgba(255,255,255,0.60)]"
             >
-              <div className="rounded-[8.6px] bg-black px-[18px] py-2 text-[12px] font-medium leading-[14px] text-white transition-all duration-500 ease-in md:text-[10px] md:leading-[22px] xl:rounded-[12px] xl:px-6 xl:py-2.5 xl:text-[15.033px] xl:leading-[31.067px]">
-                Book A Free Consultation
+              <Image
+                src={"/hero-section/hero-svg.svg"}
+                alt="hero-svg"
+                className="absolute inset-0 hidden h-full w-full object-fill opacity-40 2xl:block"
+                fill
+              />
+
+              <Image
+                src={"/hero-section/hero-svgg-small.svg"}
+                alt="hero-svg"
+                className="absolute inset-0 h-full w-full object-fill opacity-40 xl:block 2xl:hidden"
+                fill
+              />
+            </div>
+          )}
+
+          <div className="container relative py-[100px] sm:py-[112px] md:py-[162px]">
+            <div className="flex flex-col items-start justify-center gap-[22px] font-inter md:gap-[34px] xl:gap-[39px]">
+              <div className="flex flex-col items-start gap-2">
+                <div className="rounded-[50px] border border-white/15 bg-black px-[7.78px] py-1 text-[10px] font-normal leading-[14.45px] -tracking-[0.001px] text-[#9855FF] md:px-2.5 md:py-1.5 md:text-[11px] md:leading-[18px] xl:px-[14px] xl:py-2">
+                  We are here to redefine the digital future
+                </div>
+                <div className="flex flex-col gap-2.5 xl:gap-3">
+                  <div className="w-[255px] text-[28px] font-medium leading-[38px] -tracking-[1.417px] text-transparent text-white md:w-[500px] md:text-[59px] md:leading-[60px] md:-tracking-[4.158px] xl:w-[700px] xl:text-[82.178px] xl:leading-[90.182px]">
+                    Transforming Ideas into Reality
+                  </div>
+                  <div className="w-[250px] text-sm font-normal text-white md:w-[392px] xl:w-[550px] xl:text-xl">
+                    We create smart, AI-driven products that help businesses
+                    innovate, grow, and lead in a digital-first world.
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  background:
+                    "conic-gradient(from var(--border-angle), #FF57DB, #B33691, #6748DB, #9D78F2)",
+                }}
+                className="animate-rotate-border rounded-[12px] p-[3px] hover:shadow-[0_0_12px_0_rgba(255,255,255,0.60)]"
+              >
+                <div className="rounded-[8.6px] bg-black px-[18px] py-2 text-[12px] font-medium leading-[14px] text-white transition-all duration-500 ease-in md:text-[10px] md:leading-[22px] xl:rounded-[12px] xl:px-6 xl:py-2.5 xl:text-[15.033px] xl:leading-[31.067px]">
+                  Book A Free Consultation
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="mb-[20px] flex flex-col items-center justify-center gap-[16px] font-inter md:mb-[40px] xl:mb-[76px] xl:gap-[22px]">
-        <div className="text-center text-lg font-medium -tracking-[0.33px] text-white md:text-xl xl:text-[22px] xl:leading-[47px]">
-          Integration Services
-        </div>
+        <div className="flex flex-col items-center justify-center gap-[20px] py-[20px] md:py-[30px] xl:py-[50px] font-inter xl:gap-[25px]">
+          <div className="text-center text-lg font-medium -tracking-[0.33px] text-white md:text-xl xl:text-[22px] xl:leading-[47px]">
+            Integration Services
+          </div>
 
-        <div className="w-[75%]">
-          <InfiniteScrollTape />
+          <div className="w-[75%] bg-[linear-gradient(90deg,_#090B0D_6.13%,_rgba(9,11,13,0.00)_46.81%,_#090B0D_95.76%)]">
+            <InfiniteScrollTape />
+          </div>
         </div>
       </div>
-
       {/* <div className="absolute top-[43%] left-[24.5%] w-[953px] h-[627px] scale-[0.9]">
       <Image src={"/hero-section/Frame-257.png"} alt="cbhdscbdc" fill className="object-cover"/>
      </div> */}
 
-      <div className="left-[24.5%] top-[43%] hidden flex-row gap-[18px] font-inter 2xl:absolute 2xl:top-[64%] 2xl:flex">
+      <div className="left-[24.5%] top-[43%] hidden flex-row gap-[18px] font-inter 2xl:absolute 2xl:top-[64%] 2xl:hidden">
         {/* left-divs */}
         <div className="flex flex-col gap-[18px]">
           {/* future ready digital solutions card*/}

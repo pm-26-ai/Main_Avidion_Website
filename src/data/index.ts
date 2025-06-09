@@ -257,6 +257,9 @@ export const tapeSection = [
   {
     url: "./infinite-scroll/stripe.svg",
   },
+  {
+    url: "./infinite-scroll/lyro.svg",
+  },
 ];
 
 export const whyChooseUs = [
@@ -321,7 +324,7 @@ export const currentOpenings = [
       "Opportunity to work with AI-driven & 3D experiences",
       "Collaborative and innovation-driven environment",
       "Health insurance",
-       "Competitive salary",
+      "Competitive salary",
     ],
   },
 

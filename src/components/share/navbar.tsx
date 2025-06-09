@@ -11,6 +11,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import { RxCross2 } from "react-icons/rx";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import path from "path";
 
 export default function Navbar() {
   const navbarRef = useRef<HTMLDivElement>(null);
@@ -21,6 +22,7 @@ export default function Navbar() {
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams.toString());
   const pathname = usePathname();
+
   const isOpen = searchParams.get("open") === "true";
 
   const handleClose = () => {
@@ -78,11 +80,13 @@ export default function Navbar() {
                       className="relative transition-all duration-300 ease-in"
                     >
                       <span
-                        className={`font-inter text-[13px] font-normal leading-[26px] -tracking-[0.001px] ${pathname === item.url ? `bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#9E3DC2_95.25%)] bg-clip-text text-transparent underline underline-offset-8` : `text-white/80 hover:font-medium hover:text-white`}`}
+                        className={`font-inter text-[13px] font-normal leading-[26px] -tracking-[0.001px] ${pathname === item.url || (item.url != "/" && pathname.startsWith(item.url)) ? `bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#9E3DC2_95.25%)] bg-clip-text text-transparent underline underline-offset-8` : `text-white/80 hover:font-medium hover:text-white`}`}
                       >
                         {item.name}
                       </span>
-                      {pathname === item.url && (
+                      {(pathname === item.url ||
+                        (item.url != "/" &&
+                          pathname.startsWith(`${item.url}/`))) && (
                         <span className="absolute -bottom-[1px] left-0 h-[2px] w-full bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#4D1263_95.25%)]"></span>
                       )}
                     </Link>
@@ -141,27 +145,31 @@ export default function Navbar() {
               ref={navbarRef}
               className="flex flex-col items-center gap-9 px-[27px] pb-[30px] pt-[50px] transition-all duration-300 ease-in-out"
             >
-              {navItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.url}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="relative"
-                >
-                  <span
-                    className={`font-inter text-[13px] font-normal leading-[26px] -tracking-[0.001px] ${
-                      pathname === item.url
-                        ? "bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#9E3DC2_95.25%)] bg-clip-text text-transparent underline underline-offset-8"
-                        : "text-white/80"
-                    }`}
+              {navItems.map((item, index) => {
+                return (
+                  <Link
+                    key={index}
+                    href={item.url}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="relative"
                   >
-                    {item.name}
-                  </span>
-                  {pathname === item.url && (
-                    <span className="absolute -bottom-[1px] left-0 h-[2px] w-full bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#4D1263_95.25%)]"></span>
-                  )}
-                </Link>
-              ))}
+                    <span
+                      className={`font-inter text-[13px] font-normal leading-[26px] -tracking-[0.001px] ${
+                        pathname === item.url ||
+                        (item.url != "/" && pathname.startsWith(item.url))
+                          ? "bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#9E3DC2_95.25%)] bg-clip-text text-transparent underline underline-offset-8"
+                          : "text-white/80"
+                      }`}
+                    >
+                      {item.name}
+                    </span>
+                    {(pathname === item.url ||
+                      (item.url != "/" && pathname.startsWith(item.url))) && (
+                      <span className="absolute -bottom-[1px] left-0 h-[2px] w-full bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#4D1263_95.25%)]"></span>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           )}
         </div>

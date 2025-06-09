@@ -11,10 +11,10 @@ export default function PortfolioCard({
 }) {
   return (
     <>
-      <div className="flex flex-col rounded-[14.75px] border border-[rgba(255,255,255,0.15)] bg-[rgba(21,21,21,0.29)] font-inter backdrop-blur-[34.146px]">
+      <div className="overflow-hidden flex flex-col rounded-[14.75px] border border-[rgba(255,255,255,0.15)] bg-[rgba(21,21,21,0.29)] font-inter backdrop-blur-[34.146px]">
         <video
           src={details.videoUrl}
-          className="h-full w-full rounded-tl-[14.75px] rounded-tr-[14.75px] object-cover"
+          className="h-full w-full rounded-tl-[14.75px] rounded-tr-[14.75px] object-cover scale-[1.15]"
           autoPlay
           loop
           muted

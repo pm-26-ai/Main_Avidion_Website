@@ -9,7 +9,6 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      Sus
       <WhatWeOffer />
       {/* <WhatWeOfferNew/> */}
       <WhyChooseUs />

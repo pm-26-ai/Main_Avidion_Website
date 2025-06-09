@@ -27,7 +27,7 @@ const AboutUs = () => {
       <Main />
       {/* our vision */}
       <div className="bg-[#13081C]">
-        <div className="flex flex-row px-[150px] py-[297px] 2xl:px-[340px]">
+        <div className="flex flex-row px-[150px] py-[30px] 2xl:px-[340px]">
           {facilities.map((item, index) => (
             <>
               <div
@@ -47,7 +47,7 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              {index != facilities.length - 1 && (
+              {/* {index != facilities.length - 1 && (
                 <div className="relative h-[425px] w-[1.48px]">
                   <Image
                     src={"/icons/line.svg"}
@@ -57,7 +57,7 @@ const AboutUs = () => {
                     priority
                   />
                 </div>
-              )}
+              )} */}
             </>
           ))}
         </div>
