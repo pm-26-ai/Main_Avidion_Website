@@ -225,13 +225,13 @@ const Careers = () => {
               </div>
               <div
                 ref={divRef}
-                className="absolute inset-0 z-0 size-[192px] rounded-full bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] opacity-0 blur-[97.25px] transition-opacity transform-gpu duration-300"
+                className="absolute inset-0 z-0 size-[192px] rounded-full bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] opacity-0 blur-[97.25px] transition-opacity duration-300 will-change-transform"
               ></div>
             </div>
           </div>
 
-          <div className="absolute left-0 top-[80%] size-[525px] animate-blob rounded-full bg-[#A5318A] opacity-[0.3] blur-[112px] lg:size-[625px] xl:left-[20%] xl:top-[60%] xl:size-[825px] xl:blur-[200px]"></div>
-          <div className="animate-blob-2 absolute right-0 top-[70%] size-[350px] rounded-full bg-[#622A9A] opacity-[0.3] blur-[112px] lg:size-[569px] xl:right-[15%]"></div>
+          <div className="absolute left-0 top-[80%] size-[525px] animate-blob rounded-full bg-[#A5318A] opacity-[0.3] blur-[112px] will-change-transform lg:size-[625px] xl:left-[20%] xl:top-[60%] xl:size-[825px] xl:blur-[200px]"></div>
+          <div className="absolute right-0 top-[70%] size-[350px] animate-blob-2 rounded-full bg-[#622A9A] opacity-[0.3] blur-[112px] will-change-transform lg:size-[569px] xl:right-[15%]"></div>
         </div>
       </div>
 
