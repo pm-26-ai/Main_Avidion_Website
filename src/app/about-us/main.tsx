@@ -24,9 +24,10 @@ export default function MainSection() {
               </span>
               At Avidion Softwares, we empower businesses with cutting-edge
               digital solutions that blend AI, human insight, and scalable
-              engineering. Our mission is to set benchmarks in next-gen
+              engineering. 
+              {/* Our mission is to set benchmarks in next-gen
               technology by delivering flexible, high-impact software tailored
-              to your goals.
+              to your goals. */}
             </p>
           </div>
           <div className="hidden lg:block">

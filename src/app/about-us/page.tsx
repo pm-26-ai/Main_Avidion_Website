@@ -130,7 +130,7 @@ const AboutUs = () => {
 
       {/* security-first culture */}
       <div className="bg-[#13081C]">
-        <div className="flex flex-col py-[80px] xl:px-[140px] xl:py-[168px] 2xl:px-[254px]">
+        <div className="flex flex-col pt-[80px] xl:px-[140px] xl:pt-[168px] 2xl:px-[254px]">
           <div className="text-center text-[56px] text-xl font-medium leading-[65px] -tracking-[0.84px] text-white md:text-[42px]">
             Security-First Culture{" "}
           </div>
@@ -194,7 +194,7 @@ const AboutUs = () => {
       {/* comprehensive digital solutions */}
       <div className="bg-[#13081C]">
         <div className="container relative flex max-w-full flex-col gap-[50px] overflow-hidden py-[80px] xl:py-[168px]">
-          <div className="px-[50px] text-center text-xl font-medium leading-[65px] -tracking-[0.84px] text-white md:text-[42px] xl:text-[56px]">
+          <div className="px-[50px] text-center text-xl font-medium md:leading-[65px] -tracking-[0.84px] text-white md:text-[42px] xl:text-[56px]">
             Comprehensive Digital Solutions
           </div>
 
@@ -243,7 +243,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="relative aspect-square h-[363px] w-[406px] lg:h-[521px] lg:w-[584px] xl:h-[463px] xl:w-[519px]">
+            <div className="relative aspect-square h-[297px] w-[340px] sm:h-[362px] sm:w-[406px] lg:h-[521px] lg:w-[584px] xl:h-[463px] xl:w-[519px]">
               <Image
                 alt="digital-solutions"
                 src={"/about-us/digital-solutions.svg"}
