@@ -64,7 +64,7 @@ export default function HeroSection() {
             </div>
           )}
 
-          <div className="container relative py-[100px] sm:py-[112px] md:py-[162px]">
+          <div className="container w-full max-auto relative py-[100px] sm:py-[112px] md:py-[162px]">
             <div className="flex flex-col items-start justify-center gap-[22px] font-inter md:gap-[34px] xl:gap-[39px]">
               <div className="flex flex-col items-start gap-2">
                 <div className="rounded-[50px] border border-white/15 bg-black px-[7.78px] py-1 text-[10px] font-normal leading-[14.45px] -tracking-[0.001px] text-[#9855FF] md:px-2.5 md:py-1.5 md:text-[11px] md:leading-[18px] xl:px-[14px] xl:py-2">

@@ -23,7 +23,7 @@ export default function OurBlogs() {
         />
 
         {/* blog content */}
-        <div className="container relative flex max-w-full flex-col gap-[63px] py-[63px] text-white md:gap-[80px] md:py-[80px] xl:gap-[98px] xl:py-[108px]">
+        <div className="container relative mx-auto flex flex-col gap-[63px] py-[63px] text-white md:gap-[80px] md:py-[80px] xl:gap-[98px] xl:py-[108px]">
           <div className="flex flex-col items-center gap-2.5">
             <div className="rounded-[50px] border border-white/15 px-[14px] py-2 text-base font-normal text-[#9855FF]">
               Latest Insights

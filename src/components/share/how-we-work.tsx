@@ -24,7 +24,7 @@ export default function HowWeWork() {
         </video>
         {/* overlay over the video */}
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.60)]"></div>
-        <div className="container max-w-full">
+        <div className="container mx-auto w-full">
           <div className="relative flex flex-col gap-10 py-[63px] font-inter md:py-[80px] xl:gap-[70px] xl:px-[156.5px] xl:py-[123px] 2xl:px-[144px]">
             <div className="flex flex-col items-center gap-[10px]">
               <div className="rounded-[50px] border border-white/15 px-[14px] py-2 text-base font-normal text-[#9855FF]">

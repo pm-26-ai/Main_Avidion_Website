@@ -44,7 +44,8 @@ export default function WhatWeOffer() {
   }, []);
   return (
     <>
-      <div className="container relative max-w-full overflow-x-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] py-[63px] md:py-[80px] xl:py-[108px]">
+      <div className="relative overflow-hidden bg-[linear-gradient(107deg,#190D2E_0.54%,#020103_99.46%)] py-[63px] md:py-[80px] xl:py-[108px]">
+        <div className="container w-full mx-auto">
         <HeadingSection
           mainHeading="What We Offer"
           subContent="Avidion Softwares is a forward-thinking tech company specializing in custom software development, AI integration, cloud migration, and workflow automation. We deliver scalable digital solutions that drive growth for businesses of all sizes."
@@ -114,6 +115,7 @@ export default function WhatWeOffer() {
 
         <div className="animation-delay-1 absolute -right-24 bottom-52 size-[309px] animate-circle-move rounded-full bg-[#971b76] opacity-70 mix-blend-screen blur-[100px]"></div>
         <div className="animation-delay-2 absolute -right-12 bottom-8 size-[213px] animate-circle-move rounded-full bg-[#622A9A] opacity-70 mix-blend-screen blur-[100px]"></div>
+        </div>
       </div>
     </>
   );
