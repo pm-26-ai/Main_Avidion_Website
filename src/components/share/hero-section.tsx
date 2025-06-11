@@ -22,7 +22,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="relative bg-[#090B0D]">
+      <div className="relative overflow-hidden bg-[#090B0D]">
         <div
           ref={containerRef}
           onMouseEnter={() => setIsHovering(true)}
@@ -96,7 +96,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="lg:mt-32 xl:mt-20 flex flex-col items-center justify-center gap-[20px] py-[20px] font-inter md:py-[30px] xl:gap-[25px] xl:py-[50px]">
+        <div className="flex flex-col items-center justify-center gap-[20px] pb-[20px] font-inter sm:mt-10 md:py-[30px] lg:mt-32 xl:mt-20 xl:gap-[25px] xl:py-[50px]">
           <div className="text-center text-base font-medium -tracking-[0.33px] text-white md:text-xl xl:text-[22px] xl:leading-[47px]">
             Integration Services
           </div>
@@ -109,12 +109,12 @@ export default function HeroSection() {
         {/* <div className="absolute top-[43%] left-[24.5%] w-[953px] h-[627px] scale-[0.9]">
       <Image src={"/hero-section/Frame-257.png"} alt="cbhdscbdc" fill className="object-cover"/>
      </div> */}
-
-        <div className="scale-[0.42] md:scale-[0.7] lg:scale-[0.88] absolute -left-[54%] top-[25%] md:-left-[8%] lg:left-[4%] md:top-[37%] xl:left-[16.5%] lg:top-[40%] z-0 flex xl:scale-[1.1] flex-row gap-[7px] md:gap-[18px] font-inter xl:top-[44%] 2xl:left-[24.5%] 2xl:top-[42%] 2xl:scale-[1]">
+        {/* -left-[73.5%] sm:-left-[54%] md:-left-[8%] */}
+        <div className="absolute -left-[73%] vs:-left-[68.2%] scale-[0.35] vs:scale-[0.37] xxs:-left-[64%] xs:-left-[60%] top-[21.6%] z-0 flex xxs:scale-[0.38] flex-row gap-[7px] font-inter sm:-left-[54%] sm:top-[24%] sm:scale-[0.4] md:-left-[8%] md:top-[37%] md:scale-[0.7] md:gap-[18px] lg:left-[4%] lg:top-[40%] lg:scale-[0.88] xl:left-[16.5%] xl:top-[44%] xl:scale-[1.1] 2xl:left-[24.5%] 2xl:top-[42%] 2xl:scale-[1]">
           {/* left-divs */}
-          <div className="flex flex-col gap-[16px] md:justify-between ">
+          <div className="flex flex-col gap-[16px] md:justify-between">
             {/* future ready digital solutions card*/}
-            <div className="flex flex-col gap-[17px] rounded-[6px] md:rounded-[8px] bg-[linear-gradient(144deg,_#1B1521_3.52%,_rgba(28,22,34,0.00)_55.43%,_#756184_96.85%)] px-[21px] py-9">
+            <div className="flex flex-col gap-[17px] rounded-[6px] bg-[linear-gradient(144deg,_#1B1521_3.52%,_rgba(28,22,34,0.00)_55.43%,_#756184_96.85%)] px-[21px] py-9 md:rounded-[8px]">
               <div className="relative aspect-square size-10 xl:size-[55px]">
                 <Image
                   src={"/hero-section/logo.svg"}
@@ -129,7 +129,7 @@ export default function HeroSection() {
                   Future-Ready Digital Solutions
                 </div>
 
-                <div className="flex flex-col gap-2 text-sm md:text-xs font-normal leading-[25.83px] -tracking-[0.001px] text-[rgba(255,255,255,0.70)]">
+                <div className="flex flex-col gap-2 text-sm font-normal leading-[25.83px] -tracking-[0.001px] text-[rgba(255,255,255,0.70)] md:text-xs">
                   <div>Highly Skilled Professionals</div>
                   <div>100% In-House Talent</div>
                   <div>Global-Ready Delivery Model</div>
@@ -137,7 +137,7 @@ export default function HeroSection() {
               </div>
             </div>
             {/* ai integration and chatbot card */}
-            <div className="bg-ai-integration-chatbot bg-fill flex flex-col items-start gap-[15px] rounded-[6px] md:rounded-[8px]  bg-center bg-no-repeat px-[24px] py-[35px]">
+            <div className="bg-ai-integration-chatbot bg-fill flex flex-col items-start gap-[15px] rounded-[6px] bg-center bg-no-repeat px-[24px] py-[35px] md:rounded-[8px]">
               <div className="rounded-full bg-[linear-gradient(14deg,_#593C6A_10.29%,_#AF76D0_88%)] p-2">
                 <div className="relative size-[20px] md:size-[17.8px]">
                   <Image
@@ -148,15 +148,15 @@ export default function HeroSection() {
                   />
                 </div>
               </div>
-              <div className="w-[150px] text-xl md:text-lg font-medium text-white">
+              <div className="w-[150px] text-xl font-medium text-white md:text-lg">
                 AI Integration & Chatbots
               </div>
             </div>
             {/* ai automation */}
-          
+
             <div className="rounded-[8px] bg-[linear-gradient(260deg,_rgba(175,80,155,0.20)_7.64%,_rgba(22,22,22,0.20)_99.47%)] px-[38px] py-[33px] md:py-[40px]">
               <div className="flex items-center justify-center rounded-[8px] bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#9E3DC2_95.25%)] p-[2.5px] backdrop-blur-[75.13px]">
-                <div className="box-border flex flex-row items-center gap-2.5 rounded-[7px] bg-black px-4 md:px-6 py-2">
+                <div className="box-border flex flex-row items-center gap-2.5 rounded-[7px] bg-black px-4 py-2 md:px-6">
                   <div className="relative aspect-square size-7 md:size-6">
                     <Image
                       src={"/hero-section/ai-automation.svg"}
@@ -165,7 +165,7 @@ export default function HeroSection() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="text-base md:text-sm font-medium text-[rgba(255,255,255,0.92)]">
+                  <div className="text-base font-medium text-[rgba(255,255,255,0.92)] md:text-sm">
                     AI Automation
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export default function HeroSection() {
           {/* center divs */}
           <div className="relative flex flex-col items-center justify-between">
             <div className="flex flex-col items-center justify-center">
-              <div className="w-[400px] px-[26px] pt-[28px] text-center text-[26px] md:text-2xl font-medium text-white">
+              <div className="w-[400px] px-[26px] pt-[28px] text-center text-[26px] font-medium text-white md:text-2xl">
                 Your Creative & Tech Partner for Future-Ready Experiences
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function HeroSection() {
                     />
                   </div>
                 </div>
-                <div className="w-[107px] text-base md:text-sm font-medium text-white">
+                <div className="w-[107px] text-base font-medium text-white md:text-sm">
                   Mobile App Development
                 </div>
               </div>
@@ -211,7 +211,7 @@ export default function HeroSection() {
                     />
                   </div>
                 </div>
-                <div className="w-[107px] text-right text-base md:text-sm font-medium text-white">
+                <div className="w-[107px] text-right text-base font-medium text-white md:text-sm">
                   Staff Augmentation
                 </div>
               </div>
@@ -241,11 +241,11 @@ export default function HeroSection() {
             {/* <div className="absolute inset-0 text-white">heyyyy</div> */}
           </div>
           {/* right-divs */}
-          <div className="flex flex-col gap-[6.9px] justify-between">
+          <div className="flex flex-col justify-between gap-[6.9px]">
             {/* 3d animated website */}
             <div className="relative overflow-hidden rounded-[8px] bg-[#1A171A]">
               <div className="py-[34px] pl-[22px] pr-[94px]">
-                <div className="w-[125px] md:w-[119px] text-lg md:text-base font-normal text-white">
+                <div className="w-[125px] text-lg font-normal text-white md:w-[119px] md:text-base">
                   3D & Animated Website{" "}
                 </div>
 
@@ -262,10 +262,10 @@ export default function HeroSection() {
             {/* 24/7 support */}
             <div className="rounded-[8px] bg-[linear-gradient(275deg,_#000_2.75%,_#241C2C_194.32%)]">
               <div className="flex flex-col items-center justify-center gap-[9px] px-[46px] py-[23px]">
-                <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-jersey text-[28px] md:text-[25px] leading-[40px] text-transparent">
+                <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-jersey text-[28px] leading-[40px] text-transparent md:text-[25px]">
                   24/7
                 </div>
-                <div className="w-[143px] text-center text-base md:text-sm font-medium text-white">
+                <div className="w-[143px] text-center text-base font-medium text-white md:text-sm">
                   Product Support & Maintinance
                 </div>
               </div>
@@ -273,7 +273,7 @@ export default function HeroSection() {
             {/* custom software development */}
             <div className="relative overflow-hidden rounded-[8px] bg-[linear-gradient(154deg,_#56228E_2.82%,_#130621_48.6%,_#000_97.78%)] pb-[174px]">
               <div className="flex flex-col gap-[21px] px-[26px] pt-[30px]">
-                <div className="z-10 w-[160px] text-xl md:text-lg font-medium text-white">
+                <div className="z-10 w-[160px] text-xl font-medium text-white md:text-lg">
                   Custom Software Development
                 </div>
 
