@@ -31,7 +31,7 @@ export default function HeroSection() {
         >
           <video
             src="/hero-section/bg-hero-video.mp4"
-            className="absolute left-[40px] top-[28px] h-full w-full scale-[1.7] sm:top-[45px] sm:scale-[1.8] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1.21]"
+            className="absolute left-[40px] top-[28px] h-full w-full scale-[1.7] sm:top-[45px] sm:scale-[1.7] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1.21]"
             autoPlay
             muted
             loop
@@ -96,8 +96,8 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="mt-20 flex flex-col items-center justify-center gap-[20px] py-[20px] font-inter md:py-[30px] xl:gap-[25px] xl:py-[50px]">
-          <div className="text-center text-lg font-medium -tracking-[0.33px] text-white md:text-xl xl:text-[22px] xl:leading-[47px]">
+        <div className="lg:mt-32 xl:mt-20 flex flex-col items-center justify-center gap-[20px] py-[20px] font-inter md:py-[30px] xl:gap-[25px] xl:py-[50px]">
+          <div className="text-center text-base font-medium -tracking-[0.33px] text-white md:text-xl xl:text-[22px] xl:leading-[47px]">
             Integration Services
           </div>
 
@@ -110,12 +110,12 @@ export default function HeroSection() {
       <Image src={"/hero-section/Frame-257.png"} alt="cbhdscbdc" fill className="object-cover"/>
      </div> */}
 
-        <div className="absolute left-[16.5%] z-0 flex scale-[1.1] flex-row gap-[18px] font-inter xl:top-[44%] 2xl:left-[24.5%] 2xl:top-[42%] 2xl:scale-[1]">
+        <div className="scale-[0.42] md:scale-[0.7] lg:scale-[0.88] absolute -left-[54%] top-[25%] md:-left-[8%] lg:left-[4%] md:top-[37%] xl:left-[16.5%] lg:top-[40%] z-0 flex xl:scale-[1.1] flex-row gap-[7px] md:gap-[18px] font-inter xl:top-[44%] 2xl:left-[24.5%] 2xl:top-[42%] 2xl:scale-[1]">
           {/* left-divs */}
-          <div className="flex flex-col gap-[18px]">
+          <div className="flex flex-col gap-[16px] md:justify-between ">
             {/* future ready digital solutions card*/}
-            <div className="flex flex-col gap-[17px] rounded-[8px] bg-[linear-gradient(144deg,_#1B1521_3.52%,_rgba(28,22,34,0.00)_55.43%,_#756184_96.85%)] px-[21px] pb-[21px] pt-9">
-              <div className="relative aspect-square size-[55px]">
+            <div className="flex flex-col gap-[17px] rounded-[6px] md:rounded-[8px] bg-[linear-gradient(144deg,_#1B1521_3.52%,_rgba(28,22,34,0.00)_55.43%,_#756184_96.85%)] px-[21px] py-9">
+              <div className="relative aspect-square size-10 xl:size-[55px]">
                 <Image
                   src={"/hero-section/logo.svg"}
                   alt="avidion-logo"
@@ -129,7 +129,7 @@ export default function HeroSection() {
                   Future-Ready Digital Solutions
                 </div>
 
-                <div className="flex flex-col gap-2 text-xs font-normal leading-[25.83px] -tracking-[0.001px] text-[rgba(255,255,255,0.70)]">
+                <div className="flex flex-col gap-2 text-sm md:text-xs font-normal leading-[25.83px] -tracking-[0.001px] text-[rgba(255,255,255,0.70)]">
                   <div>Highly Skilled Professionals</div>
                   <div>100% In-House Talent</div>
                   <div>Global-Ready Delivery Model</div>
@@ -137,9 +137,9 @@ export default function HeroSection() {
               </div>
             </div>
             {/* ai integration and chatbot card */}
-            <div className="bg-ai-integration-chatbot bg-fill flex flex-col items-start gap-[15px] rounded-[8px] bg-[#161616] bg-center bg-no-repeat px-[24px] pb-[23px] pt-[35px]">
+            <div className="bg-ai-integration-chatbot bg-fill flex flex-col items-start gap-[15px] rounded-[6px] md:rounded-[8px]  bg-center bg-no-repeat px-[24px] py-[35px]">
               <div className="rounded-full bg-[linear-gradient(14deg,_#593C6A_10.29%,_#AF76D0_88%)] p-2">
-                <div className="relative size-[17.8px]">
+                <div className="relative size-[20px] md:size-[17.8px]">
                   <Image
                     src={"/hero-section/ai-integration-icon.svg"}
                     alt="ai-integration-icon"
@@ -148,23 +148,26 @@ export default function HeroSection() {
                   />
                 </div>
               </div>
-              <div className="w-[150px] text-lg font-medium text-white">
+              <div className="w-[150px] text-xl md:text-lg font-medium text-white">
                 AI Integration & Chatbots
               </div>
             </div>
             {/* ai automation */}
-            <div className="rounded-[8px] bg-[linear-gradient(260deg,_rgba(175,80,155,0.20)_7.64%,_rgba(22,22,22,0.20)_99.47%)] px-[15px] py-[34px]">
-              <div className="flex flex-row items-center justify-center gap-2.5 rounded-[9.52px] border-[2px] border-[#FF57DB] bg-[rgba(0,0,0,0,0.39)] px-10 py-2.5 backdrop-blur-[75.13px]">
-                <div className="relative aspect-square size-6">
-                  <Image
-                    src={"/hero-section/ai-automation.svg"}
-                    alt="ai-automation-icon"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="text-sm font-medium text-[rgba(255,255,255,0.92)]">
-                  AI Automation
+          
+            <div className="rounded-[8px] bg-[linear-gradient(260deg,_rgba(175,80,155,0.20)_7.64%,_rgba(22,22,22,0.20)_99.47%)] px-[38px] py-[33px] md:py-[40px]">
+              <div className="flex items-center justify-center rounded-[8px] bg-[linear-gradient(57deg,_#C0ADFF_11.25%,_#BF5CEA_34.88%,_#DD68BD_66.68%,_#9E3DC2_95.25%)] p-[2.5px] backdrop-blur-[75.13px]">
+                <div className="box-border flex flex-row items-center gap-2.5 rounded-[7px] bg-black px-4 md:px-6 py-2">
+                  <div className="relative aspect-square size-7 md:size-6">
+                    <Image
+                      src={"/hero-section/ai-automation.svg"}
+                      alt="ai-automation-icon"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="text-base md:text-sm font-medium text-[rgba(255,255,255,0.92)]">
+                    AI Automation
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,14 +175,14 @@ export default function HeroSection() {
           {/* center divs */}
           <div className="relative flex flex-col items-center justify-between">
             <div className="flex flex-col items-center justify-center">
-              <div className="w-[400px] px-[26px] pt-[28px] text-center text-2xl font-medium text-white">
+              <div className="w-[400px] px-[26px] pt-[28px] text-center text-[26px] md:text-2xl font-medium text-white">
                 Your Creative & Tech Partner for Future-Ready Experiences
               </div>
             </div>
             <div className="flex flex-row gap-[18px]">
               <div className="flex flex-col items-start gap-[21px] bg-[url('/hero-section/mobile-app-dev-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
                 <div className="rounded-full bg-[linear-gradient(14deg,_#502135_10.29%,_#A13A94_88%)] p-2">
-                  <div className="relative size-[17.8px]">
+                  <div className="relative size-[20px] md:size-[17.8px]">
                     <Image
                       src={"/what-we-offer/icon-3.svg"}
                       alt="ai-integration-icon"
@@ -188,7 +191,7 @@ export default function HeroSection() {
                     />
                   </div>
                 </div>
-                <div className="w-[107px] text-sm font-medium text-white">
+                <div className="w-[107px] text-base md:text-sm font-medium text-white">
                   Mobile App Development
                 </div>
               </div>
@@ -199,7 +202,7 @@ export default function HeroSection() {
 
               <div className="flex flex-col items-end gap-[21px] bg-[url('/hero-section/staff-augmentation-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
                 <div className="rounded-full bg-[linear-gradient(14deg,_#502135_10.29%,_#A13A94_88%)] p-2">
-                  <div className="relative size-[17.8px]">
+                  <div className="relative size-[20px] md:size-[17.8px]">
                     <Image
                       src={"/what-we-offer/icon-3.svg"}
                       alt="ai-integration-icon"
@@ -208,22 +211,22 @@ export default function HeroSection() {
                     />
                   </div>
                 </div>
-                <div className="w-[107px] text-right text-sm font-medium text-white">
+                <div className="w-[107px] text-right text-base md:text-sm font-medium text-white">
                   Staff Augmentation
                 </div>
               </div>
             </div>
-            {/* <div className="absolute -left-[8%] bottom-0 right-0 top-[9%] aspect-square size-[470px]">
-            <Image
-              src={"/hero-section/main-circle.svg"}
-              fill
-              alt="main-circle"
-              className="object-cover"
-            />
-          </div> */}
+            <div className="absolute -left-[8%] bottom-0 right-0 top-[9%] aspect-square size-[470px]">
+              <Image
+                src={"/hero-section/main-circle.svg"}
+                fill
+                alt="main-circle"
+                className="object-cover"
+              />
+            </div>
 
-            <div className="absolute bottom-0 left-[6%] right-0 top-[12%] ">
-              {/* <div className="absolute size-[330px] rounded-full bg-transparent flex items-center justify-center overflow-hidden"> */}
+            {/* <div className="absolute bottom-0 left-[6%] right-0 top-[12%]">
+              <div className="absolute flex size-[360px] items-center justify-center overflow-hidden rounded-full bg-transparent">
                 <div className="relative size-[350px]">
                   <Lottie
                     animationData={animationData}
@@ -232,17 +235,17 @@ export default function HeroSection() {
                     style={{ width: "100%", height: "100%" }}
                   />
                 </div>
-              {/* </div> */}
-            </div>
+              </div>
+            </div> */}
 
             {/* <div className="absolute inset-0 text-white">heyyyy</div> */}
           </div>
           {/* right-divs */}
-          <div className="flex flex-col gap-[18px]">
+          <div className="flex flex-col gap-[6.9px] justify-between">
             {/* 3d animated website */}
             <div className="relative overflow-hidden rounded-[8px] bg-[#1A171A]">
               <div className="py-[34px] pl-[22px] pr-[94px]">
-                <div className="w-[119px] text-base font-normal text-white">
+                <div className="w-[125px] md:w-[119px] text-lg md:text-base font-normal text-white">
                   3D & Animated Website{" "}
                 </div>
 
@@ -259,10 +262,10 @@ export default function HeroSection() {
             {/* 24/7 support */}
             <div className="rounded-[8px] bg-[linear-gradient(275deg,_#000_2.75%,_#241C2C_194.32%)]">
               <div className="flex flex-col items-center justify-center gap-[9px] px-[46px] py-[23px]">
-                <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-jersey text-[25px] leading-[40px] text-transparent">
+                <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-jersey text-[28px] md:text-[25px] leading-[40px] text-transparent">
                   24/7
                 </div>
-                <div className="w-[143px] text-center text-sm font-medium text-white">
+                <div className="w-[143px] text-center text-base md:text-sm font-medium text-white">
                   Product Support & Maintinance
                 </div>
               </div>
@@ -270,14 +273,14 @@ export default function HeroSection() {
             {/* custom software development */}
             <div className="relative overflow-hidden rounded-[8px] bg-[linear-gradient(154deg,_#56228E_2.82%,_#130621_48.6%,_#000_97.78%)] pb-[174px]">
               <div className="flex flex-col gap-[21px] px-[26px] pt-[30px]">
-                <div className="z-10 w-[160px] text-lg font-medium text-white">
+                <div className="z-10 w-[160px] text-xl md:text-lg font-medium text-white">
                   Custom Software Development
                 </div>
 
                 <div className="flex flex-col items-start gap-2">
                   <div className="flex items-center gap-2">
                     <div className="rounded-full bg-[linear-gradient(14deg,_#160B24_10.29%,_#5F388E_88%)] p-2">
-                      <div className="relative size-[17px]">
+                      <div className="relative size-[19px] md:size-[17px]">
                         <Image
                           src={"/what-we-offer/icon-6.svg"}
                           alt="crm-icon"
@@ -290,7 +293,7 @@ export default function HeroSection() {
 
                   <div className="flex items-center gap-2">
                     <div className="rounded-full bg-[linear-gradient(14deg,_#160B24_10.29%,_#5F388E_88%)] p-2">
-                      <div className="relative size-[17px]">
+                      <div className="relative size-[19px] md:size-[17px]">
                         <Image
                           src={"/what-we-offer/icon-4.svg"}
                           alt="crm-icon"
