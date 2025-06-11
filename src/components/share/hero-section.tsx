@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import Lottie from 'lottie-react';
-import animationData from '@/animations/animation.json';
+import Lottie from "lottie-react";
+import animationData from "@/animations/animation.json";
 import { useEffect, useRef, useState } from "react";
 import InfiniteScrollTape from "../infinite-scroll-area";
 export default function HeroSection() {
@@ -22,7 +22,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <div className="bg-[#090B0D]">
+      <div className="relative bg-[#090B0D]">
         <div
           ref={containerRef}
           onMouseEnter={() => setIsHovering(true)}
@@ -105,115 +105,115 @@ export default function HeroSection() {
             <InfiniteScrollTape />
           </div>
         </div>
-      </div>
-      {/* <div className="absolute top-[43%] left-[24.5%] w-[953px] h-[627px] scale-[0.9]">
+
+        {/* <div className="absolute top-[43%] left-[24.5%] w-[953px] h-[627px] scale-[0.9]">
       <Image src={"/hero-section/Frame-257.png"} alt="cbhdscbdc" fill className="object-cover"/>
      </div> */}
 
-      <div className="scale-[1.1] 2xl:scale-[1] absolute left-[16.5%] 2xl:left-[24.5%] xl:top-[70%] flex flex-row gap-[18px] font-inter 2xl:xl:top-[52%]">
-        {/* left-divs */}
-        <div className="flex flex-col gap-[18px]">
-          {/* future ready digital solutions card*/}
-          <div className="flex flex-col gap-[17px] rounded-[8px] bg-[linear-gradient(144deg,_#1B1521_3.52%,_rgba(28,22,34,0.00)_55.43%,_#756184_96.85%)] px-[21px] pb-[21px] pt-9">
-            <div className="relative aspect-square size-[55px]">
-              <Image
-                src={"/hero-section/logo.svg"}
-                alt="avidion-logo"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col gap-[25px]">
-              <div className="w-[209px] bg-[linear-gradient(57deg,_#C7B5FF_11.25%,_#D984FF_34.88%,_#E458BE_66.88%,_#A03EC4_95.25%)] bg-clip-text text-2xl font-medium -tracking-[1.214px] text-transparent">
-                Future-Ready Digital Solutions
-              </div>
-
-              <div className="flex flex-col gap-2 text-xs font-normal leading-[25.83px] -tracking-[0.001px] text-[rgba(255,255,255,0.70)]">
-                <div>Highly Skilled Professionals</div>
-                <div>100% In-House Talent</div>
-                <div>Global-Ready Delivery Model</div>
-              </div>
-            </div>
-          </div>
-          {/* ai integration and chatbot card */}
-          <div className="bg-ai-integration-chatbot bg-fill flex flex-col items-start gap-[15px] rounded-[8px] bg-[#161616] bg-center bg-no-repeat px-[24px] pb-[23px] pt-[35px]">
-            <div className="rounded-full bg-[linear-gradient(14deg,_#593C6A_10.29%,_#AF76D0_88%)] p-2">
-              <div className="relative size-[17.8px]">
+        <div className="absolute left-[16.5%] z-0 flex scale-[1.1] flex-row gap-[18px] font-inter xl:top-[44%] 2xl:left-[24.5%] 2xl:top-[42%] 2xl:scale-[1]">
+          {/* left-divs */}
+          <div className="flex flex-col gap-[18px]">
+            {/* future ready digital solutions card*/}
+            <div className="flex flex-col gap-[17px] rounded-[8px] bg-[linear-gradient(144deg,_#1B1521_3.52%,_rgba(28,22,34,0.00)_55.43%,_#756184_96.85%)] px-[21px] pb-[21px] pt-9">
+              <div className="relative aspect-square size-[55px]">
                 <Image
-                  src={"/hero-section/ai-integration-icon.svg"}
-                  alt="ai-integration-icon"
+                  src={"/hero-section/logo.svg"}
+                  alt="avidion-logo"
                   fill
                   className="object-cover"
                 />
               </div>
-            </div>
-            <div className="w-[150px] text-lg font-medium text-white">
-              AI Integration & Chatbots
-            </div>
-          </div>
-          {/* ai automation */}
-          <div className="rounded-[8px] bg-[linear-gradient(260deg,_rgba(175,80,155,0.20)_7.64%,_rgba(22,22,22,0.20)_99.47%)] px-[15px] py-[34px]">
-            <div className="flex flex-row items-center justify-center gap-2.5 rounded-[9.52px] border-[2px] border-[#FF57DB] bg-[rgba(0,0,0,0,0.39)] px-10 py-2.5 backdrop-blur-[75.13px]">
-              <div className="relative aspect-square size-6">
-                <Image
-                  src={"/hero-section/ai-automation.svg"}
-                  alt="ai-automation-icon"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="text-sm font-medium text-[rgba(255,255,255,0.92)]">
-                AI Automation
+
+              <div className="flex flex-col gap-[25px]">
+                <div className="w-[209px] bg-[linear-gradient(57deg,_#C7B5FF_11.25%,_#D984FF_34.88%,_#E458BE_66.88%,_#A03EC4_95.25%)] bg-clip-text text-2xl font-medium -tracking-[1.214px] text-transparent">
+                  Future-Ready Digital Solutions
+                </div>
+
+                <div className="flex flex-col gap-2 text-xs font-normal leading-[25.83px] -tracking-[0.001px] text-[rgba(255,255,255,0.70)]">
+                  <div>Highly Skilled Professionals</div>
+                  <div>100% In-House Talent</div>
+                  <div>Global-Ready Delivery Model</div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        {/* center divs */}
-        <div className="relative flex flex-col items-center justify-between">
-          <div className="flex flex-col items-center justify-center">
-            <div className="w-[400px] px-[26px] pt-[28px] text-center text-2xl font-medium text-white">
-              Your Creative & Tech Partner for Future-Ready Experiences
-            </div>
-          </div>
-          <div className="z-10 flex flex-row gap-[18px] ">
-            <div className="flex flex-col items-start gap-[21px] bg-[url('/hero-section/mobile-app-dev-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
-              <div className="rounded-full bg-[linear-gradient(14deg,_#502135_10.29%,_#A13A94_88%)] p-2">
+            {/* ai integration and chatbot card */}
+            <div className="bg-ai-integration-chatbot bg-fill flex flex-col items-start gap-[15px] rounded-[8px] bg-[#161616] bg-center bg-no-repeat px-[24px] pb-[23px] pt-[35px]">
+              <div className="rounded-full bg-[linear-gradient(14deg,_#593C6A_10.29%,_#AF76D0_88%)] p-2">
                 <div className="relative size-[17.8px]">
                   <Image
-                    src={"/what-we-offer/icon-3.svg"}
+                    src={"/hero-section/ai-integration-icon.svg"}
                     alt="ai-integration-icon"
                     fill
                     className="object-cover"
                   />
                 </div>
               </div>
-              <div className="w-[107px] text-sm font-medium text-white">
-                Mobile App Development
+              <div className="w-[150px] text-lg font-medium text-white">
+                AI Integration & Chatbots
               </div>
             </div>
+            {/* ai automation */}
+            <div className="rounded-[8px] bg-[linear-gradient(260deg,_rgba(175,80,155,0.20)_7.64%,_rgba(22,22,22,0.20)_99.47%)] px-[15px] py-[34px]">
+              <div className="flex flex-row items-center justify-center gap-2.5 rounded-[9.52px] border-[2px] border-[#FF57DB] bg-[rgba(0,0,0,0,0.39)] px-10 py-2.5 backdrop-blur-[75.13px]">
+                <div className="relative aspect-square size-6">
+                  <Image
+                    src={"/hero-section/ai-automation.svg"}
+                    alt="ai-automation-icon"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="text-sm font-medium text-[rgba(255,255,255,0.92)]">
+                  AI Automation
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* center divs */}
+          <div className="relative flex flex-col items-center justify-between">
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[400px] px-[26px] pt-[28px] text-center text-2xl font-medium text-white">
+                Your Creative & Tech Partner for Future-Ready Experiences
+              </div>
+            </div>
+            <div className="flex flex-row gap-[18px]">
+              <div className="flex flex-col items-start gap-[21px] bg-[url('/hero-section/mobile-app-dev-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
+                <div className="rounded-full bg-[linear-gradient(14deg,_#502135_10.29%,_#A13A94_88%)] p-2">
+                  <div className="relative size-[17.8px]">
+                    <Image
+                      src={"/what-we-offer/icon-3.svg"}
+                      alt="ai-integration-icon"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="w-[107px] text-sm font-medium text-white">
+                  Mobile App Development
+                </div>
+              </div>
 
-            {/* <div className="absolute inset-0 w-[187px] h-[291px]">
+              {/* <div className="absolute inset-0 w-[187px] h-[291px]">
               <Image src={"/hero-section/mobile-app-dev-bg.svg"} alt="cbhdsbc" fill className="object-cover"/>
             </div> */}
 
-            <div className="flex flex-col items-end gap-[21px] bg-[url('/hero-section/staff-augmentation-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
-              <div className="rounded-full bg-[linear-gradient(14deg,_#502135_10.29%,_#A13A94_88%)] p-2">
-                <div className="relative size-[17.8px]">
-                  <Image
-                    src={"/what-we-offer/icon-3.svg"}
-                    alt="ai-integration-icon"
-                    fill
-                    className="object-cover"
-                  />
+              <div className="flex flex-col items-end gap-[21px] bg-[url('/hero-section/staff-augmentation-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
+                <div className="rounded-full bg-[linear-gradient(14deg,_#502135_10.29%,_#A13A94_88%)] p-2">
+                  <div className="relative size-[17.8px]">
+                    <Image
+                      src={"/what-we-offer/icon-3.svg"}
+                      alt="ai-integration-icon"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="w-[107px] text-right text-sm font-medium text-white">
+                  Staff Augmentation
                 </div>
               </div>
-              <div className="w-[107px] text-right text-sm font-medium text-white">
-                Staff Augmentation
-              </div>
             </div>
-          </div>
-          {/* <div className="absolute -left-[8%] bottom-0 right-0 top-[9%] aspect-square size-[470px]">
+            {/* <div className="absolute -left-[8%] bottom-0 right-0 top-[9%] aspect-square size-[470px]">
             <Image
               src={"/hero-section/main-circle.svg"}
               fill
@@ -221,99 +221,106 @@ export default function HeroSection() {
               className="object-cover"
             />
           </div> */}
-          <div className="z-0 absolute -left-[0%] bottom-0 right-0 top-[9%] size-[400px]">
-          <Lottie
-            animationData={animationData}
-            loop={true}
-            autoplay={true}
-            style={{ width: "100%", height: "100%" }}
-          />
+
+            <div className="absolute bottom-0 left-[6%] right-0 top-[12%] ">
+              {/* <div className="absolute size-[330px] rounded-full bg-transparent flex items-center justify-center overflow-hidden"> */}
+                <div className="relative size-[350px]">
+                  <Lottie
+                    animationData={animationData}
+                    loop={true}
+                    autoplay={true}
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
+              {/* </div> */}
+            </div>
+
+            {/* <div className="absolute inset-0 text-white">heyyyy</div> */}
           </div>
-          {/* <div className="absolute inset-0 text-white">heyyyy</div> */}
-        </div>
-        {/* right-divs */}
-        <div className="flex flex-col gap-[18px]">
-          {/* 3d animated website */}
-          <div className="relative overflow-hidden rounded-[8px] bg-[#1A171A]">
-            <div className="py-[34px] pl-[22px] pr-[94px]">
-              <div className="w-[119px] text-base font-normal text-white">
-                3D & Animated Website{" "}
+          {/* right-divs */}
+          <div className="flex flex-col gap-[18px]">
+            {/* 3d animated website */}
+            <div className="relative overflow-hidden rounded-[8px] bg-[#1A171A]">
+              <div className="py-[34px] pl-[22px] pr-[94px]">
+                <div className="w-[119px] text-base font-normal text-white">
+                  3D & Animated Website{" "}
+                </div>
+
+                <div className="absolute -bottom-[28%] -right-[18%] aspect-[16/9] h-[126px]">
+                  <Image
+                    src={"/hero-section/3d-animated-website.png"}
+                    alt="3d-animated-website"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* 24/7 support */}
+            <div className="rounded-[8px] bg-[linear-gradient(275deg,_#000_2.75%,_#241C2C_194.32%)]">
+              <div className="flex flex-col items-center justify-center gap-[9px] px-[46px] py-[23px]">
+                <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-jersey text-[25px] leading-[40px] text-transparent">
+                  24/7
+                </div>
+                <div className="w-[143px] text-center text-sm font-medium text-white">
+                  Product Support & Maintinance
+                </div>
+              </div>
+            </div>
+            {/* custom software development */}
+            <div className="relative overflow-hidden rounded-[8px] bg-[linear-gradient(154deg,_#56228E_2.82%,_#130621_48.6%,_#000_97.78%)] pb-[174px]">
+              <div className="flex flex-col gap-[21px] px-[26px] pt-[30px]">
+                <div className="z-10 w-[160px] text-lg font-medium text-white">
+                  Custom Software Development
+                </div>
+
+                <div className="flex flex-col items-start gap-2">
+                  <div className="flex items-center gap-2">
+                    <div className="rounded-full bg-[linear-gradient(14deg,_#160B24_10.29%,_#5F388E_88%)] p-2">
+                      <div className="relative size-[17px]">
+                        <Image
+                          src={"/what-we-offer/icon-6.svg"}
+                          alt="crm-icon"
+                          fill
+                        />
+                      </div>
+                    </div>
+                    <div className="text-sm font-medium text-white">CRM</div>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <div className="rounded-full bg-[linear-gradient(14deg,_#160B24_10.29%,_#5F388E_88%)] p-2">
+                      <div className="relative size-[17px]">
+                        <Image
+                          src={"/what-we-offer/icon-4.svg"}
+                          alt="crm-icon"
+                          fill
+                        />
+                      </div>
+                    </div>
+                    <div className="z-10 text-sm font-medium text-white">
+                      WMS & ERP Systems
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="absolute -bottom-[28%] -right-[18%] aspect-[16/9] h-[126px]">
+              <div className="absolute -right-[40%] top-[15%] z-0 h-[82px] w-[217px] scale-[3]">
                 <Image
-                  src={"/hero-section/3d-animated-website.png"}
-                  alt="3d-animated-website"
+                  src={"/hero-section/custom-software-dev-bg.png"}
+                  alt="custom-software-dev-bg"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
-            </div>
-          </div>
-          {/* 24/7 support */}
-          <div className="rounded-[8px] bg-[linear-gradient(275deg,_#000_2.75%,_#241C2C_194.32%)]">
-            <div className="flex flex-col items-center justify-center gap-[9px] px-[46px] py-[23px]">
-              <div className="bg-[linear-gradient(57deg,_#6748CD_11.25%,_#972BC7_34.88%,_#B33691_66.88%,_#4D1263_95.25%)] bg-clip-text font-jersey text-[25px] leading-[40px] text-transparent">
-                24/7
-              </div>
-              <div className="w-[143px] text-center text-sm font-medium text-white">
-                Product Support & Maintinance
-              </div>
-            </div>
-          </div>
-          {/* custom software development */}
-          <div className="relative overflow-hidden rounded-[8px] bg-[linear-gradient(154deg,_#56228E_2.82%,_#130621_48.6%,_#000_97.78%)] pb-[174px]">
-            <div className="flex flex-col gap-[21px] px-[26px] pt-[30px]">
-              <div className="z-10 w-[160px] text-lg font-medium text-white">
-                Custom Software Development
-              </div>
 
-              <div className="flex flex-col items-start gap-2">
-                <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[linear-gradient(14deg,_#160B24_10.29%,_#5F388E_88%)] p-2">
-                    <div className="relative size-[17px]">
-                      <Image
-                        src={"/what-we-offer/icon-6.svg"}
-                        alt="crm-icon"
-                        fill
-                      />
-                    </div>
-                  </div>
-                  <div className="text-sm font-medium text-white">CRM</div>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[linear-gradient(14deg,_#160B24_10.29%,_#5F388E_88%)] p-2">
-                    <div className="relative size-[17px]">
-                      <Image
-                        src={"/what-we-offer/icon-4.svg"}
-                        alt="crm-icon"
-                        fill
-                      />
-                    </div>
-                  </div>
-                  <div className="z-10 text-sm font-medium text-white">
-                    WMS & ERP Systems
-                  </div>
-                </div>
+              <div className="absolute left-[8%] top-[60%] aspect-square size-[212px]">
+                <Image
+                  src={"/hero-section/custom-software-development.png"}
+                  alt="custom-software-development"
+                  fill
+                />
               </div>
-            </div>
-
-            <div className="absolute -right-[40%] top-[15%] z-0 h-[82px] w-[217px] scale-[3]">
-              <Image
-                src={"/hero-section/custom-software-dev-bg.png"}
-                alt="custom-software-dev-bg"
-                fill
-                className="object-contain"
-              />
-            </div>
-
-            <div className="absolute left-[8%] top-[60%] aspect-square size-[212px]">
-              <Image
-                src={"/hero-section/custom-software-development.png"}
-                alt="custom-software-development"
-                fill
-              />
             </div>
           </div>
         </div>
