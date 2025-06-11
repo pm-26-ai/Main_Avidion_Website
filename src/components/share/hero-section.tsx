@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import Lottie from 'lottie-react';
+import animationData from '@/animations/animation.json';
 import { useEffect, useRef, useState } from "react";
 import InfiniteScrollTape from "../infinite-scroll-area";
 export default function HeroSection() {
@@ -29,7 +31,7 @@ export default function HeroSection() {
         >
           <video
             src="/hero-section/bg-hero-video.mp4"
-            className="absolute left-[40px] top-[28px] h-full w-full scale-[1.7] sm:scale-[1.8] sm:top-[45px] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1]"
+            className="absolute left-[40px] top-[28px] h-full w-full scale-[1.7] sm:top-[45px] sm:scale-[1.8] md:left-[81px] md:top-0 md:scale-[1.7] lg:scale-[1.7] xl:scale-[1.4] 2xl:scale-[1.21]"
             autoPlay
             muted
             loop
@@ -37,7 +39,7 @@ export default function HeroSection() {
             playsInline
           ></video>
           {/* overlay over the video */}
-          <div className="absolute inset-0 bg-[linear-gradient(2deg,_rgba(0,0,0,0.00)_90.33%,#000_98.88%)] md:bg-[linear-gradient(2deg,_rgba(0,0,0,0.00)_81.43%,#000_90.93%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(358deg,_rgba(0,0,0,0.00)_90.33%,#000_98.88%)] md:bg-[linear-gradient(2deg,_rgba(0,0,0,0.00)_81.43%,#000_90.93%)]"></div>
 
           {/* Hidden background image - only visible on the hover */}
           {isHovering && (
@@ -64,7 +66,7 @@ export default function HeroSection() {
             </div>
           )}
 
-          <div className="container w-full max-auto relative py-[100px] sm:py-[112px] md:py-[162px]">
+          <div className="max-auto container relative w-full py-[100px] sm:py-[112px] md:py-[162px]">
             <div className="flex flex-col items-start justify-center gap-[22px] font-inter md:gap-[34px] xl:gap-[39px]">
               <div className="flex flex-col items-start gap-2">
                 <div className="rounded-[50px] border border-white/15 bg-black px-[7.78px] py-1 text-[10px] font-normal leading-[14.45px] -tracking-[0.001px] text-[#9855FF] md:px-2.5 md:py-1.5 md:text-[11px] md:leading-[18px] xl:px-[14px] xl:py-2">
@@ -94,12 +96,12 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center gap-[20px] py-[20px] font-inter md:py-[30px] xl:gap-[25px] xl:py-[50px]">
+        <div className="mt-20 flex flex-col items-center justify-center gap-[20px] py-[20px] font-inter md:py-[30px] xl:gap-[25px] xl:py-[50px]">
           <div className="text-center text-lg font-medium -tracking-[0.33px] text-white md:text-xl xl:text-[22px] xl:leading-[47px]">
             Integration Services
           </div>
 
-          <div className="w-full xl:w-[75%] bg-[linear-gradient(90deg,_#090B0D_6.13%,_rgba(9,11,13,0.00)_46.81%,_#090B0D_95.76%)]">
+          <div className="w-full bg-[linear-gradient(90deg,_#090B0D_6.13%,_rgba(9,11,13,0.00)_46.81%,_#090B0D_95.76%)] xl:w-[75%]">
             <InfiniteScrollTape />
           </div>
         </div>
@@ -108,7 +110,7 @@ export default function HeroSection() {
       <Image src={"/hero-section/Frame-257.png"} alt="cbhdscbdc" fill className="object-cover"/>
      </div> */}
 
-      <div className="left-[24.5%] top-[43%] hidden flex-row gap-[18px] font-inter 2xl:absolute 2xl:top-[64%] 2xl:hidden">
+      <div className="scale-[1.1] 2xl:scale-[1] absolute left-[16.5%] 2xl:left-[24.5%] xl:top-[70%] flex flex-row gap-[18px] font-inter 2xl:xl:top-[52%]">
         {/* left-divs */}
         <div className="flex flex-col gap-[18px]">
           {/* future ready digital solutions card*/}
@@ -174,7 +176,7 @@ export default function HeroSection() {
               Your Creative & Tech Partner for Future-Ready Experiences
             </div>
           </div>
-          <div className="flex flex-row gap-[18px]">
+          <div className="z-10 flex flex-row gap-[18px] ">
             <div className="flex flex-col items-start gap-[21px] bg-[url('/hero-section/mobile-app-dev-bg.svg')] bg-center bg-no-repeat px-[40px] pb-[34px] pt-[164px]">
               <div className="rounded-full bg-[linear-gradient(14deg,_#502135_10.29%,_#A13A94_88%)] p-2">
                 <div className="relative size-[17.8px]">
@@ -211,13 +213,21 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="absolute -left-[8%] bottom-0 right-0 top-[9%] aspect-square size-[470px]">
+          {/* <div className="absolute -left-[8%] bottom-0 right-0 top-[9%] aspect-square size-[470px]">
             <Image
               src={"/hero-section/main-circle.svg"}
               fill
               alt="main-circle"
               className="object-cover"
             />
+          </div> */}
+          <div className="z-0 absolute -left-[0%] bottom-0 right-0 top-[9%] size-[400px]">
+          <Lottie
+            animationData={animationData}
+            loop={true}
+            autoplay={true}
+            style={{ width: "100%", height: "100%" }}
+          />
           </div>
           {/* <div className="absolute inset-0 text-white">heyyyy</div> */}
         </div>
